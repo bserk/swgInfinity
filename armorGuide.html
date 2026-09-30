@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Examples</title>
+</head>
+
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: white;
+    }
+
+    .floating-navbar {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    /*width: 90%;
+    max-width: 1200px;*/
+    z-index: 1000;
+    
+    /* Flexbox positioning for contents */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+    }
+
+    .nav-links iframe {
+        width: 100px;
+        height: 200px;
+        border: none;
+    }
+
+    .content {
+    padding-top: 10px; 
+    /*max-width: 800px;*/
+    margin: 0 110px;
+    }
+
+</style>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<main class="content">
+
+  <center>A Complete Guide to Armor and Armorsmithing</center></u></b><br>This guide was created in order to provide both users and makers of armor with a comprehensive handbook about this highly important set of equipment. It is a composite of many of the helpful postings armorsmiths have made on the SOE armorcrafters board. You are welcome to copy all or portions of this document for your personal use provided that you include the 'credits' section with every copy. For the latest version, check out the SOE armorcrafters profession board or www.mmorpgamers.org. This guide is now in its third version.<br><br><strong>Credits:</strong> Jaato Waals (editor), Zigmund, Castigar, SWBarker12, EasyMcRhinopants, Tobold, Aircartman, Arlissa, Xrande, Arcus, Beldaran, BigAke, Zecra, ZionHalycon, Gair, and the entire armorcrafting community.<br><br>
+<div align="left"></div>
+<div align="left"></div>
+<div align="left"><strong>Contents:</strong></div><br>
+<blockquote>
+<p><b>Section I: Armor Basics</b><br>A. Types of Armor<br>B. Damage Types<br>C. Examples of Armor Attributes in Action<br>D. Wearing Armor<br>E. Armor Attachments </p>
+<p><b>Section II: Crafting Armor</b><br>A. Becoming a Master Armorsmith<br>B. Making Armor<br>C. Resource Choice<br>D. Experimentation<br>E. Coloring and Naming Armor<br>F. The Mathematics Behind Armorcrafting<br>G. Standard Armor Templates</p></blockquote>
+<blockquote>
+<p><strong>Section III: Appendices:</strong><br>A. Frequently Asked Questions<br>B. Grinding Macro<br>C. Looted Items and their effects<br>D. Special Armors and Quests<br>E. Critical Bugs<br>F. Trainer Locations<br>G. Resources Required for Armorcrafting<br>H. Gated Resources<br>I. Death Watch Bunker Guide<br>J. Additional Web Resources</p>
+<p><br>&nbsp;</p></blockquote>
+<div align="center"><strong>Section I – Armor Basics</strong></div>
+<div align="left"><strong>A. Types of Armor</strong><br><br>
+<div align="left"><b><strong>Bone Armor</strong></b><br><em>Special Resistance:</em> Energy</div>
+<div align="left"><em>Vulnerabilities:</em> Kinetic, Blast, Stun, Heat, Cold, Acid<br>Bone armor is the only type of armor craftable by an artisan who is untrained in armorsmithing. It provides decent protection against energy attacks and, while it has a number of vulnerabilities, can serve as perfectly acceptable armor in many situations when made by a master artisan using high quality components.<br>Obtained at: Engineering I-IV </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Chitin</strong><br><em>Special Resistance:</em> Kinetic</div>
+<div align="left"><em>Vulnerabilities:</em> Stun, Heat, Cold, Electricity<br>This is an medium weight armor made out of insect carapaces that protects well against kinetic damage. If you do a lot of PvE against mobs that do kinetic damage then this is one of two primary armor options you have. It doesn't come in a very many colors combinations but looks very cool.<br>Obtained at: Personal Armor I </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Composite Armor</strong><br><em>Special Resistance:</em> Electricity</div>
+<div align="left"><em>Vulnerabilities:</em> Stun<br>Composite is heavy and powerful. It offers very high resists (30%+, with 50% plus being fairly common) across the board, with the exception of stun damage, which it is vulnerable to. Its special protection is electricity. Furthermore, up to three layers can be added to advanced composite segments, resulting in extremely high special protections. All of this protection comes at a fairly high cost, however. Composite armor has tremendously high HAM costs, so high, in fact, that very few characters can wear it unsliced without engaging in heavy stat migration.<br>Obtained at: Master Armorsmith </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Kashyyykan Ceremonial Armor</strong><br><em>Special Resistance:</em> Kinetic</div>
+<div align="left"><em>Vulnerabilities:</em> Stun, Acid<br><em>Wearable only by Wookiees</em> Kashyyykan Ceremonial Armor is one of three types of armor currently wearable by Wookiese. It provides decent kinetic resists, about on par with chitin. It is fairly light and has a very organic look. Add a krayt or voritor scale to an advanced segment and kinetic resists upwards of 65% are possible. Note that this armor requires Padding Segments, an item made by tailors. Both the resists and HAM of the padding segments may be experimented on by the tailor making the item. As with all wookiee armor, it has only four pieces, and leaves the hands and feet uncovered.<br>Obtained at: Personal Armor II </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Kashyyykan Black Mountain Armor</strong><br><em>Special Resistance:</em> Kinetic</div>
+<div align="left"><em>Vulnerabilities:</em> Heat, Stun, Cold<br><em>Wearable only by Wookiees</em> Black Mountain Armor is the second of the three types of armor available to Wookiees. It is very difficult to make, especially the advanced version, as it requires numerous organic resources. The benefit of this armor, however, is that it has an extremely high resistance to kinetic damage, yet is not terribly heavy. The two horns on the helmet are decorative and do not provide any additional abilityes. Note that this armor requires Padding Segments and has only four pieces, leaving the hands and feet uncovered.<br>Obtained at: Personal Armor IV </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Kashyyykan Hunting Armor</strong><br><em>Special Resistance:</em> Kinetic</div>
+<div align="left"><em>Vulnerabilities:</em> Stun<br><em>Wearable only by Wookies</em> Kashyyykan Hunting Armor is the third type of armor available to Wookiees. While somewhat more complicated to make than composite, it provides resistances that are on par with that armor type but yet has a significantly lower encumbrance. Note that this armor requires Padding Segments and has only four pieces, leaving the hands and feet uncovered.<br>Obtained at: Master Armorsmith </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Mabari Armorweave</strong><br><em>Special Resistance:</em> Heat, Blast</div>
+<div align="left"><em>Vulnerabilities:</em> Energy, Stun, Acid<br>Mabari is a great starter set of armor because it's lightweight and usually priced low enough that nearly anyone can get a hold of it. Mabari is pretty much the lightest suit of armor you are going to come across. It may not offer the massive protective elements of some armor but it does give you a light armor rating against damage types that it is not vulnerable to. Add in a voritor scale or light energy layer and its biggest vulnerability, energy, becomes a special resistance. Mabari is also easy to make because each piece takes only one segment, so you don't need to use factory made segments.<br>Obtained at: Novice Armorsmith </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Padded Armor</strong><br><em>Special Resistance:</em> Blast</div>
+<div align="left"><em>Vulnerabilities:</em> Stun, Heat, Acid<br>Padded armor is an unusual armor that can be made either very heavy, with decent resists, or very light, with next to no resists. It also is the most colorful armor available. The main protective element of padded armor is blast protection, although the secondary protections are decent enough.<br>Obtained at: Personal Armor IV </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Personal Shield Generators (PSG’s)</strong><br><em>Special Resistance:</em> Energy</div>
+<div align="left"><em>Vulnerabilities:</em> Acid, Blast, Kinetic<br>Not properly a type of armor, these nevertheless provide armor-like protection. Personal shield generators, or PSGs, are a great little device that can save your life in a sticky situation. If you read above then you know now that wearing armor gives you a rating of light armor so that 50+% of the damage you take from AP0 weapons is absorbed by the armor (remember that only the damage that the armor is not vulnerable to).</div>
+<p align="left"></p>
+<div align="left">When your PSG is active and you are hit with a damage type that it is not vulnerable to, the PSG will first reduce damage as if it were armor. The leftover damage is then further reduced by your armor. As you can see, this may result in a considerable amount of damage may be blocked. When wearing a suit of 90% composite (possible with a good effectiveness slice) and a PSG with bare resists (4-5%), you will take 2-3 points of damage for every hundred done to you. Even with lower resists on your armor you'll still take half the damage while wearing a PSG than you would without. This why SOE has made PSGs so fragile.</div>
+<p align="left"></p>
+<div align="left">The drawback to PSG’s is their very low durability, meaning that they wear out very quickly. While they can be repaired, they still have very limited lifespans. Nevertheless, PSG’s can be a lifesaver in a variety of situations and are a good armor supplement in PvP.<br>Obtained at: Deflectors II, III &amp; IV </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Tantel Armor</strong><br><em>Special Resistance:</em> Energy</div>
+<div align="left"><em>Vulnerabilities:</em> none<br>Tantel is an ancient armor that consists of a helm, boots and chest plate. There are no tantel arms, legs, or gloves. Tantel comes in a wide variety of colors and is also very light. It is a favorite among those who do PvP as it's main protective element is energy. For those that like a low encumbrance armor then Tantel is the way to go.<br>Obtained at: Personal Armor II </div>
+<div align="left">&nbsp;</div>
+<div align="left"><strong>Ubese Armor</strong><br><em>Special Resistance:</em> Kinetic</div>
+<div align="left"><em>Vulnerabilities:</em> Heat, Stun, Cold<br>Ubese armor is the second option for players who are frequently attacked by enemies dealing kinetic damage. It offers more kinetic protection than chitin and, when made with advanced segements and layered, can have kinetic resists as high as 80%. A full suit of well made ubese is fairly light, certainly more so than composite. Note that a ubese jacket covers both the chest and upper arms, resulting in significantly lower HAM costs than other types of armor. Ubese shirts can also be made that, while providing no protection, can be worn under other types of armor and provide a non-attackable place to put armor attachments (since they can be made with sockets).<br>Obtained at: Personal Armor III</div></div>
+
+<br><br>
+
+<strong>B. Armor Attributes</strong> <br><br>There are six different sets of attributes that make up a given piece of armor: Condition, Armor Rating, Effectiveness (or Base Resists), Special Protection, Vulnerability, and Encumbrance. Let's go through each of these using freshly crafted bone gloves as an example. <br><br><strong>Condition:</strong> <br>Condition is a measure of how much damage the armor can absorb before becoming useless. It is expressed as two numbers, the current value and the maximum value. The amount of damage taken is equal to the damage that penetrates its defenses divided by a factor particular to the armor type. Therefore, if the armor absorbs 30 points from a 100-point shot, it takes 70 points of damage multiplied by a particular factor depending on the type of armor. For example, a mk.1 PSG has a factor of roughly .10. If 70 points of damage were to get past it, it would lose 7 condition. Once at 0 condition, the armor no longer provides protection and cannot be repaired. An armor repair tool can be used to restore condition at the cost of lowering the armor's maximum as long as condition is not below a certain minimum. <br><br><strong>Armor Rating:</strong> <br>Armor Ratings have four possible values: None (AR0), Light (AR1), Medium (AR2), and Heavy (AR3). Personal armor always falls into the Light category with None used for those with no armor and the two higher values being reserved for armored vehicles and really nasty critters. Armor ratings are placed in direct opposition to Armor Piercing values, which are also classfied as None (AP0), Light (AP1), Medium (AP2) and Heavy (AP3).<br><br>Armor Rating expresses the minimum Armor Piercing value of a weapon needed for the weapon to do its full damage. If the armor's Armor Rating is equal to the weapon's Armor Piercing, there is no effect. If the Armor Rating is higher, however, there is a 50% reduction for each level difference. Therefore for the bone gloves against a CDEF Pistol's Armor Rating of None, damage is reduced by 50% off of the top. But in the case of the Power Hammer, its Medium Armor Piercing value (AP2) is higher than the Light Armor Rating (AR1) of the gloves. It therefore does 25% more damage. Note that the 50% reduction or 25% increase occurs for each level. So if that CDEF were to be used against an AT-ST, whose Armor Rating is Heavy, there would be a three level difference. Consequently damage would be reduced by 50%, then another 50%, and another 50% for merely 12.5% of the initial damage. This is explained in more detail later in this guide.<br><br><strong>Effectiveness:</strong> <br>Effectiveness, also called the base resists, measures the percent damage the armor absorbs against any damage type in which it does not have a Vulnerability or Special Protection (we'll get to those attributes in a bit). In this case, our Effectiveness is 15%. Don't be confused by the listing of multiple damage types under this section in the examination UI. All values here reflect the current Effectiveness value. They are listed verbosely to make it clear that Effectiveness protects against all damage types not listed as Vulnerabilities or Special Protections. <br>The damage reduced by Effectiveness occurs after adjustments are made due to Armor Rating. <br><br><strong>Special Protection:</strong> <br>Special Protections are values that override the Effectiveness. In our case, the armor has a Special Protection of 27% against Energy. This means that whenever the armor is hit by Energy damage, it uses the 27% value instead of the Effectiveness of 15%. Although Special Protections are usually higher than the armor's Effectiveness, they can potentially be lower. In that case, the armor would actually be weaker against that Damage Type. <br><br><strong>Vulnerabilities:</strong> <br>Vulnerabilities denote damage types in which the armor offers no <br>protection whatsoever. Our bone armor has quite a few of these: Kinetic, Blast, Stun, Heat, Cold, and Acid. Whenever the armor is hit by one of these Damage Types, all of the damage goes through. The target wearing this armor would also have an Armor Rating of None against any of these Vulnerabilities. <br><br><strong>Encumbrance:</strong> <br>Encumbrance is a measure in the reduction of statistics when the armor is worn. The reduction occurs only in the secondary stats and not the pools. This means that the bone gloves Health Encumbrance of 11 would reduce Strength and Constitution by 11 points. If the Encumbrance is such that it would ever reduce a stat below 1, the armor may not be worn. The following are a list of rumors from people who don't know how armor really works and have been misinformed: armor causes you to take more damage because your secondary stats dictate damage you take (untrue), armor makes me run slower (untrue), armor <br>makes me attack slower (untrue), armor makes me take longer to heal (heal rates are dependant on secondary statistics), and armor makes my special moves hurt me more (this is true too- special move cost are also dependant on secondary statistics). <br><br><strong>Color:</strong> <br>Not properly an official armor attribute, color is just as important as anything else. Color can lend style to your armor and without style, why bother wearing armor? I mean, if you’re going to engage in PvP, do you want to be referred to as “That jerk d00d in the ugly gray composite” or “The assassin in the sleek black suit”? Look at the armor before you buy it and make sure it’ll look good.<br><br><strong>C. Damage Types</strong> <br><br>Not all Damage Types are equal. Some Damage Types are far more common than others and armors as a whole tend to fare better or worse against certain Damage Types. While there's no steadfast rule for this, here are some general trends, such as most things are vulnerable to stun damage. These tend to apply to both players as well as creatures. <br><br>(Note that these are not in order of importance; the type of damage you receive can vary greatly depending on your particular situation). <br><br><em>Acid</em>: A very, very important damage type. Basically, most of the pistols used in PvP that are not FWG5 will be probably either Scatter (BH and the famous eye shots) or DX2 (pistoleers) which both do acid damage. Some mobs' attack types, the rarely used commando acid launcher, and the DXR6 carbine also do acid damage. <br><br><em>Blast</em>: Blast is a moderately common form of damage.. Most armor offers at least some protection against this form of attack. Commando special weapons and Power Hammers are the primary weapons that do Blast damage. Padded armor’s special resistance is blast damage. <br><br><em>Cold </em>: An anecdotal damage type. Weak SG82 rifles, cryoban grenades. A rare and minor damage type <br><br><em>Electrical</em>: Not a very widely used damage type, but many bounty hunters like to play "commando lite" with their LLCs. Composite armor’s special resistance is electricity. <br><br><em>Energy</em>: Energy is the most common form of ranged damage. Rifles, most carbines, faction pets, and laser weapons all do energy damage. However, while most blasters do this type of damage you should not assume that just because you are fighting an enemy with a ranged attack that he or she is using a weapon that does energy damage. Like Kinetic, most armor protects against this to some degree. Both Tantel and Bone armor provide special protection against energy damage. <br><br><em>Heat</em>: Along with kinetic and energy, heat is probably THE most critical PvP resist. Sure, only a handful of weapons use heat damage ... but they are the most widely used everywhere. The flame thrower (used by the highly popular commando class), and "the" bread and butter pistol, the FWG5 both do heat damage. Mabari armor’s special resistance is heat. <br><br><em>Kinetic</em>: Kinetic is most common form of melee damage. Most melee weapons and creatures do kinetic damage and, since pets are so popular in PvP, having an armor with kinetic resists can be very important. Most armor (both player and creature) offers at least some protection against this; some armor protects against this greatly. Kinetic damage from ranged attacks is limited to a few projectile weapons. Ubese and Chitin armors are the primary defense against Kinetic damage. <br><br><em>Stun</em>: Stun damage is the bane of armor, player and creature alike. Most armor is vulnerable to this Damage Type. Fortunately, only a few specialized PvP weapons deal stun damage (jawa ion rifles, stun batons, tangler pistols, and the new geo stun pistols).<br><br>
+
+<strong>D. Examples of Armor Attributes in Action</strong> <br><br>This section provides examples of exactly how various armor attributes function against different types of weapons. It also explains the sometimes convoluted rules of armor-weapon interaction.<br><br><strong>AP:0 vs AR:0, no resistances</strong> <br>Now, let's start with the most basic form of combat. AP:0 vs AR:0, no resistances. We'll use the example of Bob is attacking Joe. Bob is using his unarmed skill and not wielding any form of weapon (AP:0). Joe is only wearing clothing, and no armor (AR:0, no resistances). When Bob attacks Joe he will get notified of how much damage he did in the combat window. Let's say 100 damage. Joe will also receive notification of this in his combat window. And above Joe's head a number will float up displaying how much damage was done. In this example all three locations will display 100 as the amount of damage done and Joe will lose 100 points of HAM. This is a very simple and easy scenario. <br><br><i>What is going on here:</i> When you attack an enemy wearing no armor with a non-armor piercing weapon, the damage you do to your target is applied directly to it with no bonuses or penalties.<br><br><strong>AP:1 vs AR:1, resistances to that damage type:</strong><br>Again we have Bob and Joe. Bob has decided to attack this time with his new set of Vibro Knuckles (AP:1, kinetic), and while Bob was out working hard to earn his Knuckles Joe managed to get his hands on some composite armor (AR:1) that has 40% resistance to all damage types. Bob attacks Joe and once again does 100 damage. In Bob's combat window he sees that he did 100 damage. In Joe's combat window he sees that Bob did 100 damage, however right after that it says that 40 damage was prevented by the armor! Both Bob and Joe see the number 60 float over Joe's head. So, we are seeing 3 different numbers here, let's go over what each one means. The number displayed in Bob's combat window is the amount of damage he did, this is before armor is taken into account. The first number in Joe's combat window will always be the same, it is the damage done before armor. The second number that Joe sees is how much damage his armor "absorbed". The number which appears over Joe's head is the actual amount of damage that is removed from his HAM pool. This is the number you want to look at to find out exactly how much damage you are doing to your opponent as it is always the final amount, after all modifiers are considered. Unfortunately, every time damage is done to you it is also done to your armor- so while Joe suffers 60 points of damage, his armor also takes damage (20% in the case of composite).<br><br><i>What is going on here:</i> When you attack an enemy who has the same armor level as your weapon, your weapon pierces the armor but still must contend with the resistances. As a result, 40% of the damage in this case is blocked by the resistances.<br><br><strong>AP:1 vs AR:0 with no resistances to that damage type</strong><br>This is where things start to get tricky. Bob is now attacking Joe with his vibroknuckles (AP:1, kinetic) and Joe, caught unaware has no armor equipped (AR:0, no resistances). Bob hits Joe for his standard 100 damage hit. In Bob and Joe's chat window they both see that Bob did 100 damage. Indeed, the number floating over Joe's head shows 100! <br><br><i>What is going on here:</i> When you attack a target vulnerable to your damage type (a completely unarmored character is treated as vulnerable to all damage types), there is neither a damage bonus nor a damage penalty. As a result, the amount of damage you do to the target is the amount of damage the target sustains. *Note: this is believed to be a bug. Presumably an AP weapon should receive the same damage bonuses to an unarmored/vulnerable target as it does to a lower-armored target with resists.<br><br><strong>AP:0 vs AR:1</strong><br>This time Bob forgot his Vibro Knuckles at home (AP:0) and Joe remembered to get dressed this morning (AR:1+40%). Bob hits Joe for a whopping 100 damage! Bob and Joe's combat windows both say that Bob hit for 100 damage. However, Joe's window also says something else. It claims that his composite armor prevented 70 damage! Oh lucky day for Joe. Above Joe's head floats the number 30. Now, at first glance this doesn't work out right. Bob's armor just absorbed 70% of the damage done to him, even though it is only +40% to kinetic (the damage type Bob is attacking with). This is because Bob is attacking with an AP level lower than Joe's AR. What happens is this that Joe's armor absorbs 50% of the damage just because it has a higher AR than Bob has AP. Then, after that calculation is made, Joe's armor absorbs another 40% of what is left because of it's resistance to kinetic damage. So 100(initial damage) * 0.5(AR is higher than AP) = 50 damage prevented by the armor and the other 50 goes on to the next step. Of the remaining 50 damage (which hasn't gotten to Joe yet), 40% of it is absorbed by the kinetic resists. So 50 * 0.4 = 20. The armor has successfully blocked 70 points of damage and Joe gets hit for a measly 30 points. <br><br><i>What is going on here:</i> When you attack an armored target with either a non-armor piercing weapon or an armor piercing weapon with an AP rating that's lower than your target, your damage is reduced. If your AP rating is one point below the AR of the target (AP0 versus AR1, for example), damage is reduced by 50%. If the AP rating is two points below the target (AP1 versus AR3 (heavy) armor, damage is reduced by 75% (one half of one half). In the unlucky situation where you're attacking an enemy whose AR is 3 points above your weapon (AP0 versus AR3), damage is reduced by 87.5% (half of half of half). Note that all of this is before resistances are taken into account, so attacking something with heavy armor with 50% resists to that damage type would result in 6 points of damage suffered out of every 100 dealt.<br><br><strong>AP:2 vs AR:0</strong><br>Time to bring out the big guns. Bob, realizing that he was doing so little damage to Joe has decided to become a pikeman. He picks up a master made Long Vibro Axe which is reported to do an awesome 100 damage per hit! Before using his weapon on Joe, Bob decides to test it out on a kreetle (AR0, 10% resists to kinetic). Bob, sneaks up on the kreetle and lashes out with his new Vibro Axe, dealing 100 points of damage. In Bob's combat window we see the same 100 damage we always see. However, over the kreetle's head the number 140 is displayed. The kreetle dies. <br><br><i>What is going on here:</i> When you attack at target that has a lower AR than your AP level and <i>is not vulnerable to your damage type</i> (remember, a completely unarmored player is treated as being vulnerable to all damage types), you receive a bonus depending on the degree to which your AP is greater than the target's AR. For each step your AP is greater than the target's AR, the damage you do is multiplied by 25%. So, against a target with AR0 (assuming it has no vulnerablility to that damage type), you receive a 25% bonus to damage. Likewise, when using an AP 2 weapon against an AR) target with no vulnerability to that damage type, the bonus is 56% (125% + 25%(125%). Finally, when using an AP3 weapon against an AR0 target with no vulnerabilities to that damage type, you receive a 95% bonus to damage (156% + 25%(156%). Note that resistances still apply- so in the case of the kreetle, the damage bonus resulted in total damage of 156 that was then reduced by 10% (16 points). Note that when attacking mobs that don't have a particular damage type listed as either a resist or a vulnerability you will generally see the bonus added in.<br><br><strong>AP:2 vs AR:1 with resist to that damage type</strong><br>Payback. After testing his axe on the kreetle, Bob is ready for his showdown with Joe. Joe grabs his armor (AR:1+40%) and rushes out to meet Bob in mortal combat. Bob is in the middle of showing off his Long Vibro Axe (AP:2) when Joe bursts in the door and rushes him. Bob being as fast as he is still manages to get the jump on Joe and hits him for 100 damage. Joe figures no problem though, he has his trusty armor on and it should absorb 70% of the damage leaving him sitting pretty. Joe is wrong. Although the numbers in the combat window still show 100, <br>the magical floating number is displaying 75! Oh not-so-lucky day for Joe!<br><br><i>What is going on:</i> When you attack an enemy with an armor piercing weapon that is greater than your target's AR, you receive the damage bonus (25% in this case, because AP2 is one step greater than AR1). However, your resists still apply. In this case, Bob's damage is first increased to 125, then reduced by 40% (50 points). <br><br><strong>AP:0 vs AR:3</strong><br>Joe is now very annoyed with his inability to do anything about Bob's new form of attack. So he runs out and gets himself a quick 12,250 imperial faction points points to rank up and buy an AT-ST for himself (AR:3 + 75% kinetic). He then immediately rushes back to the cantina and finds that Bob has lent someone else his Long Vibro Axe leaving Bob with his fists again. Bob, being in the drunken stupor that he is, attacks the AT-ST without regard for his wellbeing. Bob immediately strikes a critical blow on the AT-ST for 100 damage (as both Joe and Bob can see in their combat windows). However, above the AT-ST's head a little 3 floats away. Bob, suddenly coming out of his drunken state, contemplates what has happened. He quickly realizes that it is futile to attack the AT-ST. Unfortunately Joe only trained the AT-ST to sit and stay. While he is busy training his over-sized pet to attack Bob beats Joe into the ground.<br><br><i>What is going on here:</i> The AT-ST has an AR three levels higher than Bob's weapon. So before anything else happens he is hit with the 50% penalty 3 times. The 100 damage is reduced to 12.5 damage (100*0.5*0.5*0.5). Then, on top of all that, the AT-ST's resistance kicks in for another 75% reduction leaving bob with a measly 3.125 damage (12.5*0.25).<br><br><strong>AP:2 vs AR:3+Vulnerability</strong><br>Bob, now worried for his life, runs out and buys himself a nice Power Hammer (AP:2 Blast damage) as well as trains up to novice swordsman. In the meantime Joe runs around slaughtering the innocent with his war machine (AR:3+Vulnerability to Blast), but is unable to heal his AT-ST and it is eventually reduced to 100 health. But that's okay. He will save his AT-ST for the final battle with Bob. There is no fear of losing his AT-ST for Bob can only do 3 damage at a time to the mighty machine. To make a long story short, Bob attacks Joe's AT-ST with his Power Hammer for 100 damage (as displayed in the combat windows). The number 100 floats away above the AT-ST's head and it collapses in a heap of twisted steel.<br><br><i>What is going on here:</i> Bob attacked the AT-ST with a weapon that does a type of damage (blast) that it is vulnerable to. When you attack an opponent that is vulnerable to your damage type, the armor has no effect. Likewise, you receive no damage bonus. As a result, the amount of damage you do to the target is the same as the amount of damage it suffers. *Note: this is believed to be a bug and may change at some point in time.<br><br><strong>AP:0 vs AR:1(70% resists to kinetic) and a PSG</strong><br>Joe's revenge. After weeks of mourning Joe decides that he is done with beating Bob. He has found peace in his life and takes up the carebear ways of entertainers and artisans. After shopping around for many minutes he sees a beautiful set of Ubese armor. It is a stunning gold color and makes him look dead sexy. So, using the money he earned as a dancer during his period of mourning he buys a full set of the armor (AR:1 Special Protection vs Kinetic: +70%) as well as a Personal Shield Generator (kinetic resist: 10%). Enter Bob stage left. While dancing the night away one evening, however, Joe sees Bob walk into the cantina. At the sight of Bob Joe is sent into a frenzy and, forgetting all past oaths, he rushes at Bob in a final assault against his arch enemy. Unfortunately, Joe took the attack button off his hotbar and replaced it with an emote and Bob gets the first shot in and hit's Joe for a surprising 100 damage. Joe, feeling that the battle is over already, is quite surprised. Bob's combat window shows 100 damage, but the number floating over Joe's head is is only 8! Joe's combat window shows that his PSG absorbed 55 points of damage and his Ubese armor absorbed another 42 points of damage! Joe is ecstatic, and he has a sudden revelation about how armor works. <br><br><i>What is going on here:</i> Before Bob even gets close to Joe, his blow is stopped by the PSG. Functioning as a first level of defense, the PSG absorbs 55 points of damage (50 points because it is light armor plus another 10% of the remainder due to the kinetic resist), passing 45 points of damage on to the armor. Because Joe's composite armor is AR1, 50% of this damage is blocked, leaving 23 points remaining. Finally, Joe's armor has a high resistance to kinetic attacks (70%, the fact that it is called a "special protection" is irrelevent) and Bob's attack is kinetic, so Joe's armor blocks 70% of the remaining damage, resulting in Joe suffereing 7 points of damage. *Note: some bugs with PSG's may prevent them from working properly. Check the resistances on your PSG and unequip/re-equip it; this generally solves the problem.<br><br><strong>AP:2(kinetic) vs AR:1(70% resists to kinetic) and a PSG</strong><br>Bob, realizing that he cannot defeat Golden Joe with his bare hands, whips out his Vibro Axe one last time. Dodging Joe's wild swing, he slashes at Joe, dealing 100 points of damage. Above Joe's head floats the number 37 and Joe, puzzled at the amount of damage he suffered while wearing his beautiful armor and PSG, dies. <br><br><i>What is going on here:</i> To begin with, when an armor piercing attack penetrates a PSG, the PSG blocks no damage, even if it is resistant to that damage type. Next, Bob's attack was AP2, which is one step greater than Joe's armor (AP1). As a result, his damage is boosted by 25%. Finally, because Joe's ubese armor has a 70% resistance to kinetic, the total damage is reduced by 70%, resulting in 27 points of damage.<br><br>
+
+<strong>E. Wearing Armor</strong> <br>
+<br>
+Regardless of what type of armor you’re wearing, it’s going to impact your
+secondary HAM pools considerably. There are a number of ways to reduce the HAM
+impact of armor. <br>
+<br>
+<i>1. Get the armor sliced:</i> <br>
+
+Just as smugglers can slice weapons, they can also slice armor. There are two armor attributes that smugglers can slice: base resists and encumbrance. There is no way to choose one over the other on any given slice. Generally, a master smuggler will slice encumbrance for 20-45% while base resist (effectiveness) slices will range from 10-35%. <p></p>With a basic 20% encumbrance slice across the board on a standard 500/400/500 suit the total HAM will be reduced to
+400/329/400. Now that is almost within wearable range for some people, but for
+the majority of the player community that I have dealt with Focus and Mind (the
+secondaries for Mind) in particular are problem areas. The good news is that
+now that you know what the total encumbrance is, you can start working toward
+making sure you can wear it. <br>
+<br>
+
+<i>2. Boost Secondary Stats</i><br>
+Since armor encumbrance only impacts the secondary stats, you need to boost
+them up to make sure you can offset the armor's encumbrance. To do this there
+are three primary options available to the player. <br>
+<br>
+
+<em>Option #1 </em>- Stat migration to wear armor, buffs to regain stats - In
+this scenario you would migrate your stats to were your secondary stats were
+all just high enough to wear all the armor. You would then use buffs
+(food,spice,medical) to then raise your secondary stats back up to usable
+levels. The advantage of this method is if you run out of buffs, you can still
+put your armor on/off without any issues. The disadvantage of this method is
+your primary stats will have to be lowered. Personally, I recommend this option
+because it seems to be the easiest road to take. There are also some reports
+that a stealth change went into affect that does not allow option # 2 to fully
+work. <br>
+<br>
+<em>Option #2 </em>- Buff to wear armor - In this scenario you could
+(potentially) do stat migration to your primaries, assuming you are going to be
+buffing yourself. You would then use buffs to give your secondary stats a major
+boost which would then allow you to wear the armor. The advantage of this is
+your primaries will be high. The disadvantage is if you run out of buffs, at
+best you have to keep the armor on, at worst you can not put it back on until
+you get another batch of buffs. <br>
+<br>
+<em>Option #3 </em>- Combo of the above - In this scenario you would pick your
+favorite buff then do stat migration in other areas. For instance, you know a
+good chef that makes a great food buff that impacts Focus and Willpower and you
+can always get a good supply from him. So you do stat migration to cover your
+Health and Action secondary stats, and use the buffs to cover Focus and
+Willpower. This option saves more of your primary stats, but also forces you to
+rely on buffs. <br><br>
+<i>3. The Armor Macro</i> <br>
+The armor macro is critical for proper usage of armor. Learn it, love it, live
+it. If you are NOT being hit, and you can anticipate if you will start to get
+hit, then you should NOT have your armor on. <br>
+<br>
+Keep the armor off since it provides no benefits if you are not being hit, then
+put it on via an armor macro the second you are being threatened. Once the
+threat has passed (for instance an animal changing course and going after a
+group mate) then immediately use the macro again to take the armor off. Unless
+you are soloing, dueling, or engaged in a major PVP event where being targeted
+is too hard to predict, you should definitely NOT have your armor on all the
+time. <br>
+<br>
+Before going over how to setup an armor macro, please realize that all the user
+interface buttons are numbered starting with zero, not with one. So the first
+button on the left for toolbar number 1 is actually Slot00,Pane00. That last
+button (the 24th) on the first tool bar would be Slot23. <br>
+<br>
+That being said, you can choose any pane and any slots you want, so the ones I
+am picking are just for example. To now setup your armor macro please follow
+the steps outlined below. <br>
+<br>
+<em>Step 1</em>: Pick a tool bar - I have selected the toolbar marked in game
+as 3 (so for programming Pane02) <br>
+<br>
+<em>Step 2</em>: Hotkey your armor - Drag all your armor pieces (for me eight
+of them) into the buttons starting at the left (so for programming, Slot00
+through Slot08). <br>
+<br>
+<em>Step 3: </em>Create a macro - Create a new macro, name it, pick the icon
+and enter the following lines. <br>
+<br>
+/ui action toolbarPane02; /ui action toolbarSlot00; /ui action toolbarSlot01;
+/ui action toolbarSlot02; /ui action toolbarSlot03; /ui action toolbarSlot04;
+/ui action toolbarSlot05; /ui action toolbarSlot06; /ui action toolbarSlot07;
+/ui action toolbarSlot08; /ui action toolbarPane00; <br>
+<br><em>Step 4</em>: Place macro on toolbar - Place the macro you created on your
+primary toolbar, which for my example I use the 1st one (notice I used Pane00
+at the end). So now that the macro is setup, whenever you hit the button on the
+primary toolbar, the macro immediately switches to the toolbar that has all the
+armor on it, it selects every armor piece, then goes back to the toolbar you
+used the macro on. The end result is an immediate equipment/unequipment without
+ever leaving your primary toolbar. <br>
+<br>
+Personally I have two macros setup. One for armor, one for clothing. So if I
+want to armor up I select the armor one, if I want to take armor off I use the
+clothing one. If you used just one macro you would be going back and forth
+between naked and armored which I would prefer not to do. <br><br>
+<strong>E. Skill enhancing attachments</strong><br>
+There are a variety of skill enhancing attachments that are designed to fit into slots in armor, rather than clothes. With the November patch, it is now possible to make armor with sockets, into which armor-specific skill attachment can be placed. Once the armor is made, simply drop the attachment onto the armor, just as you would with a powerup. Once placed, the attachment cannot be removed. Note that placing skill enhancing attachments into various required tailor components does nothing to the final piece of armor (it simply goes poof!).<br><br><br>
+
+<br><br>
+
+<div align="center"><strong>Section II: Crafting Armor</strong></div><br>
+So, you want to be an armorsmith? While being an armorsmith is a long and
+difficult process, armorsmiths are certainly one of the highest-paid artisan
+professions. Why? In order to provide have full protection, a character needs up to nine
+different pieces of armor. Most armor types are also extremely complicated,
+requiring multiple rare resources and cross-profession components. Furthermore,
+each of these pieces of armor degrades over time based on the amount of damage
+it blocks. On top of this you can make PSGs, which have a very short lifespan.
+As a result, Armorsmiths demand substantial compensation for their time.<br>
+<br>
+<strong>A. Becoming a master armorsmith:</strong><br><br> To begin with, being a
+successful armorsmith does not require you to make master. An armorsmith with
+Tech 4 and Personal Armor 1 can make a suit of mabari armorweave that, with the
+right components, is almost as good as one made by a Master. Since each type of
+armor has its own benefits and drawbacks, this means that even low-level
+armorsmiths are in demand.<br>
+<br>
+As with any crafting profession, there are two ways to gain xp: make products
+for sale or "grind". An armorsmith who just makes products for sale
+and relies on the XP gained from making those products is in for a long, slow
+ride to the top. This is made worse by the fact that your armor really isn't
+comparable to what other armorsmiths can make until you hit Tech 3 or 4. As a
+result, you will find that the market for your products is rather small
+initially. On the other hand, 'grinding' can be a very tedious process. Most
+armorsmiths advance through a combination of the two techniques. Grind until
+you hit tech 3 or 4, then start making mabari suits or, if you prefer, grind up
+the PSG line to PSG 2 and make Mark I PSGs. Generally, armorsmiths tend to
+leave the 'layers' line until last.<br>
+<br>
+If you do choose to grind, there are four items that most armorsmiths mass
+produce at some point in their careers. Armor Upgrade Kits (Novice Armorsmith),
+Mabari Chest Plates (Novice Armorsmith), Mk1 Personal Shield Generators and
+their subcomponents (PSG 1 and 2) and Ubese Shirts (Personal Armor 3). Mass
+producing each of these has its own advantages and difficulties (AUK's only
+give 60xp, but only take 2 resources while Mabari Chest Plates give around 500
+xp, but require subcomponents and hides, which can be difficult to come by in
+sufficient quantities to grind with). Use of a crafting macro is highly
+recommended; a useful one is listed in Appendix B.<br>
+<br>
+<strong>B. Making Armor:</strong><br><br> Each suit of armor is made up of up to nine differen
+pieces, although some types of armor have far fewer. Each of these pieces has
+numerous subcomponents. Note that oftentimes schematics call for identical
+components. This means that they must all have the same serial number - i.e.:
+from the same factory run (crated) or from the same mob (dropped). The most
+common are listed below:<br>
+<br>
+<em>1. Tailor components</em>: reinforced fiber panel, synthetic cloth,
+fibroplast panel, and padding segments. These require varying levels of tailoring skill. Fibroplast
+panels can be made by most artisans, synth cloth can be made by novice tailors
+and reinforced fiber panels can be made by a tailor with Field Wear 2. Padding segments, a component of the new Kashyyykan Ceremonial Armor for wookies, require Field Wear 3. However, padding segments can also be experimented on by tailors, and as a result they are best made by masters (or even 12-point masters to get the best statistics possible). It is
+highly recommended that you either take a few steps in the tailoring line or
+develop a sound relationship with a tailor who is willing to provide you with
+large-run schematics of both synth cloth and reinforced fiber panels.
+Experimentation does not matter on synth cloth, reinforced fiber panels and fibropast panels (indeed, it cannot be done), nor does resource quality. <br><br>
+<em>2. Segments</em>: These come in two forms: dropped segments and crafted
+segments. Dropped segments can be used directly in armor as a component and
+include, among other things, the famous Legendary Krayt Dragon Segment that is used to
+make spectacular composite armor. See Appendix C for a list of these components and their effects. <br><br>Crafted segments are made from a variety of
+materials and are the type of segment used in most armor. There are two types of crafted segments for most types of armor: regular and advanced. Advanced segments use more specialized resources and tend to give higher results. Generally lower armor using advanced segments is superior to the armor 'above' it. Note that crafted segments can and should be experimented on. <br>
+<br>
+<em>3. Segment enhancers</em>: these are dropped items that can be placed into
+segments to give special bonuses. See Appendix C for a list of known enhancers.<br>
+<br>
+<em>4. Layers</em>: these are special protective subcomponents
+that can be placed in segments when they are crafted. Layers provide an additional bonus against a
+particular type of damage but increase the HAM costs of the segment in the
+process. Note that if a layer for a particular type of damage is added to armor
+vulnerable to that type of damage it will cancel that vulnerability. Note that
+layers were fixed in a recent patch so that now their special protection is in
+addition to the base resistances of the armor rather than in place of.<br>
+<br><br>
+<strong>C. Resource Choice:</strong><br><br> 
+<b>1. Basic Resource Choice</b><br>Using high quality resources is very
+important to armorsmiths and care should be taken when selecting which resources you use for a given product. There
+are four traits that matter to armorsmiths: Overall Quality, Unit Toughness,
+Shock Resistance and Malleability. Each of these affects different things.<br>
+<br>
+<em>Overall Quality:</em> The single most important trait. OQ provides 50% of
+all armor traits. Choosing resources with high OQ is imperative when crafting
+armor. <br>
+<br>
+<em>Unit Toughness</em>: Affects the durability of the armor.
+Generally, customers don't pay attention to this value and, as a result, neither do armorsmiths. The small benefit in terms of armor durability you might see from choosing a material with a high UT is almost always outweighed by lower OQ, SR, or Mall attributes, all of which are more important.<br>
+<br>
+<em>Shock Resistance:</em> Affects both the general and special resistances of the armor segment.
+Generally you want to keep this as high as possible, although sometimes you might want to stress Mall more if you are very concerned about HAM costs.<br>
+<br>
+<em>Malleability:</em> This resource affects HAM costs. The higher the Mall,
+the lower the HAM costs. There are also theories that it affects success rates
+- a high Mall results in fewer fails and more successes in both crafting and
+experimentation.<br>
+<br>
+<b>2. Gated Resources</b>
+<br>
+<div>The resources used to make armor vary in quality from 0 to 1000. Unknown to many smiths, most resources have invisible “caps” or limits on how high or low the resource can get in a specific statistic. OQ is never capped. Any resource’s OQ can be as high as 1000 or as low as 0. The other statistics (SR, MA, and UT) often have upper or lower limits depending on the specific resource. General resources such as Iron, Copper, Aluminum, tend to have large ranges. Specific named resources such as Vertex Crystalline Gemstone or Crism Siliclastic Ore tend to have more defined ranges of what to expect. When a resource is limited upward or downward in a statistic, we refer to this as the resource being “gated”.</div>
+<div> </div>
+<div>Knowing which resources are gated in certain areas is important when an armorsmith is choosing what type of layers to put into armor. For example, stun layers use Crism Silcastic ore. This ore is gated at 400 for SR. Stun layers will have less base effectiveness than other layers due to the low SR. An armorsmith making stun layers will need to account for this when planning their armor. Note: this is not the reason that stun protection is so abysmally low on composite and much other armor, except RIS armor. The reason for that is because stun is a vulnerability of most armor. Its special protection is not added to the base effectiveness of the armor, nor can it be experimented up in the final armor assembly.</div>
+<div> </div>
+<div>Let us look at another example: Energy Layers. Energy Layers require metal, polymer, known inert gas, and low grade ore. Now let us say we wanted high-protection PVP layers. We would look at the gated SR for each resource needed. Metal has no upward SR gate. Polymer has no upward SR gate. Inert gas doesn’t have any SR, so just the OQ is used, which is never gated, hence it has no upward limit. Finally low-grade ore has no apparent upward limit. We can conclude that energy layers would make great PVP armor, given that not one of the resources is gated for SR.</div>
+<div> </div>
+<div>Appendix H lists the ranges of various resources. The data on these was gathered from SWGCraft.com. The sample size was anywhere from 14 resources, to 50+ resources for a given category. The numbers below may change as more data is gathered. However, they provide a guideline for what to expect from a given resource.</div>
+
+<br><br>
+
+<strong>D. Experimentation</strong><br><br> Armorcrafting is all about experimentation.
+This is where you distinguish yourself as a true master armorcrafter.
+Basically, there are three things you can experiment on:<br>
+<br>
+Durability (relates to HAM costs and maximum condition)<br>
+Quality (relates to general resistances) <br>
+Resistance (relates to the armor's special resistance)<br>
+<br>
+Depending on where you place your skill points, you can make an armor that's
+maxed for its special resistance but has a high HAM and low general
+resistances, or you can make an armor with relatively low HAM and low
+resistances. Section F discusses some of the mathematics behind experimentation. Just knowing the equations isn't enough, however- the only way to really get a feel for experimentation is to actually do some yourself. Make a whole bunch of gloves of different types of armor and
+see how putting experimentation points into each category changes the outcome
+of the armor.<br>
+<br>
+<br>
+<br>
+<strong>E. Coloring and naming armor</strong><br><br> When naming your armor, it is highly
+suggested that you include some information about each piece in the title.
+Generally, stating the resistances and the HAM costs is a must if you want
+people to buy your armor. Doing so also allows the buyer to easily check and
+see if the armor has been sliced (by comparing the stats in the title to the
+ones in the delve details). <br><br>
+Sophisticated armorsmiths often use colors in their
+titles as well. While it is no longer possible to color the item name itself, it is possible to rename a backpack with a colored title that describes the resists and HAM of the armor and place a whole suit in there for sale on a vendor. To color a title, simply insert \#xxxxxx imediately before the text. Replace the "xxxxxx" with a six-digit hex color code. For example, \#FF0000 will make the text yellow. A hex color chart can be found by simply typing 'hex color' into any search engine. Colored titles are also useful for organizing your inventory or storage house by enabling you to quickly see which backpacks contain which items.<br>
+<br>
+You'll also want to color your armor. This feature is both your best friend and
+your worst nightmare. It's your best friend because it allows your items to be
+unique, increasing the demand and value of your products. It's also your worst
+nightmare, because making custom suits of armor that are different colors means
+no factory runs. And as a craftsman who wants to sell a lot of products,
+factory runs are your friend. The solution: decide to either be a custom
+craftsman and make each piece to order (and charge a ton for them) or mass
+produce suits of armor that are all the same color (allowing your customers to
+have any color on their armor…as long as it's black). A few months ago end-users were given the ability to change the color of composite at will. This feature is very nice for armorsmiths, as it allows them to do factory runs of composite without having to worry about the colors.<br>
+<br>
+For a list of colors, see this thread: http://forums.station.sony.com/swg/board/message?board.id=armorsmith&amp;message.id=13917
+<br>
+
+<br>
+<br>
+<strong>F. The mathmatics behind armorcrafting</strong>
+<br>
+<br>
+This section is provided as a starting point for armorcrafters to understand a bit more about how they get the results they do. Since the actual equations behind crafting have not been released by the game developers, this section may not be fully accurate. However, it does describe the best understanding we have of how the system actually works. <p></p>
+<p>In order to understand how the final result is produced, you first need to understand the basic formula. Essentially, the game calculates a minimum experimental statistic. This minimum experimental statistic is a function of the weighted average experimental quality. By spending experimentation points, you can increase this experimental statistic above the minimum at a fixed rate. The degree to which you can raise the experimental statistic is capped, a limit that is also a function of the weighted average experimental quality. The final experimental stastic is then mapped to an actual statistic in the final item.</p>
+<p><strong>1. How the weighted average experimental quality is calculated</strong></p>
+<p>This section describes how the weighted average experimental quality is calculated based on resource attributes. Essentially, for each experimental statistic there is weighted average quality that depends on a)the attributes of each resource used, b)the amount of each resource required by the schematic and c) the weighting of each attribute. Depending on the number of resources and attributes, this can be very simple (for example, in the case of batteries, only one resource and one attribute) or very complex (multiple resources and multiple attributes, each with different weights). In order to simplify the explanation, base resists will be used.</p>
+<p>When you experiment on a piece of armor, you get three options, one of which is Experimental Quality. Experimenting on experimental quality raises the base resists of the item. However, in order to know how experimentation will effect the base item, you first need to calculate the weighted average quality of the item for that particular experimental statistic. </p>
+<p>The weighted average quality for Experimental Quality on all armor is based on the Overall Quality and Shock Resistance at a 50-50 ratio. The shock resistance of each material multiplied by the quantity used divided by the sum of the total quantites of the materials used. This will give you the average shock resistance for the item. The same process is performed for Overall Quality and a weighted average of the two (50/50 in this case) is determined. For materials that do not have one of the values (for example solid petrochem fuel), the equation simply removes that factor from the calculation.</p>
+<p>For example, say you're making a composite helm using the following materials (we're only going to list the OQ/Shock of these theoretical materials, since that's all applies to resistances):</p>Intrusive Ore 800 OQ 900 Shock Solid Petrochem Fuel 950 OQ Nabooian Fiberplast 700 OQ 900 Shock Aluminum 600 OQ 800 Shock Beyrllius Copper 700 OQ 400 Shock Wooly Hide 900 OQ 600 Shock 
+<p>You're looking effectively using the following total quality of material...</p>
+<p><strong>(</strong>(((70*800) + (70*950) + (35*700) + (40*600) + (30*700) + (30*900)) / (70 + 70 + 35 + 40 + 30 + 30 )) + (((70*900) + (35*900) + (40*800) + (30*400) + (30*600)) / (70 + 36 + 40 + 30 + 30)))<strong>)</strong> / 2</p>
+<p>
+</p><p>In the above equations, the average OQ would be 796 while the average SR would be 729. Consequently, the weighted average material rating for this experimental attribute would be 762.5.</p>
+<p>The full equation for finding the weighted average attribute quality is described below:</p>
+<p>General equation:</p>
+<p>OQ1: Material 1 Overall Quality <br>SR1: Material 1 Shock Resistance <br>n1: Number of Material 1 required in schematic 
+</p><p>OQ2: Material 2 Overall Quality <br>Material 2 does not have a Shock Resistance <br>n2: Number of Material 2 required in schematic 
+</p><p>OQ3: Material 3 Overall Quality <br>SR3: Material 3 Shock Resistance <br>n3: Number of Material 3 required in schematic 
+</p><p align="center"><strong>(  (</strong> <u><strong>(</strong>(OQ1*n1) + (OQ2*n2) + (OQ3*n3)</u><strong><u>)</u> )</strong>   +   <strong>( <u>(</u></strong><u>(SR1*n1) + (SR3*n3)</u><strong><u>)</u> )  )</strong>       <br>    <strong>(</strong>n1+n2+n3<strong>) </strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>(</strong>n1+n3<strong>)</strong><br>_______________________________________________</p>
+<p align="center"><strong>( </strong>2 <strong>)</strong> </p>
+<p><strong>2. Experimental minimums and maximums</strong></p>
+<p>Experimental minimums and maximums are directly related to the average weighted quality of the resources used. Currently, the benefit gained from using each experimentation point is fixed at 7%, regardless of resource, although this will almost certainly change at some point in the future. </p>
+<p>1. Each point of experimentation placed into the object resulted in a 7% gain, regardless of material, as was expected. </p>
+<p>2. There is a fairly clear linear relationship between average material quality and starting/final percentages. The fit is not perfect, suggesting that there is a more complicated relationship at work, but this fit is very close (R2 = 99, n=6), which is good enough for pratical purposes. Any deviations are in the fractions of single percents and won't affect our work.</p>
+<p><b>Basic Equations:</b>
+<br>starting experimental percentage y = 0.0003x - 0.0369
+<br>max experimental percentage y = 0.001x - 0.0012
+<br>incremental gain: .07 (7%)
+</p><p><b>Ultimate equation:</b>
+<br><em>x = average material quality for the relevant attribute</em>
+<br>EM&gt;n = number of experimentation points spent
+</p><p>final attribute percentage = (0.0003x - 0.0369) + (n*(.07)), but capped at 0.001x - 0.0012</p>
+<p>Note that depending on how many experimentation points you have and the resource qualities, you may have points left over that can be spent in other areas.</p>
+<p><strong>3. Mapping experimental percentages to actual statistics</strong></p>
+<p>Here are the results of some tests that mapped percentages to actual base resistance statistics on various armor segments. Note that resource attributes are immaterial at this stage- all that matters is the final experimentation statistic. All that resource attributes do is adjust the starting point and the maximum up or down.</p>
+<p><em>a. maberi armorweave segment:</em>
+<br>11% - 1% resistance
+<br>25% - 2% resistance
+<br>53% - 3% resistance</p>
+
+<p><em>b. composite armorweave segment</em>
+<br>23% - 3% resistance
+<br>37% - 4% resistance
+<br>51% - 5% resistance
+<br>59% - 6% resistance&gt;
+<br>73% - 7% resistance</p>
+
+<p>Note that these are <em>not</em> absolute cut off points. They are limited by the starting points offered by the particular resource I was using. Using resources with different qualities will allow us to hone in on where the actual cut-off points are, which will enable us to better spend experimentation points (i.e.: not spending that last experimentation point in resistance, for example, if you know it will not put you over the cutoff to the next % of resistance). Of course, this assumes that there are discrete intervals of resistance. It is possible that there are decimals involved as well, but that they are hidden behind the scenes.</p>
+<p><strong>4. Armor resource attribute ratios </strong><br>When selecting resources for making armor, it is important to know which attributes are the most important. Fortunately, this is fairly simple, since experimental attributes are the same on all armors. </p>
+<p>Resists % is determined by --&gt; OQ and SR at a 50-50 ratio <br>HAM/encumberence cost --&gt; OQ and MA at a 50-50 ratio <br>Durability --&gt; OQ and UT at a 50-50 ratio </p>Examples: - <p></p>
+<p>- 1000 OQ + 1000 SR + 70 MA = Uber resists + mediocre HAM costs 
+<br>- 1000 OQ + 99 SR + 70 = mediocre resists + mediocre HAM costs
+<br>- 1000 OQ + 70 SR + 999 MA = mediocre resists + Excellent HAM costs
+<br>- 70 OQ + 999 SR + 1000 MA = mediocre resist + mediocre HAM costs
+<br>- 70 OQ + 70 SR + 70 MA = horrible resists + horrible HAM costs
+</p><p>The most powerful combination: High 900s of OQ + SR + MA + UT = this will yield the best stats for armor. As you can tell, it does not matter if one of the stats is really high but the other is terrible. It needs to be balanced. As a general rule of thumb, if two stats together = 1600, that's usually pretty good. Note that when you are performing these calculations, you need to take the stats of all resources into account at the ratios they are used. </p>
+<p><strong>5. Adding in segments</strong></p>
+<p>Once you have the base resist of the armor, you can add in segments. Note that segments provide a benefit to the armor over and above that of the basic resists- their resists are add-ons, not multipliers. Segments use the same ratios of quality / quantities of materials to determine the maximum effectiveness available. Once crafted, the segments are added to the totals provided by the armor experimentation to get the final values.</p>
+<p>Thus, if you had a 16% base segment, and created armor with the above materials, you should end up with a 48% base effectiveness composite helm (assuming you managed to hit the cap of 76% in Experimental Quality).</p>
+<p><strong>6. Layering</strong> </p>
+<p>Layers are a way to boost both the base resistances of a segment as well as the special resistances, but this benefit comes at the cost of greater encumbrance. This section discesses how to effectively use layers in such a way as to keep HAM costs low. </p>
+<p>Using good materials is pretty much a must. Find stuff with high malleability and high overall quality first and foremost. Pick a single damage type. Using multiple damage type layers on one piece of armor seems to lead to less desireable, less sliceable armor. Using more than one type of layer gives you less of a boost to the damage types, and since the layers move the resist to special protection, its going to stay there no matter what the slice does. This is why krayt scales are often not the best thing to place in armor, as they only leave one type of resist in base effectiveness, making effectiveness slices virtually useless. </p>
+<p>So pick one type, say - heat (one of the easiest to make). Find some good resources, throw together a layer... Use as many points as you can in "experimental durabilty" on the layer to get it down to 2-2-2 or thereabouts... 4-4-4 is decent, 6-6-6 is about the highest you'll want to go. (Keep in mind, the system isn't perfect, and sometimes if you have 8 possible points to put into durability, only 6 may be needed to get the layer down to its minimum H/A/M rating.) Hopefully, with decent materials, you'll be able to accomplish this using 6 or 7 points. The remaining points you can use to boost the resist % of the layer. At first the %'s may not look like much, but added up X3 they can be pretty significant. For this example, the heat layers are 5% heat 2% base (x3 = 15ish extra heat, 6ish extra base), which is a great setup if you can get 2-4 H/A/M on the pieces. The HAM costs of the heat layers are 3-3-3 (9/9/9 or so added on to the final piece). </p>
+<p>Make a LOT of layers... Then throw together a segment. This part is a little trickier, as the H/A/M costs's on the segment will throw you off a little bit and make you think it stinks, but proceed as normal - keeping in mind what your usual unlayered composite segment base effectiveness % is - and bring the base effectiveness (experimental quality) up at least on par with that. Unlayered adv comp segments can easily have a resist of 19%, but bumping it up even further for the few points it takes is well worth it, as segments, like actual armor pieces, dont benefit very much from durability(H/A/M) experimentation. In addition, the special protection given by the layer stacks ON TOP of the base effectiveness, so the higher the base, the higher the special. </p>
+<p>In our example, we bump the base effectiveness on the heat segs to 25%, put the last few points into H/A/M reduction, and it comes out at 25% base, 2541 integrity (very nice condition improvement) 19/19/21 ham (the unlayered examples are 9/9/11), 16% heat(clearly some decimal work going on here we dont see, cuz 5x3 != 16 ), 8% electrical. Blammo, make a bunch of segments (they eat up layers faaaast beware of this), and throw them together... With one amazing success on quality experimentation (4+4 points) and 2 points into H/A/M reduction, here's an example of how an Acid helmet came out: </p>
+<p>Composite Helmet Condition: 36818/36818 Special Protection: 
+</p><blockquote>Acid: 79.0% (77.0% without amazing suc.)<font color="yellowgreen"></font> Electricity: 67.0% </blockquote>Effectiveness: 
+<blockquote>*: 59.0% (57.0% without amazing suc.)</blockquote>Vuln: 
+<blockquote>Stun: -</blockquote>Encumberance: 
+<blockquote>Health: 46<font color="yellowgreen"></font> Action:43 Mind: 286 </blockquote>
+<p></p>
+<p>Without layers, these helmets are 53% bases, 60-something electrical, with a HAM of 34/31/281. Some versions of the helmets go as low as 40/40/281, some a bit higher like 48/45/289, all depending on the quality of the resources used in the layers. </p>There's an important lesson in this. Encumberance reduction via experimentation works similar to a slice. It's all a percentage. A reduction of 2 points on H/A/M brings the M on that helmet down from about 305 to 286(almost eliminating the M added by the layers) but the HA only drops 1 or 2 points. The same pretty much holds true on the chest/pants, so stick to making just those three pieces with layers. Using the layers on the smaller pieces with small ham hits, even with 2-2-2 layers, still make the suit way too heavy. But for a sacrifice of about 30 overall H/A/M, that is one killer set of armor. One important thing to note when doing this is that two layers with low HAM costs are better than one layer with a higher HAM cost. This seems to be due to the basic 1%/4% benefit you get when making the layer that makes multiples better than singles. One suggestion for an effective suit is to make an Acid special helm(scatter eye-shot), Heat special chest(fwg5 torso/stopping), and Energy special legs (carbine stuff). It just about covers the most popular damage types and the 3 targetable areas.<br><br>
+
+<strong>H. Standard Armor Templates</strong><br>
+<br>This section describes a variety of standard armor templates. Currently, all of them are composite templates, but there are other variations for different types of armor- kinetic layered padded and ubese are just two examples. Use these examples as guides for designing your own products.<br><br>
+<div> </div>
+<div>1. <i>Unlayered composite</i>: This is the first type of armor many new smiths will make and is a good mainstay even for experienced armorsmiths. It is fairly light, for composite, and can be made with an encumbrance that is wearable by most species even unsliced. Resists aren't spectacular, but with good resources they can easily hit 55% or higher.</div>
+<div> </div>
+<div>Resource selection: Focus on resources with high OQ/SR for both segments and the final combine.</div>
+<div> </div>
+<div>Experimental design: Place all experimentation points in Effectiveness for both segments and the final combine. Place any leftover points in Durability.</div>
+<div> </div><br><br>
+<div>2. <i>Standard triple-layered composite</i>: This is the standard medium weight armor and is the most practical way to get above 60% base resists. By using electricity layers a smith can avoid shifting any of the base resists into the special resist category, thus allowing a good slice to raise nearly all the resists. </div>
+<div> </div>
+<div>Resource selection: Focus on resources with high OQ/Mall for layers and high SR/OQ for segments and the final combine.</div>
+<div> </div>
+<div>Experimental design: Place all experimentation points in Durability for layers, with any leftover points being placed in Effectiveness. For the segments and the final combine, first place experimentation points in Effectiveness, then in durability.</div>
+<div> </div><br><br>
+<div>3. <i>Kinetic composite</i>: This is the first type of truly advanced armor. It is made by combining kinetic layers with advanced segments. The goal is to hit 80% kinetic resists while retaining as high an effectiveness, and as low an encumbrance, as possible.</div>
+<div> </div>
+<div>Resource selection: Choose resources that are balanced across OQ/SR and Mall, emphasizing the OQ. For high level smiths (11 or 12 experimentation points), focus first on resources with high Mall.</div>
+<div> </div>
+<div>Experimental design: For layers, you will need the Effectiveness + Kinetic resist to be around 10%. With high quality segment and final combine resources this can sometimes be as low as 7 or 8%. Careful experimentation with the smith's personal store of resources is necessary to determine the exact values. Place any leftover experimentation points in HAM. Advanced smiths may find it helpful to first experiment HAM as low as possible, then split their remaining points between special resists and effectiveness for the layers. Continue to experiment effectiveness first on both the segments and the final combine, placing any leftover points in durability.</div>
+<div> </div><br><br>
+<div>4. <i>Stun composite</i>: There are two forms of this armor, high stun composite and minimal stun composite. Minimal stun composite is useful because it remove stun as a vulnerability, allowing the armor to function as AP1 against stun weapons. This effectively reduces stun damage against AP0 weapons by 50%. High stun composite can have a stun resistance as high as 37% or so, although base resists will suffer somewhat, as will encumbrance costs.</div>
+<div> </div>
+<div>Resource selection: When making minimal stun composite, focus on OQ/Mallfor the layers. For high stun composite, emphasize SR/OQ. Continue to seek high OQ/SR resources for the layers and final combine. Don't forget you're going to need Crism Silcastic Ore and Vertex Crystalline Gemstone for the layers.</div>
+<div> </div>
+<div>Experimental design: For minimal stun composite, use only one stun layer and make the rest electric layers, all experimented primarily for encumbrance with any leftover points going into effectiveness. For high stun composite, first experiment the stun resistance on the layers, then place any leftover points in effectiveness. Segments and the final combine should be experimented as normal, with all points going first into effectiveness and then into durability.</div>
+<div> </div><br><br>
+<div>5. <i>Heavy Composite</i>: This type of armor can have base resists as high as 71% if you use good resources. While it is extremely heavy (upwards of 900 HAM is not uncommon), it can be sliced as high as 90% with a good effectiveness slice. It remains weak to stun damage, though. Generally it is made by using three blast layers, as these permit the use of ferrous metals, which have high SR's. </div>
+<div> </div>
+<div>Resource selection: Seek out resources with as high a SR/OQ as possible. Ideally both should be above 950 for the layers, although 900 is acceptable.</div>
+<div> </div>
+<div>Experimental design: Place all points into Effectiveness at all levels. Any remaining points should be placed into HAM. </div>
+<br><br><br>
+
+<div align="center"><b>Part III: Appendices</b></div>
+<strong>Appendix A: Frequently Asked Questions:</strong> <br>
+<br>
+<em>Is bone armor with 20% energy better than composite with 5% energy? </em><br>
+<br>
+Protection ratings are absolutes. A higher value is a higher value. Their
+meanings don't change based on the armor type. So in this case, the bone is
+better against energy. Although the maximum potential protection for composite
+is higher than bone, it is possible for lighter superbly made armor to protect
+better than a poorly made heavy one. <br>
+<br>
+<br>
+<em>I tried on some high level armor, and it had encumbrances so high, I
+couldn't wear it. Will I never be able to use that type of armor? </em><br>
+<br>
+Depending on the materials used and the skill of the smith, armor can have
+better or worse stats, and higher or lower encumbrances. That encumbrance can
+be further lowered by a slicer. If you shop around, you may find lower
+encumbrance armor that you're able to wear, or get a slicer to slice your
+existing armor. Also, stat-boosting food, spice, and medicine can allow you
+wear high-encumbrance armor. <br>
+<br>
+<br>
+<em>Is it a good idea to wear my armor all the time? </em><br>
+<br>
+Not if you do non-combat things that use Health, Action or Mind. The
+encumbrances lower your secondary attributes, thereby decreasing your
+regeneration rate and increase the cost for using abilities.<br>
+<br>
+<br>
+<em>Do Personal Shield generators work the same as armor? </em><br>
+<br>
+The attributes work the same as armor. There are some differences, however.
+Shields have no encumbrance penalties and act as a second layer of armor.
+Damage is first absorbed by the shield and whatever remains goes to the armor.
+Shields also have an innate protection again Stun damage which no other crafted
+armor has. The trade off, however, is that shields are extremely fragile. They
+wear out quickly, making it an expensive proposition to use them continuously. <br>
+<br>
+<br>
+<em>Do I get usage xp when other people use my armor?</em><br>
+<br>
+You get a small amount of usage xp when others wear your armor <i>provided</i> that you are online, nearby, and the person is taking damage. Currently you do not get any usage xp from PSG's.
+<br>
+<br><br>
+<em>Does a crafting station with a high "rating" do anything?</em><br>
+<br>
+There is absolutely no evidence that a crafting station with a higher rating works better than one with a lower rating, either in terms of fewer critical failures, more great successes, or better experimentation results. Numerous tests have been run on this and all have indicated the same thing: crafting station and tool rating above zero means nothing (it is inconclusive whether a rating below zero has any effect).
+<br><br><br>
+<em>What species have restrictions to wearing armor? </em><br>
+<br>
+Armor is technically clothing so it follows the same rules. Basically, Trandoshans can't wear boots and gloves and wookies can only wear wookie armor. There are a few other armor-type specific restrictions, including limitations on who can wear the RIS helm.<br>
+<br>
+<em>What is RIS Armor?</em><br>
+<br>
+RIS armor is a type of armor craftable only by Master Armorsmiths
+who complete a particular quest. The quest is given by a hermit on Dantooine who can be found at loc 6806 6022 on Dantooine (by the abandoned rebel base in the FAR NW corner) (props to EpocAmid for being the first to post his location and Drummerboychris for being the first to post on the Armorsmith board). Building the armor requires several rare components that drop off of mobs. These include: a Giant Dune Kimogila Scale [Lok],
+a Reclusive Gurk King Hide [Lok], a Woolamander Harrower Bone Fragment [Yavin
+IV], and a Peko Peko Albatross feather [Naboo].<br><br>
+<br>
+<em>What types of resources should armorsmiths/resource suppliers be on the lookout for?</em>
+<br>
+Armorsmiths need a huge variety of inorganic resources, more than can be easily listed here. For a complete listing, check the schematics on SWGCraft.com. Organics are easier to detail- all types of high OQ/SR/Mall wooly, scaley, leathery and bristley hides are needed, with wooly hides being the most important. Special organics include: Avian bones (tantel armor), Yavinian Wooly Hide, and Lokian Leathery Hide (Padded armor).<br><br>
+<br>
+<em>How long does it take to become a master armorsmith?</em><br>
+<br>
+Short answer: a long time. Even grinding straight up the tree takes a
+considerable amount of time. The analysis below is provided for informational
+purposes only and should not be attempted by anyone who wishes to retain their
+sanity.<br>
+<br>
+In order to complete all four Armorsmith skill lines using the fastest possible
+method (Armor Upgrade Kits until Personal Armor 3, then Ubese Armor Shirts*),
+you will need to use a total of 358,400 resources. Assuming you are making all
+of these items in practice mode, you will need to make 1,450 AUK's and 4,941
+Ubese Armor Shirts. <br>
+<br>
+If you use a high powered macro on an average computer and are good with a
+mouse, you can make do about eight combines a minute with a low error rate.
+Given one critical failure per eight combines, this works out to roughly seven
+combines per minute. This means that it will take you 913 minutes, or fifteen
+hours and thirteen minutes of solid crafting.<br>
+<br>
+In making these items you will need 14,500 units of chemical, 28,900 units of
+metal, 49,410 units of fiberplast, 98,820 units of iron and 148,230 units of
+steel. <br>
+<br>
+*You can substitute Mabari Chest Plates for the UAK's, but these require a
+larger variety of resources including a significant amount of hides and
+synthetic cloth from a factory crate.<br>
+<br><br>
+<em>What is the maximum resistance an armor can have?</em><br>
+<br>
+
+80% pre-slice. Any experimentation above this is wasted and will do nothing.
+Slicing the armor can raise it above this up to a max of 90%. Note that in order to achieve such high resists you need extraordinary
+resources (995+), a master armorsmith, high qual krayt dragon segments, layers,
+and someone who really knows what they're doing. In addition, this armor will
+probably have extremely high HAM costs. <br>
+<br>
+<br>
+<em>Where is the Advanced Tantel Segment in my schematic list?</em><br>
+<br>
+It doesn't exist<br>
+<br><br>
+<strong>Appendix B: Grinding Macro</strong><br>
+<br>
+This is one variation on the grinding macro. You will need to play with it to
+adapt it to your own use.<br>
+<br>
+/ui action toolbarSlot01; /selectDraftSchematic 47; /pause 20; /nextC; /nextC;
+/nextC; /createPrototype practice no item; /createPrototype practice no item;
+/pause 3; /ui action toolbarSlot02; /selectDraftSchematic 47; /pause 20;
+/nextC; /nextC; /nextC; /createPrototype practice no item; /createPrototype
+practice no item; /pause 3; /ui action toolbarSlot03; /selectDraftSchematic 47;
+/pause 20; /nextC; /nextC; /nextC; /createPrototype practice no item;
+/createPrototype practice no item; /ui action toolbarSlot00;<br>
+<br>
+With the macro in the first toolbar slot and three armor crafting tools in the
+next three slots. This macro opens each of the tools in turn, selects the
+schematic for Mabari chest plate, gives you 20 seconds to select the resources,
+and then makes the item in practice mode. So you get the 5% experience bonus,
+and no Mabari chest plate. <br>
+<br>
+After the third tool, the macro calls itself, thereby starting again at the
+first tool. If you make something less complicated (You need 14 double-clicks
+for the resources of the Mabari chest plate), you can make the pause for adding
+the resources shorter, but then you might need to add a 4th tool and macro part
+for it.<br>
+<br><br>
+<strong>Appendix C - Looted items and their effects</strong><br>
+<br>
+
+<strong>1. Difference between looted segment enhancers and segments</strong><br>
+<br>
+Segment enhancers are items that you can put into a segment that will give it a
+bonus of some sort. Examples of these include Krayt scales. Currently, many of
+the segment enhancers are bugged.<br>
+<br>
+Segments are items that can be placed directly into a suit of armor. They tend
+to have different bonuses that the normal segments you can make for your suits.
+For example, a Voritor Lizard Hide Segment can be placed into a suit of bone
+armor and will grant the bone armor both an energy special resist and a kinetic
+special resist (normal bone armor is vulnerable to kinetic). Segments are tied
+directly to a particular type of armor and can only be used when crafting that
+armor.<br>
+<br>
+<br>
+How will looted segments affect the armor I make? Lets take these variables
+using a segment of Krayt armor.<br>
+<br>
+<strong>Y</strong> = Your composite segment base effectiveness %<br>
+<br>
+<strong>K</strong> = Krayt segment base <br>
+effectiveness %<br>
+<br>
+<strong>R</strong> = Your Composite Armor resist % using your composite
+segments<br>
+<br>
+<strong>X</strong> = Your Krayt Composite Armor resist %<br>
+<br>
+and apply them to this formula...<br>
+<br>
+<strong>X = R + (K - Y)</strong><br>
+<br>
+For example, a while back before my server had colat iron, my composite
+segments were 9%. the resist % on my composite was 42%. Using a 10% krayt
+segment, i got 43% composite (sometimes 44). So basically add the difference
+between your segment and the krayt segment to your usual resist %, and you will
+find your answer. If you are using advanced segments normally, its most likely
+going to be more than 10%, which makes those *somewhat* useless. Of course,
+lower HAM values may make Krayt segments more valuable.<br>
+<br>
+<br>
+<strong>2. Current list of dropped segments/segment enhancers</strong><br>
+<br>
+These are all the known lootable items that can be used when crafting armor. <b>Enhancements</b> are placed in the 'enhancement' slot when making segments, while <b>segments</b> are used in place of crafted segments when doing the final assembly of the armor. Note that enhancements are generally not armor-specific while segments are. Also, don't forget that when crafting armor with lootable components you need to make sure you use items with the same serial number- this is especially important when using enhancements, as it means that you need to do a factory run of segments using your enhancements to make any item other than a pair of gloves.  This list describes just the basic items. Exceptional and Legendary drops may have higher resists or lower HAM costs. <br><br>
+*Note: if you acquire a lootable component with stats that are lower than those listed below, please post the stats in this thread. <br><br>
+<strong>Segments</strong>
+
+<p></p>
+<ul>
+<li>Ackley Hide</li><ul>
+<li>Used in: Padded</li>
+<li>Dropped by: Ackley</li>
+<li>Location: Geonesian Caves (Yavin IV)</li>
+<li>Base Effectiveness: 15%</li>
+<li>Integrity: 31,200</li>
+<li>Health Encumbrance:</li>
+<li>Action Encumbrance:</li>
+<li>Mind Encumbrance:</li>
+<li>Heat Special Resist: 12%</li>
+<li>Energy Special Resist: 19%</li></ul>
+
+<li>Brackaset Plate Segment</li>
+<ul>
+<li>Used in: Chitin</li>
+<li>Dropped by: Brackasets</li>
+<li>Location: Dathomir </li>
+<li>Base Effectiveness: 4% </li>
+<li>Integrity: 650 </li>
+<li>Health Encumbrance: 20 </li>
+<li>Action Encumbrance: 20 </li>
+<li>Mind Encumbrance: 24 </li>
+<li>Blast Special Resist: 4%</li></ul>
+<li>Fambaa Hide Segment </li>
+<ul>
+<li>Used in: Padded </li>
+<li>Dropped by: Fambaa </li>
+<li>Location: Naboo </li>
+<li>Base Effectiveness: 5% </li>
+<li>Integrity: 450 </li>
+<li>Health Encumbrance: 13</li>
+<li>Action Encumbrance: 13 </li>
+<li>Mind Encumbrance: 16 </li>
+<li>Cold Effectiveness: 4% </li></ul>
+<li>Kimogila Scale Segment </li>
+<ul>
+<li>Used in: Bone </li>
+<li>Dropped by: Kimogilas </li>
+<li>Location: Lok </li>
+<li>Base Effectiveness: 8% </li>
+<li>Integrity: 750 </li>
+<li>Action Encumbrance: 12 </li>
+<li>Mind Encumbrance: 6 </li>
+<li>Heat Special Resistance: 3-7% </li>
+<li>Cold Special Resistance: 3-7% </li></ul>
+<li>Kliknick Chitin Armor Segment </li>
+<ul>
+<li>Used in: Chitin </li>
+<li>Dropped by: Kliknicks (Queens?) </li>
+<li>Location: Yavin IV </li>
+<li>Base Effectiveness: 3% </li>
+<li>Integrity: 500 </li>
+<li>Health Encumbrance: -7</li>
+<li>Action Encumbrance: -7 </li>
+<li>Mind Encumbrance: -7 </li></ul>
+<li>Krayt Dragon Composite Armor Segment </li>
+<ul>
+<li>Used in: Composite </li>
+<li>Dropped by: Krayt Dragons </li>
+<li>Location: Tatooine </li>
+<li>Base Effectiveness: 10% </li>
+<li>Integrity: 5000 </li></ul>
+<li>Rancor Hide Segment </li>
+<ul>
+<li>Used in: Padded</li>
+<li>Dropped by: Rancors</li>
+<li>Location: Dathomir</li>
+<li>Base Effectiveness: 12%</li>
+<li>Integrity: 2500</li>
+<li>Health Encumbrance: 20</li>
+<li>Action Encumbrance: 15</li>
+<li>Mind Encumbrance: 20</li>
+<li>Heat Special Resistance: 15%</li>
+<li>Cold Special Resistance: 15%</li>
+</ul>
+<li>Sharnaff Plating Segment </li>
+<ul>
+<li>Used in: Chitin </li>
+<li>Dropped by: Sharnaffs </li>
+<li>Location: Corellia </li>
+<li>Base Effectiveness: 15% </li>
+<li>Integrity: 800 </li>
+<li>Health Encumbrance:</li>
+<li>Action Encumbrance: 24 </li>
+<li>Mind Encumbrance: 28 </li>
+<li>Cold Effectiveness: 5% </li>
+<li>Heat Effectiveness: 5% </li>
+<li>Acid Effectiveness: 5% </li></ul>
+<li>Voritor Lizard Hide Segment </li>
+<ul>
+<li>Used in: Bone </li>
+<li>Dropped by: Voritor Dashers, Trackers, Hunters </li>
+<li>Location: Dantooine </li>
+<li>Base Effectiveness: 5% </li>
+<li>Integrity: 500 </li>
+<li>Action Encumbrance: 15 </li>
+<li>Mind Encumbrance: 8 </li>
+<li>Energy Effectiveness: 5% </li>
+<li>Kinetic Effectiveness: 6% </li></ul></ul>
+<p><strong>Segment Enhancers</strong></p>
+<ul>
+<li>Brackaset Plates </li>
+<ul>
+<li>Dropped by: Brackasets </li>
+<li>Location: Dathomir </li>
+<li>Action Encumbrance: 3
+</li><li>Action Encumbrance: 3 </li>
+<li>Mind Encumbrance: 3 </li>
+<li>Blast Effectiveness: 3%</li></ul>
+<li>Fambaa Hide </li>
+<ul>
+<li>Dropped by: Fambaas </li>
+<li>Location: Naboo </li>
+<li>Health Encumbrance: 3</li>
+<li>Action Encumbrance: 3</li>
+<li>Mind Encumbrance: 3 </li>
+<li>Cold Effectiveness: 3</li></ul>
+<li>Janta Hide </li>
+<ul>
+<li>Dropped by: Janta tribemembers </li>
+<li>Location: Dantooine </li>
+<li>Base Effectiveness: 3%</li></ul>
+<li>Kimogila Scales </li>
+<ul>
+<li>Dropped by Kimogilas </li>
+<li>Location: Lok </li>
+<li>Health Encumbrance: 4</li>
+<li>Action Encumbrance: 4 </li>
+<li>Mind Encumbrance: 4 </li>
+<li>Heat Special Resist: 4% </li>
+<li>Cold Special Resist: 4% </li></ul>
+<li>Krayt Dragon Scale </li>
+<ul>
+<li>Dropped by: Krayt Dragons </li>
+<li>Location: Tatooine </li>
+<li>Krayt scales will have a variety of special resists ranging from 4-8% on a basic scale. An example is given below.</li>
+<li>Cold Special Resist: 4% </li>
+<li>Blast Special Resist: 5% </li>
+<li>Energy Special Resist: 7% </li>
+<li>Acid Special Resist: 8% </li>
+<li>Kinetic Special Resist: 4% </li>
+<li>Heat Special Resist: 6% </li></ul>
+<li>Nightsister Shard</li>
+<ul>
+<li>Dropped by: Nightsisters</li>
+<li>Location: Dathomir </li>
+<li>Action Encumbrance: -10</li>
+<li>Mind Encumbrance: -10</li>
+</ul>
+<li>Nightsister Layer</li>
+<ul>
+<li>Dropped by: Nightsisters</li>
+<li>Location: Dathomir </li>
+<li>Base Resist: 3%</li>
+<li>Action Encumbrance: -10</li>
+<li>Note: these are layers and are used in the 'layer' slot when used in segments</li></ul>
+<li>Rancor Hide </li>
+<ul>
+<li>Dropped by: Rancors </li>
+<li>Location: Dathomir </li>
+<li>Base Effectiveness: 2% </li>
+<li>Integrity: 1000 </li>
+<li>Health Encumbrance: 10
+</li><li>Action Encumbrance: 8 </li>
+<li>Mind Encumbrance: 10 </li>
+<li>Energy Special Resist: 5% </li>
+<li>Kinetic Special Resist: 5% </li></ul>
+<li>Reinforced Kliknik Shell</li>
+<ul>
+<li>Dropped by: Enhanced Klikniks </li>
+<li>Location: Geonesian Cave, Yavin IV </li>
+<li>Base Effectiveness: 17% </li>
+<li>Integrity: 6550 </li>
+<li>Health Encumbrance: -18
+</li><li>Action Encumbrance: -8 </li>
+<li>Mind Encumbrance: -10 </li>
+</ul>
+
+<li>Sharnaff Plates </li>
+<ul>
+<li>Dropped by: Sharnaff </li>
+<li>Location: Corellia </li>
+<li>Health Encumbrance: 0</li>
+<li>Action Encumbrance: 6</li>
+<li>Mind Encumbrance: 5</li>
+<li>Cold Special Resist: 5%</li>
+<li>Heat Special Resist: 3%</li>
+<li>Acid Special Resist: 2%</li></ul>
+<li>Voritor Lizard Scales </li>
+<ul>
+<li>Dropped by: Voritor Dashers, Trackers, Hunters </li>
+<li>Location: Dantooine </li>
+<li>Health Encumbrance: 5</li>
+<li>Action Encumbrance: 5 </li>
+<li>Mind Encumbrance: 5 </li>
+<li>Energy Effectiveness: 3% </li>
+<li>Kinetic Effectiveness: 4%</li></ul></ul>
+<br><br>
+<strong>Geonesian Power Cubes</strong><br>
+Geonesian Power Cubes are used in certain schematics dropped as loot from the Geonesian Caves, specifically, the Integrated RIS segment and Ackley Bone Armor. They can have a variety of different effects.<br>
+<ul><li>Green Power Cube</li>
+<li>Red Power Cube</li>
+<li>White Power Cube</li><br><br></ul>
+
+<br><br>
+
+<p><strong>Appedix D: Special Armors and Quests<br><br></strong><i>1. Imperial PSG Prototype</i><br>The Imperial PSG Prototype can be obtained as a schematic by any member of the Imperial faction. To receive the schematic you must complete three quests given by a doctor in the Imperial Outpost on Dantooine. Once you have received the schematic (it will appear in your datapad), you may trade it to another player (you do not need to be an imperial to receive or craft the schematic; only to do the quest). While each schematic has only five uses, a master armorsmith can make a factory schematic while crafting and thereby make runs of 332 Imperial Prototype PSG's at a time (runs are limited to 332 because one of the ingrediant slots calls for 3 identical components). The stats of the Imperial PSG Prototype are vastly better than even a Mk. 3. Using good resources (note that only the resource quality of the resources used in the final assembly (not the subcomponents) matters), one possible experimentation route can produce a PSG with 47% base resists, 39% energy resists and 2787 durability. The key resource used in the prototype PSG's is ditanium steel.<br><br><i>2. RIS Armor</i><br>RIS armor is one of the most difficult items to obtain in the game. Most master armorsmiths will never see even a single piece of RIS. That said, RIS suffers from both Acid and Stun vulnerabilities, and is more of a show-piece than an useful armor type. It is possible to make RIS armor that is light and has a very high kinetic resist, but given the extraordinary difficulty of obtaining it, no rational person would ever use it in PvE combat. If you do ever succeed in obtaining the components and assembling a full suit you will definitely have major bragging rights. <br><br>RIS quest: The RIS quest may only be undertaken by a master armorsmith. You must seek out the hermit armorsmith on Dantooine (-6806 6022) and must assemble several items for him. These items require the ultra-rare RIS components and some very rare resources. See Appendix G for a listing of the resources required for RIS. The special components may be found on: Naboo (Peko-Peko albatross feather), Lok (Giant Dune Kimogila Scale and Gurk King Hide) and Yavin IV (bone shard from a Woolymander Harrower, found in the Woolymander temple). Once you have completed the quest (which requires one peko peko feather, two woolymander harrower shards, two gurk king hides and one giant dune kimogila scale, you get all the schematics. To make a single piece of RIS armor you will need a gurk king hide, woolymander shard, and giant dune kimo scale, as well as the necessary resources. <br><br>Interwoven RIS Segment (Schematic)<br>How obtained: Looted from Acklay, Geonosian Cave<br>Uses: 5<br>Requirements: Resources: 160 Titanium Aluminum (same), 160 Chanlon Intrusive Ore (same), 75 Yavinian Animal Bone<br>Required: 1 Geonosian Power Cube<br>Optional: 3 Armor Layer Slots, 1 Armor Enhancement Slot<br>Properties: Complexity 33 (Regular is 30)<br>Special Limitations and properties: Unknown<br><br><i>3. Interwoven Bone Armor Segment Schematic</i><br>This is a schematic dropped by Ackley, the boss of the Geonesian caves. Very little is known about it, other than it produces high quality bone armor, requires a Geo power cube, and can take up to two layers and one enhancement.<br><br><i>4. Marauder Armor</i><br>This armor is obtained from a series of quests on Endor. The quest rewards were bugged for a while; reports have come in that they sometimes work now.<br><br><strong>Appendix E: Critical Bugs</strong><br><br>Before purchasing or making a suit of armor, it is important to recognize the current bugs that may prevent it from having its full effectiveness. Below are some of the current critical bugs. Be sure and check the SOE armorsmithing profession board for the must up to date information on armor bugs.<br><br><strong>Armor Hole</strong><br><br>The original armor hole, relating to wearing certain items such as backpacks and belts and discovered by EnragedMonkey, has apparently been fixed by the Devs. There were also reports of a second armor hole that is unrelated to the one discovered by EngragedMonkey, but the Devs have managed to fix this as well.<br><br><strong>Personal Shield Generator and Tantel Armor resists shifts</strong><br><br>The resists on both PSGs and Tantel armor used to shift randomly for no apparent reason. One theory is that they shifted when you log/cross a server boundary. Regardless of the reason, this bug was very frustrating if you just purchased a PSG with the general resists you want (most commonly one with kinetic or stun resists) and it morphed into one with cold and electricity resists. The only solution was to carry several independently made PSGs and equip the one that has the resists you want at that time. Some time ago the Devs fixed the vuln shift issue and now PSG's all possess the resists they were originally supposed to have (i.e.: vuln to kinetic, blast and acid damage).<br><br><strong>Armor not working when you cross server boundaries</strong><br><br>If you have your armor equipped, sometimes it will stop working after you cross a server boundary. One way to avoid this problem is to use an armor macro and only don your armor when you are being targeted by an enemy. Removing and re-equipping your armor *may* solve this problem.<br><br><strong>Special resists not providing additional protection against AP weapons of that damage type</strong><br><br>Recent testing has indicated that special resists do not provide an additional bonus against AP weapons of that damage type. The previous understanding of special resists was that even if the armor was struck by an AP weapon, if the armor had a special resist against that damage type the Armor Piercing nature of the weapon would be nullified. This is not the case, although it may be fixed/changed in a future patch. <br><br><strong>PSGs do not function against AP weapons</strong><br><br>Personal Shield Generators do nothing against armor piercing weapons. This may or may not be a bug, but be aware that your PSG will do nothing (not even function as light armor) against that sniper with a T-21.<br><br><strong>PSGs are fragile</strong><br><br>This is not a bug; the low durability of PSG's is intentional. The consensus is that PSGs have a very low condition to balance out the fact that they have zero HAM costs, cover the entire body with just one piece, and are easier to make than most pieces of armor (six components, all within the armorsmithing/artisan line, and no rare resources). It is unlikely that this will be adjusted. Note that it is now possible to create Imperial Prototype PSG's, which have a much higher durability than standard PSG's.<br><br><strong>Lightsaber Resists</strong><br><br>There are currently no types of armor that are resistant to Lightsaber damage. This includes PSG's. Sometimes PSG's will display a resistance to Lightsaber damage while they are in crates or on a vendor, but will suddenly become vulnerable again when removed from the crate/purchased. There are conflicting statements from the Devs as to whether PSG's are supposed to be vulnerable to Lightsaber damage, so currently the future status of this issue is uncertain.<br><br><b>Appendix F: Armorsmith Trainers</b><br><br>Corellia Bela Vistal 6872, -5429<br>Tatooine Bestine -1245, -3505<br>Corellia Doaba Guerfel 3127, 5291<br>Talus Dearic 351, -2867<br>Talus Dearic 599, -3070<br>Naboo Kaadara 5139, 6813<br>Naboo Keren 1801, 2565<br>Naboo Keren 1890, 2767<br>Corellia Kor Vella -3164, 2791<br>Corellia Kor Vella -3701, 3071<br>Naboo Moenia 4792, -5000<br>Tatooine Mos Eisley 3349, -4691<br>Tatooine Mos Entha 1247, 3248<br>Tatooine Mos Entha 1302, 3394<br>Tatooine Mos Espa -3073, 2057<br>Rori Narmle -5025, -2417<br>Rori Narmle -5248, -2358<br>Talus Nashal 4275, 5102<br>Rori Restuss 5370, 5608<br>Naboo Theed -5465, 3996<br>Corellia Tyrena -5118, -2337<br>Corellia Tyrena -5521, -2666<br>Corellia Coronet City 37, -4455<br>Rori Rori Rebel Military Outpost 3676, -6419<br>Naboo Dee'ja Peak 4770, -1274<br>Dantooine Abandoned Rebel Base -6947, 5614<br><br><strong>Appendix G: Resources Required for Armorcrafting</strong><br><br><strong>Composite Armor needs<br></strong>Intrusive Ore<br>Known Solid Petro. Fuel<br>Naboo Fiberblast<br>Aluminum<br>Beyrllis Copper<br>Wooly Hide<br>Metal<br>Steel<br>Colat Iron(Advanced)<br>Kiirium Steel(Advanced)<br>Synthetic Cloth (tailor made)(fibroplast, polymer)<br>Reinforced Fiber Panel (tailor made)(fibroplast, metal, polymer)<br><br><b>Ubese Armor needs</b><br>Iron<br>Steel<br>Leathery Hide<br>Neutronium Steel<br>Polymer<br>Wooly Hide<br>Fiberblast<br>Axidite Iron(advanced)<br>Neutronium Steel(more for advanced)<br>Fiberblast Panel (tailor made)(fibroplast, metal)<br>Reinforced Fiber Panel (tailor made)<br><br><b>Personal Shield Generators (MK 2 &amp; 3 needs)</b><br>Low Grade Ore<br>Metal<br>Iron<br>Copper<br>Steel<br>Non-Ferrous Metal<br>Armophous Gemstone<br>Crystalline Gemstone<br>Power Conditioner (master artisan made)<br>Energy Distributor (master artisan made)<br><br><b>Layers (All) needs:</b><br>Non-Ferrous Metal<br>Ferrous Metal<br>Metal<br>Copper<br>Aluminium<br>Intrusive Ore<br>Carbonate Ore<br>Siliclastic Ore<br>Low Grade Ore<br>Polymer<br>Crystalline Gemstone<br>Armophous Gemstone<br>Skevon Reactive Gas<br>Known Inert Gas<br>Vertex Crystalline Gemstone<br><br><b>RIS Armor needs:</b><br>Titanium aluminum<br>Chanlon Intrusive ore<br>Rori Fibroplast<br>Polysteel Copper (layer)<br>Laboi Crystalline Gemstone (layer) <br>Oridium Intrusive Ore (layer)<br>vedusii crystal amorphous gemstone<br>known solid petrochemical fuel <br>talusian fiberplast<br>chromium aluminum<br>platinite copper<br>rori wooly hide<br>Woolymander Bone Fragment<br>Gurk King Hide<br>Peko-Peko Albatross Feather (layer)<br>Giant Dune Kimogila Scale<br><br><br><b>Appendix H: Gated Resources</b><br><strong></strong></p>
+<p><strong>Beryllius Copper</strong> MA 594-683 SR 404-468 UT 394-475</p>
+<div></div>
+<div><strong>Colat Iron</strong> MA 279-396 SR 678-797 UT 678-796</div>
+<div></div>
+<div><strong>Kiirium Steel</strong> MA 65-93 SR 536-604 UT 448-537</div>
+<div></div>
+<div><strong>Metal</strong> MA 4-1000 SR 4-1000 UT 998</div>
+<div></div>
+<div><strong>Polymer</strong> MA 6-999 SR 38-999 UT 17-991</div>
+<div></div>
+<div><strong>Amorphous Gemstone</strong> MA: 7-597 SR: 13-995 UT: 4-997</div>
+<div></div>
+<div><strong>Known Inert Gas</strong> MA: N/A SR: N/A UT: N/A</div>
+<div></div>
+<div><strong>Low-Grade Ore</strong> MA: 7-999 SR: 1-999 UT: 5-999</div>
+<div></div>
+<div><strong>Ferrous Metal</strong> MA: 1-598 SR: 406-998 UT: 5-999</div>
+<div></div>
+<div><strong>Crism Siliclastic Ore </strong>SR: 177-316 MA: 500-674 UT: 202-385</div>
+<div><strong>Vertex Crystalline Gemstone </strong>SR: 911-998 MA: 339-397 UT: 889-967</div>
+<div></div>
+<div><strong>Crystalline Gemstone</strong> SR: 326-998 MA: 2-397 UT: 315-967</div>
+<div></div>
+<div><strong>Skevon Reactive Gas</strong> SR: N/A MA: N/A UT: N/A</div>
+<div></div>
+<div><strong>Aluminum</strong> SR: 7-900 MA: 5-996 UT: 8-898</div>
+<div></div>
+<div><strong>Carbonate Ore</strong> SR: 23-687 MA: 309-996 UT: 219-994</div>
+<div></div>
+<div><strong>Copper</strong> SR: 312-797 MA: 509-999 UT: 301-800</div>
+<div></div>
+<div><strong>Siliclastic Ore</strong> SR: 7-570 MA: 310-994 UT: 15-981</div>
+<div></div>
+<div><strong>Intrusive Ore</strong> SR: 522-980 MA: 15-593 UT: 422-995</div>
+<p><br><br>The following lists give the resource ranking - from high class to low class. Note that these ranking apply to all the stats other than OQ. <br><br><u>Crystalline Gemstone:</u><br>Vertex<br>Laboi Mineral<br>Sormahil Fire Gem<br>Seafah Jewel<br>Kerol Fire-Gem<br>Green Diamond<br>Gallinorian Rainbow<br>Byrothsis<br><br><u>Amorphous Gemstone:</u><br>Bal'ta'ran Crystal<br>Vendusii Crystal<br>Stygium<br>Sedrellium<br>Ryll<br>Rudic<br>Plexite<br>Regvis<br>Baradium<br>Bospiridium<br><br><u>Siliclastic Ore:</u><br>Tertian<br>Robindun<br>Malab<br>Crism<br>Cortosis<br>Ardanium<br><br><u>Carbonate Ore:</u><br>Zinsiam<br>Varium<br>Ostrine<br>Lommite<br>Frasium<br>Chromite<br>Barthierium<br>Alantium<br><br><u>Extrusive Ore:</u><br>Vintrium<br>Quadrenium<br>Pholokite<br>Maranium<br>Lidium<br>Keschel<br>Kalonterium<br>Ilimium<br>Chronamite<br>Bene<br><br><u>Instrusive Ore:</u><br>Katrium<br>Ionite<br>Hollinium<br>Dylinium<br>Oridium<br>Derillium<br>Corintium<br>Chanlon<br>Berubium<br><br><u>Copper:</u><br>Polysteel<br>Platinite<br>Mythra<br>Kelsh<br>Diatium<br>Codoan<br>Beryllius<br>Thallium<br>Desh<br><br><u>Aluminium:</u><br>Phrik<br>Link-Steel<br>Duralumin<br>Chromium<br>Agrinium<br>Titanium<br><br><u>Steel:</u><br>Duralloy<br>Carbonite<br>Quadranium<br>Ditanium<br>Duranium<br>Neutronium<br>Thoranium<br>Cubirian<br>Kiirium<br>Rhodium<br><br><u>Iron:</u><br>Kammris<br>Doonium<br>Dolovite<br>Colat<br>Bronzium<br>Axidite<br>Polonium<br>Plumbum<br><br><u>Inert Gas:</u><br>Rethin<br>Obah<br>Mirth<br>Methanagen<br>Korfaise<br>Kaylon<br>Hurlothrombic<br>Dioxis<br>Culsion<br>Corthel<br>Bilal<br>Malium<br>Hydron-3<br><br><u>Reactive Gas:</u> <i>(note that this ranking might be a bit off since the range bands are quite large)</i><br>Tolium<br>Sig<br>Skevon<br>Orveth<br>Methane<br>Irolunn<br>Eleton</p>
+<p><strong>Appendix I - Death Watch Bunker Guide v1.1</strong></p>
+<p>This is a guide that Gair wrote to help everyone with the Death Watch Bunker on Endor. It is a work in progress. There are NO screenshots. I could add screenshots, but that would be making it too easy </p>
+<p></p>
+<hr>
+
+<p></p>
+<p></p>
+<p>This guide is to try and help everyone craft Mandalorian Armor. As alot of people know I led the first group on Live servers to successfully and unsuccessfully craft a helmet. I'll try to guide you through making it without getting bugged like we did. This guide will not be completely comprehensive. I will expect you guys to at least know the waypoints, and have a general idea where some of these places are. It is not going to be handed on a silver platter.</p>
+<p><font color="#6666ff">How to get in?</font></p>
+<p>You need to have completed the Jabba theme park, and talk to Boba Fett. He will give you permission into the bunker. If you have not done these missions, then you can group with someone who has. For both of you to get access, when you go in the first door around the corner. You will see a Door Terminal. When the person with the quest completed uses the terminal it will "Unlock" the bunker entrance.</p>
+<p><font color="#6699ff">Sections &amp; Keys:</font></p>
+<p>The bunker is setup in 4 sections. The exterior, Section A, Section B, and the Mine Section. You will need 3 different keys in order to continue to each of the 3 section. Each section key can be found by locating their allocated door terminals. How to access the Exterior section, please look above at "<em>How to get in</em>?". When the terminal is attempted to "unlock" the door. It will notify security, in which a bloodguard or a ghost will come down to investigate. As soon as this individual is attacked, he will then call for reinforcements. When the reinforcements arrive, you then attack him; which then in turn calls for the keymaster. The keymaster as I call him, is someone who has no title, just a name. After killing this guy, and looting him. You will be given the section keypass to the door terminal you had just tried to unlock. Keymasters look just like Death Watch Wraiths and have identical resistances.</p>
+<p><font color="#6699ff">Mandalorian Forges</font>:</p>
+<p>There are three different forge rooms. These will be split up into their allocated profession. Every peice of armor requires 4 components. The peice you are crafting (the helmet) , Alum Mineral, Protective Coating, and Binary Liquid. The Bounty-Hunter armor itself CANNOT be looted from within the bunker. Only the random Black Sun spawns that are located outside the bunker loot armor. The 3 professions required to get inside the forge are Master Tailor, Master Armorsmith, Master Droid Engineer.</p>
+<div>Master Tailor = Leggings, Gloves, and Belt.</div>
+<div>Master Droid Engineer = Bracers, Helmet. (Jetpack crafting station is inside the Master Droid Engineer forge room.)</div>
+<div>Master Armorsmith = Bicepts, Boots, and Chestplate.</div>
+<div>Master Artisan = Jetpack</div>
+<p>Components:</p>
+<div>Armor &amp; Jetpack Base - looted off random Black Sun spawns (yavin, endor, dath)</div>
+<div>Alum Gel - npc bunker loot (used to modify rebreathers in Section B)</div>
+<div>Protective Coating - Death Watch Overlord, Death Watch Wraiths, Death Watch Ghosts</div>
+<div>Alum Mineral - The miner's quest within the mine.</div>
+<div>Binary Liquid - Death Watch Overlord, Death Watch Wraiths, Death Watch Ghosts</div>
+<div>Jetpack Components - Looted from containers inside the bunker. The jetpack base is looted from Black Sun spawns outside of the bunker.</div>
+<p>Other Misc Bunker Loots: DE-10 Schematic , Executioner's Axe Schematic, Crates of Art, DE-10 Pistol Barrels, Transmission Disks, Datastorage Units.</p>
+<div></div>
+<div></div>
+<div><font color="#6699ff"></font></div>
+<div><font color="#6699ff">Finding Section A</font>:</div>
+<div></div>
+<div>After unlocking the first door terminal, and proceeding through the adjacent door. Moving right through this next room will give you a dead end with either left or right. Proceed left here, down the ramp. Once in the next room you will want to hang another left. This route will eventually lead you to an open room with some harmless droids in the center. The door you entered this room in, directly to your left is the door terminal to Section A. The door right next to the terminal, is the locked Section A door.</div>
+<div></div>
+<div><font color="#6699ff">Finding Section B</font>:</div>
+<div></div>
+<div>Going through the Section A door, you will want to take that first left, down the long hallway. Follow this all the way to the end, until you get to the open room. In this open room, there is a technician you can talk to who will tell you what professions are needed to craft Mandalorian (incase I eh'um, accidently mixmatched professions with peices). Once you enter this room, keep going straight through the door directly infront of you across the room. This will lead down a series of ramps, into another large room. Once you are in this large room, directly across infront of you is the Section B door terminal. The door right next to this terminal is not the Section B door, but if you go through this door into the next room, the door straight across (next to the coal bin), is the Section B door. There is another way to get to Section B, but this route directly runs into the door terminal.</div>
+<div></div>
+<div><font color="#6699ff">Finding the Mines</font>:</div>
+<div></div>
+<div>Proceeding through the Section B door, there is a down ramp right infront of you. Take it all the way to the bottom, through the glassed entrance and hang a right. After going through the next door, hang your first left that goes down another ramp. At the bottom of this ramp to your right is the locked mine entrance. To open this door, you will take a left. Once you go around that corner you will see a very long hall. At the very end of this hall is the Mine terminal. Once you have obtained the key, you can then unlock the terminal and proceed back to the locked door.</div>
+<div></div>
+<div><font color="#6699ff">Navigating through the Mines</font>:</div>
+<div></div>
+<div>For the sake of difficulty, I will entail 2 directions. The first direction is maintaining all Left hand turns. This will lead you to the Miner's Quest. Proceeding at the entrance to take all right hand turns, (besides where the mine rats are, you take a left) will eventually run into the first forge door. I won't go into specifics, it is up to you guys to figure this area out on your own. The mine gas will not harm people buffed, but unbuffed people will have a devestating toll.</div>
+<div></div>
+<div><font color="#6699ff">Crafting a Mandalorian Helm</font>:</div>
+<div></div>
+<div>Once you find the Mandalorian Droid Engineer Forge door. You will proceed through the glass door, up the ramps to the very top. The jetpack crafting station is on the second floor, as the mandalorian forge is on the third. You will want to protect your crafter at all costs. I suggest not entering the forge aggro'd, and not crafting with him aggro'd either. Once he inserts the first peice (the helm), a bunch of guys will spawn. Protect him at all costs! If he dies, the mission could potentially get bugged at any point, even if he hasn't crafted yet. You will be given a series of instructions that are self explanitory. For instance, inserting the rest of the peices and it will automatically craft for you. There is another guide that goes through this more indepth, i suggest finding that and reading it. As far as we know, there is no order in which you input the components. This stage is not very hard, it is more of a matter of protecting your crafter. You will only need the 4 components I listed in <font color="#6699ff">Mandalorian Forges</font>. You do not need a crafting tool or any resources.</div>
+<div></div>
+<div><font color="#6699ff"></font></div>
+<div><font color="#6699ff">The Miner's Quest</font>:</div>
+<div></div>
+<div>This is one of the hardest quests within this game. If there is one that is harder, i simply have not found it yet. This quest is time based, however; components from within the quest can be obtained sometimes after the timer expires. As long as you go and grab the component and restart the quest. You can still proceed to the next step.</div>
+<div></div>
+<div>Finding the Miner - Look under <font color="#6699ff">Navigating through the Mines </font>for how to find the Miner's Quest. </div>
+<div></div>
+<div>Helping a friend - This is the first mission you will be given. A friend has Alum Sickness and you are required to cure him to obtain a battery. Once you find him within the mines, attack him. It will wake him up out of his sense, and he will instruct you to find a cure for him. To find the cure, after proceeding through the Section A door, you will want to take your first right. Down that hall you will run into 2 different rooms infront of you, and to your right. One of these rooms is the workshop, the other is the medical facility. Conversating with the medical droid will give you the Alum Sickness Cure.</div>
+<div></div>
+<div>Now that you have the cure, you can run back down to the guy who told you about the cure, and cure him. He will then give you a battery that goes back to the miner. Once you give the miner the battery, he will need you to clean it. As i mentioned above about the workshop and the medical facility, the workshop is where you clean the battery. Just give it to the droid, and he will clean it. After obtaining the clean battery, go back down and give it to the miner.</div>
+<div></div>
+<div>This is the last part of the quest, and was the most frustrating. The miner will need you to turn on the water pumps. To find this room, after you enter the Section B door, don't go down the ramp. Go straight ahead to the door, and take your first left. This room has 4 different water pump gages on the wall. They have 2 options, on and off. If I knew the sequence to getting them all on, I probably wouldn't include it. It would spoil all the fun </div>
+<p><strong>Appendix J - Useful Websites&gt;</strong><br><br>These are some websites that might be useful to both makers and wearers of armor. This section should not be taken as an endorsement of any individual crafters<br><br>SWGCraft.com: www.swgcraft.com
+</p><p>The Armorsmith Resource Dictionary: http://www.theburn.com/nathan/armor_dict_v2.3.zip
+</p>
+
+<br><br>
+
+</main>
+
+</html>

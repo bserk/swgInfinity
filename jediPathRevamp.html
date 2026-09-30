@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Examples</title>
+</head>
+
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: white;
+    }
+
+    .floating-navbar {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    /*width: 90%;
+    max-width: 1200px;*/
+    z-index: 1000;
+    
+    /* Flexbox positioning for contents */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+    }
+
+    .nav-links iframe {
+        width: 100px;
+        height: 200px;
+        border: none;
+    }
+
+    .content {
+    padding-top: 10px; 
+    /*max-width: 800px;*/
+    margin: 0 110px;
+    }
+
+</style>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<main class="content">
+
+<p align="left"><font face="Verdana" size="2">Jedi Path Revamp Guide<br>Version 1.3<br>December 2, 2004<br>By SonGouki</font></p>
+<p align="left"><br><strong><u><font color="#ff0000" face="Verdana" size="2">TABLE OF CONTENTS</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">Preface<br>Introduction<br>Section 1: Intro Quest – Glowing and Visits<br>Section 2: The Village of Aurilia<br>Section 3: Force Sensitive Skills<br>Section 4: XP Conversion Ratios<br>Section 5: Force Sensitive Quests<br>Section 6: Exit Quest – Defeat Mellichae<br>Section 7: Padawan Trials</font></p>
+<p align="left"><br><strong><u><font color="#ff0000" face="Verdana" size="2">PREFACE</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">Before I get started, here's some links to guides on the official forums. A lot of the info in this guide has been derived from information in these posts. Much thanks goes to those that forged these works.</font></p>
+<p align="left"><font face="Verdana"><font size="2"><strong>Guide to getting "glowy" every time:</strong><br><font color="#3399ff">http://forums.station.sony.com/swg/board/message?board.id=game_guides&amp;message.id=220959</font></font></font></p>
+<p align="left"><font face="Verdana"><font size="2"><strong>Guide: From Non-FS to Jedi Initiate:</strong><br><font color="#3399ff">http://forums.station.sony.com/swg/board/message?board.id=Forcesensitive&amp;message.id=18</font></font></font></p>
+<p align="left"><font face="Verdana"><font size="2"><strong>Guide to Aurilia:</strong><br><font color="#3399ff">http://forums.station.sony.com/swg/board/message?board.id=Forcesensitive&amp;message.id=638</font></font></font></p>
+<p align="left"><font face="Verdana"><font size="2"><strong>Padawan Trails Answer Guide:</strong><br><font color="#3399ff">http://forums.station.sony.com/swg/board/message?board.id=jedi&amp;message.id=533877</font></font></font></p>
+<p align="left"><br><strong><u><font color="#ff0000" face="Verdana" size="2">INTRODUCTION</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">Jedi, whether viewed as religious fanatics, skilled negotiators, protectors of the weak, mystical knights, manipulative deceivers, terrifying destroyers, or whiney farm boys, many people desire to become one and unlock their own hidden potential from within. This guide is designed to cover the entire process, from having no connection to the Force to becoming a full-fledged Jedi Padawan.</font></p>
+<p align="left"><font face="Verdana" size="2">If your goal isn't to become a Jedi, but you still have interests in the new unlock system, then this guide has plenty of information for you too.</font></p>
+<p align="left"><font face="Verdana" size="2">Want to make your existing template more powerful? There's information on the various FS skills which can augment regular professions quite beneficially. Find out what they do, how beneficial they will be, how they can be unlocked, when they can be unlocked, and how they can be purchased.</font></p>
+<p align="left"><font face="Verdana" size="2">Are you a treasure collector? How about some cool and unique rewards, such as a banner that blows in the wind, crystals that can buff you, or even a plant that you can care for and grows fruit that you can pick! You'll find all the information you need to get these rewards from the new Force Sensitive quests here as well.</font></p>
+<p align="left"><font face="Verdana" size="2">Perhaps you're just looking for some new content? Well this new system has it in spades! Just read over this guide to see all the stuff that the new unlock system ensues. Best of all you pretty much get to choose the content you want to pursue with the multi-faceted Force Sensitive quest system!</font></p>
+<p align="left"><font face="Verdana" size="2">Of course, you'll also find all the information you need to become a Jedi Padawan here as well. So read on and prepare yourself, the new path awaits you!</font></p>
+<p align="left"><br><strong><u><font color="#ff0000" face="Verdana" size="2">SECTION 1: INTRO QUEST – GLOWING AND VISITS</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2"><em>(Note that pre-publish 9 Jedi are automatically granted access to the village and do not need to do any of the following, they can simply go straight to the village and enter it. You’ll need to visit Rohak first to get a Quest Journal Force Crystal before you can do any of the quests though.)</em></font></p>
+<p align="left"><font face="Verdana" size="2"><br></font><strong><u><font color="#ffff00" face="Verdana" size="2">Badges</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">In order to gain access to the Village of Aurilia you must first be visited by the Old Man, and in order to be eligible for this visit you need to earn specific badges.</font></p>
+<p align="left"><font face="Verdana" size="2">The combinations of badges you will need are:</font></p>
+<ul>
+<li>
+<div align="left"><strong><font face="Verdana" size="2">1 Profession badge</font></strong></div>
+</li><li>
+<div align="left"><strong><font face="Verdana" size="2">5 Content badges</font></strong></div>
+</li><li>
+<div align="left"><strong><font face="Verdana" size="2">3 Jedi POI badges</font></strong></div>
+</li><li>
+<div align="left"><strong><font face="Verdana" size="2">2 Difficult POI badges</font></strong></div>
+</li><li>
+<div align="left"><strong><font face="Verdana" size="2">5 Easy POI badges</font></strong></div></li></ul>
+<p align="left"><font face="Verdana" size="2">Content Badge Options:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Jabba's Themepark</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Nym's Themepark</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Rebel Themepark</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Imperial Themepark</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">2 Warren badges (Compassion, Imperial Hero)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">9 Corvette badges (Rebel, Neutral, Imperial missions – 3 for each faction)</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">Jedi POI Badges:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Ben Kenobi's House (Tatooine)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Jedi Temple Ruins (Dantooine)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">The Temple of Exar K'un (Yavin IV)</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">Difficult POI Badges:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Ancient Krayt Dragon Skeleton (Tatooine)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Great Pit of Corkoon (Tatooine)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Fort Tusken (Tatooine)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Krayt Graveyard (Tatooine)</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">Dathomir Sarlacc (Dathomir)<br></font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">All other POI explore badges are "easy"</font></p>
+<p align="left"><br><font face="Verdana" size="2">For example, here are some easy steps to becoming Force Sensitive:</font></p>
+<p align="left"><font face="Verdana"><font size="2"><font color="#3399ff">The Rebel Path – 20 Steps:</font><br><strong>Starting</strong><br>1) Master a profession (does not&nbsp;need to be an elite one)<br>2) Join the Rebellion<br><strong>Tatooine</strong><br>3) Ben Kenobi's House <font color="#666666">(Jedi POI 1/3)</font><br>4) Great Pit of Carkoon <font color="#666666">(Difficult POI 1/2)</font><br>5) Ancient Krayt Dragon Skeleton <font color="#666666">(Difficult POI 2/2)</font><br>6) Escape Pod <font color="#666666">(Easy POI 1/5)</font><br>7) Lars' Homestead <font color="#666666">(Easy POI 2/5)</font><br>8) Jabba's Themepark <font color="#666666">(Content 1/5)</font><br><strong>Corellia</strong><br>9) Crystal Fountain of Bela Vistal <font color="#666666">(Easy POI 3/5)</font><br>10) Rebel Hideout <font color="#666666">(Easy POI 4/5)</font><br>11) Rebel Themepark – Part 1<br><strong>Lok</strong><br>12) Rebel Themepark – Part 2<br>13) Nym's Themepark <font color="#666666">(Content 2/5)</font><br><strong>Dantooine</strong><br>14) Jedi Temple Ruins <font color="#666666">(Jedi POI 2/3)</font><br>15) Abandoned Rebel Base <font color="#666666">(Easy POI 5/5)</font><br>16) Rebel Themepark – Part 3<br>17) The Warren – Compassion <font color="#666666">(Content 3/5)</font><br>18) The Warren – Imperial Hero <font color="#666666">(Content 4/5)</font><br><strong>Yavin IV</strong><br>19) The Temple of Exar K'un <font color="#666666">(Jedi POI 3/3)</font><br>20) Rebel Themepark – Part 4 <font color="#666666">(Content 5/5)</font></font></font></p>
+<p align="left"><font face="Verdana"><font size="2"><font color="#3399ff">The Imperial Path – 17 Steps:</font><br><strong>Starting</strong><br>1) Master a profession (does not&nbsp;need to be an elite one)<br>2) Join the Empire<br><strong>Tatooine</strong><br>3) Ben Kenobi's House <font color="#666666">(Jedi POI 1/3)</font><br>4) Great Pit of Carkoon <font color="#666666">(Difficult POI 1/2)</font><br>5) Ancient Krayt Dragon Skeleton <font color="#666666">(Difficult POI 2/2)</font><br>6) Escape Pod <font color="#666666">(Easy POI 1/5)</font><br>7) Lars' Homestead <font color="#666666">(Easy POI 2/5)</font><br>8) Jabba's Themepark <font color="#666666">(Content 1/5)</font><br><strong>Naboo</strong><br>9) Theed Waterfall <font color="#666666">(Easy POI 3/5)</font><br>10) Amidala's Beach <font color="#666666">(Easy POI 4/5)</font><br>11) Dee'ja Peak Waterfall <font color="#666666">(Easy POI 5/5)</font><br>12) Imperial Themepark <font color="#666666">(Content 2/5)</font><br><strong>Lok</strong><br>13) Nym's Themepark <font color="#666666">(Content 3/5)</font><br><strong>Dantooine</strong><br>14) Jedi Temple Ruins <font color="#666666">(Jedi POI 2/3)</font><br>15) The Warren – Compassion <font color="#666666">(Content 4/5)</font><br>16) The Warren – Imperial Hero <font color="#666666">(Content 5/5)</font><br><strong>Yavin IV</strong><br>17) The Temple of Exar K'un <font color="#666666">(Jedi POI 3/3)</font></font></font></p>
+<p align="left"><br><font face="Verdana" size="2">I can't guarantee the Imperial method, but I did the Rebel method with my 3-week-old Master Artisan/Master Smuggler (his only two badges) and was able to gain Force Sensitivity using it. The results should be the same with the Imperial path. [Update: The Imperial path has been confirmed to work.]</font></p>
+<p align="left"><font face="Verdana" size="2">FYI, he started out with "You feel no connection with the force", got "You barely notice something different about yourself" at step 9, "You feel a faint sense of the force" at step 15, "You feel the Force surge within you" at step 19, and then finally "You feel an inner glow. The Force is with you" at step 20. It skipped "You have a strong sense of the Force within you" for some reason, but you can't argue with the results. </font></p>
+<p align="left"><font face="Verdana" size="2">BTW, you could do the Corvette instead of the themeparks for content badges credit, but for the time it takes to get the tickets, buff everyone, and attempt to complete the Corvette it may almost be faster to just do the themeparks. However, if you have a few people trying to gain Force Sensitivity then the Corvette is probably faster (if you can all handle it or you have a good group that can).</font></p>
+<p align="left"><br><strong><u><font color="#ffff00" face="Verdana" size="2">Force Sensitivity</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">You can determine how close you are to becoming eligible for a visit from the Old Man by using the <strong>/checkForceStatus</strong> command.</font></p>
+<p align="left"><font face="Verdana" size="2">This will give you one of six possible messages:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">1/6: "You feel no connection with the force."</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">2/6: "You barely notice something different about yourself."</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">3/6: "You feel a faint sense of the force."</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">4/6: "You feel the Force surge within you."</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">5/6: "You have a strong sense of the Force within you."</font></div>
+</li><li>
+<div align="left"><font face="Verdana" size="2">6/6: "You feel an inner glow. The Force is with you."</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">Once you gain the "You feel an inner glow. The Force is with you." status you will be eligible for a visit from the Old Man.</font></p>
+<p align="left"><font face="Verdana" size="2">Note: There is a rumour that dying before you receive the visit can lower your level of Force Sensitivity, meaning you'll have to raise it back up in order to be eligible for a visit again. This has yet to be confirmed or proven wrong though.</font></p>
+<p align="left"><br><strong><u><font color="#ffff00" face="Verdana" size="2">The Old Man (Intro Quest)</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">After getting your "inner glow" you will <u>eventually</u> receive a visit** from a mysterious Old Man. Appearing as a white dot on the map, converse with him and he will give you a Force Crystal and ask you to protect it.</font></p>
+<p align="left"><font face="Verdana" size="2">You will now have access to a Quest Journal from the Force Crystal that allows you to keep track of what your current task is. You can view your Quest Journal either by selecting it from the crystal's radial menu, double-clicking the crystal, or by using the command <strong>/ui action questJournal</strong>.</font></p>
+<p align="left"><font face="Verdana" size="2">Eventually some NPC's called "Sith Shadows" will attack you** (supposed to be only two of them, but it's sometimes four). They appear as red dots on the map. You must defeat them in order to protect the crystal. If they happen to kill you then you will lose the crystal and have to wait for another visit from the Old Man to get a new one. However, if you do manage to defeat them (they're very easy) you can loot "a Waypoint Datapad" with a waypoint to an encampment from (at least) one of them. Note that if you don't loot it or they weren't carrying one, you will then have to wait for another attack from some more Sith Shadows and try to loot one again.</font></p>
+<p align="left"><font face="Verdana" size="2">Now you must activate and go to the given waypoint. It will lead you to a Sith Shadow encampment with 3-4 Sith Shadows outlaws. Defeat them and loot another datapad, "a mysterious Datapad", this one with a waypoint to a mysterious village on Dathomir.</font></p>
+<p align="left"><font face="Verdana" size="2">Your Quest Journal will be updated, telling you to go to the Science Outpost on Dathomir, along with giving you a waypoint to a village southeast of the outpost. When you get to Dathomir, head towards the village. You will have to pass through a "wall" of mist when you get near the village (cannot be in combat). Once you arrive at the village talk to the village Elder, Rohak. He will reveal that this is the village of Aurilia and that they are currently being besieged by the Sith Shadows and are in great need of help...</font></p>
+<p align="left"><br><em><font face="Verdana" size="2">**Note: You must be outside of a static city area in order to get a visit from the Old Man or Sith Shadows. Player cities don't seem to matter though. Also, it helps to not be zooming around on a vehicle either and supposedly they won't visit if you're in combat. Some methods that have worked for others is to shuttle around to various player cities, logging in and out repeatedly, and running towards the (0,0) center point on the map. Note that usually when you're out in the field they won't spawn right on top of you, instead they will come running towards your general direction from off the screen, so keep your eyes open for that kind of odd behaviour on the overhead map (such as a white dot bolting across the map for no apparent reason).</font></em></p>
+
+
+<p><strong><u><font color="#ff0000" face="Verdana" size="2">SECTION 2: THE VILLAGE OF AURILIA</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">The Village of Aurilia (<strong>5306,-4145</strong>) is located about 6000 meters southeast of the Science Outpost on Dathomir. It is situated in a barren and desolate valley, and is surrounded by a thick "wall" of mist that only those with permission from the Old Man can enter (apparently he must like talking to the Sith Shadows too, j/k). The village itself is a rustic community of huts and simple (looking) villagers, with a stone wall surrounding its perimeter.</font></p>
+<p align="left"><font face="Verdana" size="2">In actuality this seemingly plain village is populated with Force Sensitive "misfits". Every villager has some level of Force Sensitivity, which unfortunately brought undue attention to them in their lives prior to the village and, for some reason or another, forced them to seek a place where their gifts could be nurtured and expanded. Eventually these people found one another and decided to form a community where others in their situation could turn to, thus the Village of Aurilia was created.</font></p>
+<p align="left"><font face="Verdana" size="2">Unfortunately, a wayward Dark Jedi named Mellichae has decided that destroying this village would be a good way to earn the Emperor's trust again and perhaps earn him a place at the Emperor's side. Therefore his soldiers, the Sith Shadows, are currently attacking the village through any means in order to try to destroy the village and everyone in it.</font></p>
+<p align="left"><font face="Verdana" size="2">This is the point where you come into the village's story. The Sith Shadows will be attacking the village throughout four phases, during which time you can offer your service to various members of the village in order to try to help them out. Each phase is three weeks long (real-time) and you can take one quest from one of four villagers each phase. It takes a full 12 weeks for the all the phases to cycle.</font></p>
+<p align="left"><font face="Verdana" size="2">The phases are:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Phase I:</font><br>The village has recently repealed a vicious attack by the enemy. Much of the village defenses have been eliminated, buildings are destroyed, and many people have been hurt or killed. At this stage, the village is preoccupied with picking up the pieces, healing the wounded, and determining the remaining strength of their enemy.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Phase II:</font><br>The village continues to build defenses. It is discovered that the enemy is regrouping. Another attack seems inevitable, and initiates who help can turn the tide.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Phase III:</font><br>In an effort to repeal another invasion, the village begins construction of a shield generator. Search and destroy operations are conducted to help keep the enemy at bay. The village continues to grow in size. It is now walled from the defense building of Phase II.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Phase IV:</font><br>The shield generator is complete. The village is at its maximum size. Despite this, the Sith Shadows will not give up. Throughout this phase, waves of the enemy appear in coordinated groups. This phase culminates with a final onslaught. Although the enemy is repealed, the village is all but destroyed. Return back to Phase I.</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">Main villagers:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Rohak</font><br>Phase: All<br>The village elder. Rohak was with the original group who founded Aurilia, and has been its spiritual guide ever since. He's very old and very wise...for a human. He will direct you to the various villagers giving quests during the phases. Also, if you somehow lose your Force Crystal he will give you a replacement.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Paemos</font><br>Phase: All<br>Paemos is a Rodian, and an expert with ranged weapons of all types. He is friendly to everyone, a trait that made him few friends on Rodia. He is much happier in the village and will give his life to defend it if need be. Paemos knows a thing or two about Force Sensitive skills and can show initiates the ropes of experience. He's the person you go to for transferring experience to Force Sensitive experience. Also, he will grant Hologrinders their free FS Branches and the experience necessary to purchase them (word of warning for hologrinders: only unlock and purchase one branch at a time, otherwise you will reach your cap and lose some of your free FS XP).<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Noldan</font><br>Phase: All<br>Noldan is a Trandoshan and a master of melee combat. He is in love with Marite, believing his heart's secret is his own, but she is aware of his feelings and she reciprocates them. She won't act on her feelings though until she believes the village is safe from harm (how tragic that the village will never be safe). Noldan has been known to train outsiders who are working for the benefit of the village. He will teach you in the FS skill boxes that you have unlocked and have enough FS experience to purchase.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Marite</font><br>Phase: (removed from game?)<br>Marite is a female Trandoshan, outgoing and outspoken. She championed the idea of bringing in new people to train, hoping that it would start down the path of understanding for those who are force sensitive. On her homeworld, her own tribe disowned and cast her out because of her bizarre Force sensitive gifts. She is the village's ambassador to the outside world and has an amazing ability to heal.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Quharek</font><br>Phase: I, II, III<br>Quharek is a Mon Cal who has forsaken his own name for one given to him by the village. The villagers couldn't pronounce his given name. He's a craftsman and an expert on building, resource gathering. He is also adept at overseeing large construction projects.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Whip</font><br>Phase: I, II<br>Whip is a young human male whose reflexes are a sight to behold. He is definitely the best pilot in the village. He hates the Empire more than any of the others. He feels that if they hadn't outlawed pod-racing he would be a rich and famous racer, the best in the galaxy, and he resents the Empire because of this.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Captain Sarguillo</font><br>Phase: I, III, IV<br>Sarguillo is a Zabrak and is in charge of defending the village. His primary concern is keeping the village safe from harm in whatever way possible...<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Sivarra Mecheaux</font><br>Phase: I, IV<br>She is a Human and the village's medic and is always looking for help curing the wounded or keeping the village's defenders healed.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Dageerin</font><br>Phase: II, III<br>An Aqualish male, he wants to delay the Sith Shadows from attacking the village so that they have time to repair the village’s defenses.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Eozlin</font><br>Phase: II, III<br>An Ithorian, his main responsibility is to find the resources necessary to rebuild the village’s defenses.<br></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#3399ff">Chief Engineer of Aurilia</font><br>Phase: IV<br>The replacement for Aurilia’s Chief Engineer, this individual is under enormous pressure to repair the village’s Computers during the final big assault by the Sith Shadows. Unfortunately luck is not on the Chief’s side, as there seems to be a new one every day during the final phase...<br></font></div></li></ul>
+<p align="left"><font color="#ff0000" face="Verdana" size="2"><strong><u>SECTION 3: FORCE SENSITIVE SKILLS</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><u><font color="#ffff00">Unlocking and Purchasing</font></u></strong><br>As you complete quests for the villagers during the various phases you will unlock Force Sensitive branches. You can then convert most normal types of experience that you have accumulated to Force Sensitive experience types. There are three types of Force Sensitive experience: Combat, Senses, and Crafting. Please refer to Section 4: XP Conversion Ratios to see what experience can be converted to which Force Sensitive experience type and what the conversion ratio is.</font></p>
+<p align="left"><font face="Verdana" size="2">There are four Force Sensitive trees in all, each with four branches. As you earn Force Sensitive experience you can purchase boxes in these trees. The cost for the boxes is as follows:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Novice box = 50K FS XP</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Level 1 box = 175k FS XP</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Level 2 box = 250k FS XP</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Level 3 box = 350k FS XP</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Level 4 box = 450k FS XP</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Master box = 620 Apprenticeship XP</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">The master level boxes currently do not grant anything (not even a title), and they just seem to be there for structure.</font></p>
+<p align="left"><font face="Verdana" size="2">Also, be aware that in order to qualify for the exit quest and the Padawan Trials you must purchase six full lines of FS skills (that's six level 4 boxes).</font></p>
+<p align="left"><font face="Verdana" size="2">When deciding to do the villagers' quests, you should also know that Force Sensitive branches are associated with specific types of quests:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat Quests = Combat Prowess skills</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Reflex Quests = Enhanced Reflexes skills</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Medic/Survey Quests = Heightened Senses skills</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Crafting Quests = Crafting Master skills</font></div></li></ul>
+<p align="left"><font color="#ffff00" face="Verdana" size="2"><strong><u>The Force Sensitive Skills</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><u>Combat Prowess:</u></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Ranged Accuracy</strong><br><font color="#ff0000">enhanced ranged accuracy +12</font><br>- Increases accuracy with any ranged weapon.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Ranged Speed</strong><br><font color="#ff0000">enhanced ranged speed +12</font><br>- Increases speed with any ranged weapon.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Melee Accuracy</strong><br><font color="#ff0000">enhanced melee accuracy +12</font><br>- Increases accuracy with any melee weapon.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Melee Speed</strong><br><font color="#ff0000">enhanced melee speed +12</font><br>- Increases speed with any melee weapon.</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><u>Enhanced Reflexes:</u></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Ranged Defense</strong><br><font color="#ff0000">ranged defense +20</font><br>Increases ranged defense.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Melee Defense</strong><br><font color="#ff0000">melee defense +20</font><br>Increases melee defense.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Vehicle Control</strong><br><font color="#ff0000">force vehicular control +20, force vehicular speed +3</font><br>Vehicle start, stop, &amp; turning.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Survival</strong><br><font color="#ff0000">camping +5, foraging +5, trapping +5, mask scent +5, terrain negotiation +5, creature knowledge +5, creature harvesting +5</font><br>Only camps and terrain negotiation are useable if you're not a Scout or Ranger.</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><u>Heightened Senses:</u></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Healing</strong><br><font color="#ff0000">injury treatment +10, injury treatment speed +10, wound healing (dancing) +20, wound healing (music) +20</font><br>Increases healing and enhancement abilities.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Surveying</strong><br><font color="#ff0000">surveying +20</font><br>Increases surveying range: (64x64) if no surveying, (384x384) if you have Artisan: Surveying IV.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Persuasion</strong><br><font color="#ff0000">persuasion +20</font><br>Lowers cost of skill training and appear aligned to any faction (better chance to pass contraband scans).</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Luck</strong><br><font color="#ff0000">jedi's luck +4</font><br>Increases your luck while looting, including credits. Unknown if this affects looting item chances.</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><u>Crafting Mastery:</u></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Experimentation</strong><br><font color="#ff0000">force experimentation +20</font><br>Increases your chances of getting Amazing Successes while crafting. Does <strong>not</strong> grant extra points!</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Assembly</strong><br><font color="#ff0000">force assembly +20</font><br>Increases your ability to succeed while assembling an item.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Repair</strong><br><font color="#ff0000">force repair bonus +20</font><br>Increases your chances to repair a damaged or broken item.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><strong>Technique</strong><br><font color="#ff0000">crafting technique +4</font><br>Decreases you chances of failing (lowering experimental risk) while crafting.<br></font></div></li></ul><font face="Verdana" size="2"></font>
+<p align="left"><font color="#ffff00" face="Verdana" size="2"><strong><u>Phases and FS Skill Availability</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2">Since you can only choose to unlock one FS branch per phase through the quests it is very important to plan ahead so you don't ‘waste' your phases. The following is a list of skills that can be unlocked per phase and vice versa, to help you make these decisions now.</font></p>
+<p align="left"><font color="#3399ff" face="Verdana" size="2"><strong>FS Skills per Phase</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase I:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat Prowess: Ranged Accuracy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Enhanced Reflexes: Survival</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Heightened Senses: Persuasion</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Crafting Mastery: Assembly</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase II:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat Prowess: Melee Speed</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Enhanced Reflexes: Vehicle Control</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Heightened Senses: Surveying</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Crafting Mastery: Technique</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase III:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat Prowess: Melee Accuracy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Enhanced Reflexes: Ranged Defense</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Heightened Senses: Luck</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Crafting Mastery: Experimentation</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase IV:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat Prowess: Ranged Speed</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Enhanced Reflexes: Melee Defense</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Heightened Senses: Healing</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Crafting Mastery: Repair</font></div></li></ul></ul>
+<p align="left"><font color="#3399ff" face="Verdana" size="2"><strong>Phases for FS Skills</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat Prowess:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase I: Ranged Accuracy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase II: Melee Speed</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase III: Melee Accuracy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase IV: Ranged Speed</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Enhanced Reflexes:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase I: Survival</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase II: Vehicle Control</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase III: Ranged Defense</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase IV: Melee Defense</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Heightened Senses:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase I: Persuasion</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase II: Surveying</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase III: Luck</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase IV: Healing</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Crafting Mastery:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase I: Assembly</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase II: Technique</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase III: Experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Phase IV: Repair<br></font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2"><strong><u><font color="#ffff00">Benefits</font></u></strong><br>The last thing I would like to discuss is the Force Sensitive skills themselves and their usefulness to Jedi and normal professions.</font></p>
+<p align="left"><font face="Verdana" size="2">All new Jedi will now have to progress through the village of Aurilia to be allowed to start the Padawan Trials and become a full-fledged Jedi. However, since there are only four possible FS lines per three-week-phase to unlock and you can only unlock <strong>one per phase</strong>, it is extremely important to know beforehand which ones you want! Not to mention the huge Force Sensitive experience requirements to buy the actual skills once you've unlocked them...</font></p>
+<p align="left"><font face="Verdana" size="2">Okay, first of all I'd like to discuss which FS skills are actually beneficial to Jedi... actually, that's somewhat of a contradictive term. The majority of the FS skills are <em>not</em> worth much to Jedi and only serve to limit their available skill points. However, they are required so you should at least pick ones that will serve <em>somewhat</em> of a purpose for your Jedi...</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Combat Prowess:</font></strong><br>Ranged Accuracy and Ranged Speed are obviously useless for a Jedi, since they only fight with melee weapons.</font></p>
+<p align="left"><font face="Verdana" size="2">Melee Speed, as can be seen from above, is only marginally useful. However, if you plan on Mastering Lightsaber then it will be completely useless to you, since you'll be speed capped for all Lightsaber types. Speed formulas are slated to change in the upcoming Combat Revamp, but we'll see if it'll serve a purpose after that...</font></p>
+<p align="left"><font face="Verdana" size="2">Melee Accuracy is probably the most worthwhile FS skill for Jedi out of all of them, since Jedi have such low accuracy (even at Master Lightsaber).</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Enhanced Reflexes:</font></strong><br>Ranged Defense is always good to have, but considering how well a Jedi's Saber Block currently works it almost not necessary... still better than most FS skills though.</font></p>
+<p align="left"><font face="Verdana" size="2">Melee Defense is another good one to grab. It won't help much in PvP, but it'll be useful while grinding... especially since Jedi can't wear armor.</font></p>
+<p align="left"><font face="Verdana" size="2">Vehicle Control does work very well but doesn't really benefit a Jedi that much. Your choice whether you want it or not, more of a "luxury" FS skill... it is nice to have though, as you do notice a difference.</font></p>
+<p align="left"><font face="Verdana" size="2">Survival is debatable. You'll get +5 Terrain Negotiation, which is okay for Jedi seeing as they get none from their Disciplines. Other than that you'll be able to place basic camps...</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Heightened Senses:</font></strong><br>Healing is completely useless for Jedi, it does <strong>not</strong> affect the Force Healing discipline at all.</font></p>
+<p align="left"><font face="Verdana" size="2">Surveying is only marginally useful for Jedi (64x64 range), since you could just grab Novice Artisan and have the same skills.</font></p>
+<p align="left"><font face="Verdana" size="2">Persuasion, hard to tell exactly what it does... it sounds like a very Jedi-like line, but no one really knows exactly what it does. We do know that it allows you to receive a lower cost for training, which is absolutely useless for Jedi since their "training" costs nothing anyway. Other than that it may have an influence on faction recruiters, junk dealers, and contraband scans... but no one really knows. Your choice if you want to pick it up, but it seems sort of like a waste at the moment.</font></p>
+<p align="left"><font face="Verdana" size="2">Luck is supposed to make you, well, more lucky at looting. The description talks about increasing your chance to loot more credits, but no one's sure if it increases your chances at looting items as well. It's your call if you want this skill, not bad considering the other options though...</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Crafting Mastery:</font></strong><br>Experimentation will increase your chances of getting Amazing Successes while experimenting (not give you more experimentation points). Okay to have, but considering Lightsabers do not decay, a Jedi won't be using this very often.</font></p>
+<p align="left"><font face="Verdana" size="2">Assembly increases your chances of succeeding while crafting. Again, this is not going to be used often by Jedi.</font></p>
+<p align="left"><font face="Verdana" size="2">Repair does work and would be nice to have, but considering that a Jedi's main items (Lightsaber and Robe) do not decay it's not too useful for Jedi. However, if you wanted to repair things for other people then it might be worth having...</font></p>
+<p align="left"><font face="Verdana" size="2">Technique decreases your chances of failing while crafting. Like most of the other Crafting Mastery FS skills, this one is not going to be used very often by a Jedi.</font></p>
+<p align="left"><br><font face="Verdana" size="2">Okay, so you read all that and still don't know what to pick? Well, to summarize, Melee Accuracy, Melee Defense, and Ranged Defense are all good picks for a Jedi. After that, Melee Speed, Vehicle Control, Survival, Luck, Persuasion, Experimentation, and Repair are all decent to choose from as well.</font></p>
+<p align="left"><font face="Verdana" size="2">As for normal professions, well obviously the FS skills are more geared towards enhancing their skill sets rather than those of Jedi, however, there are some things to be aware of. Survival is useless to a Master Ranger, since they're already capped for most of the skills this adds to. It's unknown if Assembly and Technique are of any use to a master crafter, as there is always supposed to be a 5% chance of failure anyway. If you're already capped at +125 for them, then Melee Defense and Ranged Defense would be useless too. Also, the Melee and Ranged Speed lines won't be beneficial if you're already speed capped.</font></p>
+<p align="left"><br><font color="#ff0000" face="Verdana" size="2"><strong><u>SECTION 4: XP CONVERSION RATIOS</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Force-sensitive Combat Experience (Combat Prowess and Enhanced Reflexes):</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Bounty Hunter <strong><font color="#3399ff">1:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Combat <strong><font color="#3399ff">3:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Weapon (all types) <strong><font color="#3399ff">30:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Squad Leader <strong><font color="#3399ff">90:1</font></strong></font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><strong>Force-sensitive Senses Experience (Heightened Senses):</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">DNA Sampling <strong><font color="#3399ff">3:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Political <strong><font color="#3399ff">3:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Slicing <strong><font color="#3399ff">3:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Merchant <strong><font color="#3399ff">4:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Wilderness Survival <strong><font color="#3399ff">5:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Image Design <strong><font color="#3399ff">7:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Scouting <strong><font color="#3399ff">8:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Creature Handling <strong><font color="#3399ff">9:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Dancer <strong><font color="#3399ff">10:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Musician <strong><font color="#3399ff">10:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Entertainment Healing <strong><font color="#3399ff">10:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Surveying <strong><font color="#3399ff">10:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Medical <strong><font color="#3399ff">10:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Trapping <strong><font color="#3399ff">25:1</font></strong></font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><strong>Force-sensitive Crafting Experience (Crafting Mastery):</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Bio-Engineer Crafting <strong><font color="#3399ff">4:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">All Other Crafting <strong><font color="#3399ff">5:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">General Crafting <strong><font color="#3399ff">8:1</font></strong></font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Structure Crafting <strong><font color="#3399ff">35:1</font></strong></font></div></li></ul>
+
+
+<p><strong><u><font color="#ff0000" face="Verdana" size="2">SECTION 5: FORCE SENSITIVE QUESTS</font></u></strong></p>
+<p align="left"><em><font face="Verdana" size="2">Note: Rewards from the Aurilia quests can be traded.</font></em></p>
+<p align="left"><em><font face="Verdana" size="2">Note: You do not need your Quest Journal Force Crystal on you to accept quests (but it helps you get through some of them).</font></em></p>
+<p align="left"><em><font face="Verdana" size="2">Note: Make sure you have space in your Datapad. A lot of the quests require that you have room there for waypoints, and occasionally some other stuff. If you don’t have room it can cause problems, including potentially bugging the quest.</font></em></p>
+<p align="left"><em><font face="Verdana" size="2"><em><font face="Verdana" size="2">Note: To complete the Aurilian Sculpture, collect all four of the pieces from the various quests, and then stand in a spot in your house and drop them one after another. They will automatically align into a double-pronged sculpture of the Aurilian symbol (like on the banner).</font></em></font></em></p>
+<p align="left"><font face="Verdana" size="2">&nbsp;</font></p>
+<p align="left"><font color="#ff0000" face="Verdana" size="2"><strong>--- PHASE 1 ---</strong></font></p>
+<p align="left"><font color="#ffff00" face="Verdana" size="2"><strong><u>Combat: Village Patrols</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Captain Sarguillo (5313,-4161)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Combat Prowess: Ranged Accuracy</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>You must undertake 10 patrols. When you approach one of the given waypoints you will receive a system message that reveals whether there are any Sith Shadows at that patrol point. If there are 1-3 enemies there you <u>must</u> kill them, if there are more than 3 then do <u>not</u> kill any and just move on to the next point. If you don't follow those rules you will fail the patrol and have to grab another.</font></p>
+<p align="left"><font face="Verdana" size="2">After completing 10 patrols you will successfully unlock the FS branch, at which point you can choose to do 10 extra patrols for a reward. Be warned that each successive patrol will get larger and larger, near the end of the 20 patrols the waypoints will be almost 2,000 meters apart! It's quite time consuming...</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> If you do the patrols twice (20 total) you will be awarded an Aurilian Banner, a nice banner that blows in the wind like those at the starports.</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Reflexes: Rescue Missing Villagers</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Whip (5383,-4226)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Enhanced Reflexes: Survival</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>During recent raids on the village several inhabitants have gone missing. Whip asks you to aid the village by tracking down these missing villagers. You are asked to rescue 5 in all.</font></p>
+<p align="left"><font face="Verdana" size="2">Whip will give you a waypoint. When you reach the waypoint you will be alerted that you are close to a Sith Shadow encampment with a prisoner. The encampment will show up on the overhead map as a small bar (perhaps with a square next to it). It will spawn somewhere within about 250m of the initial waypoint.</font></p>
+<p align="left"><font face="Verdana" size="2">The camp will contain three Sith Shadow pirates and a thug. Dispatch these and converse with the captured villager. He will then follow you and you must take him back to the base (you must go the whole way with them). Be aware that Sith Shadows may attack you and the villager on the way back. You need to protect the villager and make sure you both make it back alive.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> An Aurilian Sculpture Section (3/4)</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Senses: Cure the Sick</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Sivarra Mecheaux (5391,-4075)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Heightened Senses: Persuasion</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font></strong><br>You are asked to create medicines with which to treat injured and sick villagers.</font></p>
+<p align="left"><font face="Verdana" size="2">You will need a Doctor with Master Doctor's Medicine Crafting (Doc:0004) in order to craft the cures. You’ll also need a droid with a private food &amp; chemical crafting station built in to allow experimentation.</font></p>
+<p align="left"><font face="Verdana" size="2">To create the required cures you will need to control the medicine through experimentation and use various qualities of resources. Each cure requires 10 Metal and 5 Flora, with Overall Quality (OQ) weighing 66% and Potential Energy (PE) weighing 33% for experimentation. It's best to bring both high and low quality resources so you can hit all the various experimental ranges.</font></p>
+<p align="left"><font face="Verdana" size="2">Through multiple applications of the different medications you'll be able to cure the symptoms of the sick. The medical droids will help you administer the cures to the patients.</font></p>
+<p align="left"><font face="Verdana" size="2">Symptoms and the required experimentation for cures (overlap is due to decimals):</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">fever = <font color="#66ff00">0-8%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">vomiting = <font color="#66ff00">8-16%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">open sores = <font color="#66ff00">17-25%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">puss filled lesions = <font color="#66ff00">25-33%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">erratic heart rate = <font color="#66ff00">33-41%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">respiratory failure = <font color="#66ff00">42-50%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">lost vision = <font color="#66ff00">50-58%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">partial paralysis = <font color="#66ff00">58-66%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">violent spasms = <font color="#66ff00">67-75%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">bloody cough = <font color="#66ff00">75-83%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">swelling = <font color="#66ff00">83-91%</font> experimentation</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">internal bleeding = <font color="#66ff00">92-100%</font> experimentation</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">After curing the initial 5 villagers you will unlock the FS branch. You can then cure an additional 5 villagers (extended) for a reward, and even another 5 villagers after that (extra cures) for a very unique reward!</font></p>
+<p align="left"><font face="Verdana" size="2">Note: It’s important that you talk to Sivarra every time you cure 5 villagers! There’s no indication when you have completed each set so you must request the reward yourself from her (and ask to help with more so you can get the further rewards).</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> Cure 5 villagers to unlock the FS branch, cure 5 more villagers (10 in total) to unlock an Ice Pendant necklace with Combat Medicine Experimentation +5, and finally cure 5 more villagers (15 in total) to unlock an Aurilian Plant for your house that needs Watering and Nutrients. If properly taken care of the plant can grow large and bear special vitalizing fruit (a Force Melon) that you can pick and use (heals Health/Action/Mind +1000, 10 food filling, single use)! However, if you neglect the plant there is a chance that it could die...</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Crafting: Repair the Sensor Array</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Quharek (5373,-4181)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Crafting Mastery: Assembly</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>The Village's Sensor Array was damaged in the attack and their Chief Engineer was killed. Quharek asks you to repair it, directing you to the damaged Sensor Array (5419,-4119). It has four broken components which you must retrieve and bring to the Chief Engineer's hut nearby (5379,-4116). This hut has 2 workstations in it: a Recursive Analyzer that takes the broken components and makes schematics for new ones, and a Multi-phase Calibrator that balances them to work properly.</font></p>
+<p align="left"><font face="Verdana" size="2">IMPORTANT: You need to bring these resources with you (quality doesn't matter):</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Steel</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Copper</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Aluminum</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Polymer</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Lubricating Oil</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Carbonate Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Extrusive Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Rori Fiberplast</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Talusian Fiberplast</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Nabooian Water Vapor</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Yavinian Wind Energy</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">The schematics you get from the Recursive Analyzer are single use only, however, if you need another then you can just request one from the Analyzer's memory (only if you have used up your current one). Once you have the schemas you can craft the replacement components using a Generic Crafting Tool (no crafting skills required). If you critical fail while crafting you will <strong>not</strong> lose the usage on the schematic or even any of the resources.</font></p>
+<p align="left"><font face="Verdana" size="2">After the components are crafted they will need to be balanced using the Multi-phase Calibrator. Each component will have its own unique graphical logic puzzle, which you must complete in order to successfully calibrate the component. Be aware that as you attempt a puzzle the component will lose integrity (displayed in the puzzle's text area), once the component's integrity reaches 0% it will break (don't worry, like I said above, you can craft another with a new schema).</font></p>
+<p align="left"><font face="Verdana" size="2">Once all four are calibrated, replace them into the Sensor Array and it will come back online.</font></p>
+<p align="left"><font face="Verdana" size="2">Component Calibrations:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#66ff00">Configuration Processor</font> <em>(50 Rori Fiberplast, 30 Copper, 40 Aluminum, 15 Copper)</em><br>Press the small triangular buttons to adjust the configuration setting so that the component configuration (top pattern) matches the expected configuration (bottom pattern). Pressing a button will toggle its illumination state, as well as the state of two other buttons.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#66ff00">Gyroscopic Receiver</font> <em>(50 Yavinian Wind Energy, 20 Lubricating Oil, 45 Steel, 20 Copper)</em><br>Use the sliders on the right to adjust the geographical resolution so that the component parameters (top shades) matches the expected parameters (bottom shades). Changes made to the sliders will not be reflected in real-time. You must press the "OK" button in order to view your changes.<br>Sliders: Longitude Resolution, Latitude Resolution, and Vertical Resolution.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#66ff00">Signal Amplifier</font> <em>(70 Copper, 20 Carbonate Ore, 25 Talusian Fiberplast, 20 Aluminum)</em><br>Use the sliders on the right to adjust the frequency amplification so that the component output (top graph) matches the expected output (bottom graph). Changes made to the sliders will not be reflected in real-time. You must press the "OK" button in order to view your changes.<br>Sliders: Pre-amp Boost, Amplification, and Post-amp Tuning.</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2"><font color="#66ff00">Solid State Array</font> <em>(100 Extrusive Ore, 10 Nabooian Water Vapor, 20 Polymer, 10 Copper)</em><br>Use the sliders on the right to adjust the solid state devices (represented by the horizontal bars) so that they are aligned around the transmission bus (vertical line). Changes made to the sliders will not be reflected in real-time. You must press the "OK" button in order to view your changes.<br>Sliders: Element One Alignment, Element Two Alignment, Element Three Alignment, Element Four Alignment, and Element Five Alignment.</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> An Aurilian Sculpture Section (4/4)</font></p>
+<p align="left"><br><font color="#ff0000" face="Verdana" size="2"><strong>--- PHASE 2 ---</strong></font></p>
+<p align="left"><font color="#ffff00" face="Verdana" size="2"><strong><u>Combat: Search And Destroy</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Dageerin (5238,-4189)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Combat Prowess: Melee Speed</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>You will be asked to strike 8 Sith Shadow camps to delay them from attacking Aurilia before the defenses have been rebuilt.</font></p>
+<p align="left"><font face="Verdana" size="2">In order to find the camps you will either be given a waypoint or a tracking device to be used with a Radiation Sensor that Dageerin gives you. The waypoints are obviously straight forward and lead you right to the camp, but the Radiation Sensor works by evaluating “threat level”.</font></p>
+<p align="left"><font face="Verdana" size="2">To use the Radiation Sensor, you access and “use” it from your Datapad, which will open up a small window. The window will update every few seconds while you’re moving (and only when you’re moving) to display the current “threat level”. Once you reach a constant speed and direction the window will either show a positive (green) or negative (red) number. The larger the positive number is, the closer you are to the direction that the camp is in (and vice versa for negative numbers). Once you get within 64 meters of the camp it will spawn and the Sensor window will let you know that you’re within range of the camp.</font></p>
+<p align="left"><font face="Verdana" size="2">At the camp you simply need to kill all the Sith Shadows there to pass that search and destroy mission. The camps are usually filled with Sith Shadow outlaws and pirates, however, the last two missions will have Sith Shadow task masters. These guys have 13K HAM and Light Armor with 70% resists to all (except Lightsaber), and they hit hard... so be prepared! Mission 7 will have one task master and mission 8 will have two of them.</font></p>
+<p align="left"><font face="Verdana" size="2">After you complete each mission you will need to return to Dageerin to complete the mission and get the next one. Sometimes he will tell you that they can’t locate any more camps and you will need to check back with him tomorrow for more missions. When he tells you this you’ll have to wait 24 hours (real-time) before you can get more missions from him. This usually seems to happen after the 3rd and 6th missions, so plan on this quest taking you at least 3 days to complete (there is a rumor that Jedi doing this quest do not need to wait [Update: this rumor is false, it takes 3 days for Jedi as well]).</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> Durable Lathe, a +30 speed Melee Powerup with 500 uses.</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Reflexes: Retrieve Supply Crates</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Whip (5283,-4226)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Enhanced Reflexes: Vehicle Control</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>Similar to Whip’s Phase 1 quest, however this time you must retrieve 6 crates of Supplies from crashed transport ships on Endor that were attacked by Sith Shadows. Just like before, Whip will give you a waypoint.</font></p>
+<p align="left"><font face="Verdana" size="2">The waypoints will always be on Endor so you will have to travel all the way there every time. Once you arrive on Endor the waypoint will update to the approximate location of the crash site (usually 3-4 Km from the Outpost). When you reach the waypoint you will be alerted that you are close to the crashed ship. The ship will spawn somewhere within about 250m of the initial waypoint and will appear as a large rectangle-like object on the overhead map.</font></p>
+<p align="left"><font face="Verdana" size="2">When you find the ship you simply need to approach it to salvage the crate of Supplies from it. Sith Shadow pirates and thugs will sometimes spawn around the ship, you can either defeat them or escape. However, be warned that if the Sith Shadows defeat you they will steal the Supplies and you will fail that mission.</font></p>
+<p align="left"><font face="Verdana" size="2">To complete the mission you must return to Whip and <strong>converse with him</strong> to deliver the Supplies, you will also be given a new waypoint for the next mission as you get near him (but don’t forget to drop off the Supplies). Given all the travel time this is a relatively long (and boring) quest, usually taking a few hours, so be prepared.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> Focused Crystal that buffs your Health +2000 for 2 hours (unlimited uses, can be used once every 3 days and <strong>cannot</strong> be used at the same time as Doc buffs).</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Senses: Find Village Wall Resources</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Eozlin (5200,-4141)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Heightened Senses: Surveying</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font></strong><br>You’re asked to help find 50% concentrations for 8 different resource types to help rebuild the village’s wall.</font></p>
+<p align="left"><font face="Verdana" size="2">You must have at least Novice Artisan to be eligible for this quest (though it will go much faster if you have some Surveying as well). You’ll also need Mineral, Gas, and either Wind or Solar Surveying Tools in order to be able to find everything required.</font></p>
+<p align="left"><font face="Verdana" size="2">To pass you simply need to Survey for the required resource type at a specific spot where the concentration is greater than or equal to the mission requirements. When you successfully do this your Quest Journal will update and you can simply look there for the next required resource type and concentration (without needing to return to Eozlin).</font></p>
+<p align="left"><font face="Verdana" size="2">You will also be given a random single unit of an Aurilian resource container each time you complete a task (except the last one). When you finish the entire quest your reward will also appear directly in your inventory as well.</font></p>
+<p align="left"><font face="Verdana" size="2">Note that you can find these concentrations on any planet, you’re not restricted to just Dathomir.</font></p>
+<p align="left"><font face="Verdana" size="2">Resource Types and required concentrations:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Aluminum</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Gemstone</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Copper</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Steel</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Iron</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Gas</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> An Inorganic Survey Device (allows you to survey all inorganics), as well as the 8 units of Aurilian resource containers from the survey points.</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Crafting: Help Build Village Defenses</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Quharek (5247,-4032)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Crafting Mastery: Technique</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>Quharek needs help rebuilding the village’s defenses. To do this he is asking many crafters to aid with this community project. If you have at least Novice Artisan you can help him by donating a total of 10 Ingredients to contribute to rebuilding the defenses.</font></p>
+<p align="left"><font face="Verdana" size="2">(Note: The number of people that can participate in the quest is limited for a phase.)</font></p>
+<p align="left"><font face="Verdana" size="2">Once you accept the quest, Quharek will send you to go see QT-QC (5193,-4196), a binary load lifter responsible for handling the defensive Ingredients as you complete and contribute them. You can talk to it to get the schematics for the required Ingredients. You can also find out the current status of the project by talking to QT-QC or Quharek.</font></p>
+<p align="left"><font face="Verdana" size="2">You need to contribute at least 10 of any combination of the following Ingredients to pass this quest:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Refined Endrine</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Refined Rudic</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Refined Ardanium II</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Reinforced Wall Module</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Small Turret</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">The raw materials required by the Ingredients are those special Aurilian Resource Containers that can be looted off Sith Shadows, specifically Ardanium II Energy, Rudic Ore, and Endrine Ore. Also, the Ingredients can (and should) be experimented on, meaning you will need access to a weapon, droid, and general item crafting station.</font></p>
+<p align="left"><font face="Verdana" size="2">The schematic requirements and experimental properties are as follows:</font></p>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Refined Endrine</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">20 Endrine Ore</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Malleability = 100% MA</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Quality = 100% OQ</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Toughness = 100% UT</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Refined Rudic</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">20 Rudic Ore</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Conductivity = 100% CD</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Decay Resistance = 100% DR</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Quality = 100% OQ</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Shock Resistance = 100% SR</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Refined Ardanium II</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">20 Ardanium II Energy</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Potential Energy = 100% PE</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Quality = 100% OQ</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Reinforced Wall Module</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">10 Endrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">10 Rudic Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Reinforced Wall Module (optional)</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Kinetic Effectiveness = 100% MA</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Small Turret</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Turret Hardware</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Turret Electronics</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">none</font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#66ff00">Turret Hardware</font></strong> (<em>Small Turret component, cannot be contributed</em>)</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">5 Endrine Ore</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Accuracy = 50% MA, 50% UT</font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#66ff00">Turret Electronics</font></strong> (<em>Small Turret component, cannot be contributed</em>)</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">5 Rudic Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">10 Ardanium II Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Turret Electronics (optional)</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Accuracy = 100% CD</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Speed = 100% OQ</font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#66ff00">Village Defenses</font></strong> (<em>cannot be crafted, for reference only</em>)</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Refined Endrine</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Refined Rudic</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Refined Ardanium II</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Reinforced Wall Module</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Small Turret</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Armor Effectiveness = 50% OQ, 50% SR</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Armor Integrity = 50% OQ, 50% UT</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Power = 100% PE</font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2">In order to contribute the required 10 Ingredients you will need a total of 200 (specific) Aurilian Resource Containers. Unfortunately, during this phase there is no indefinite supply of these resources. Players doing Eozlin’s quest will get 7 random units as rewards and combatants doing either Dageerin’s or Whip’s quests will also have limited opportunities to gather these resources. However, there are no random spawns of Sith Shadows this Phase. So your only options are to either loot them in another Phase or request them from the players doing the other quests this phase (usually for a price).</font></p>
+<p align="left"><font face="Verdana" size="2">Note: You may have noticed that some of the Ingredient schemas have the option for generational crafting, meaning you can put a previous Ingredient into a second Ingredient of the same type, increasing the new Ingredient’s quality. If you have the resources to do this several times, it's a good way to increase the quality of an Ingredient dramatically.</font></p>
+<p align="left"><font face="Verdana" size="2">At the end of the Phase, the project will be evaluated. Those that donated the most or highest quality of each of the Ingredients and of the overall project will receive rewards. That’s a total of 12 rewards given out this phase.</font></p>
+<p align="left"><font face="Verdana" size="2"></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> A Lightsaber Crafting Toolkit with a “guaranteed critical assembly” (Amazing Success on assembly). The top 2 crafters (quantity and quality) for the overall project get 20 charges on the tool. The top 2 crafters (quantity and quality) for each Ingredient get 5 charges on the tool.</font></p>
+
+
+
+<p><font color="#ff0000" face="Verdana" size="2"><strong>--- PHASE 3 ---</strong></font></p>
+<p align="left"><font color="#ffff00" face="Verdana" size="2"><strong><u>Combat: Capture Enemy Leadership</u></strong></font></p>
+<p align="left"><font size="2"><font face="Verdana"><strong><font color="#3399ff">Villager:</font></strong> Captain Sarguillos (5313,-4161)</font></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Combat Prowess: Melee Accuracy</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>For this quest you are asked to raid an enemy base and capture its Commander, bringing him back to Aurilia for interrogation. There are 25 bases in total, spread out all over Dathomir. Each base is defended by an impassable shield, turrets, and a lot of Sith Shadows.</font></p>
+<p align="left"><font face="Verdana" size="2">In order to enter a base you must disable its shields. To do this you need to get a “remote frequency codes” disk. These can be looted off the Sith Shadow patrols within a 250 meter radius around the bases. These patrols are easy to spot, there is usually a large group of them and they are yellow dots on the radar (unlike most Sith Shadows, which are usually red dots). However, be aware that they will be aggressive towards you if you’ve already accepted the Captain’s mission.</font></p>
+<p align="left"><font face="Verdana" size="2">You will find Sith Shadow outlaws, pirates, and thugs in these patrols, but they’re not the same ones you’ve been fighting in the other phases, these Sith Shadows are a lot tougher. They all have light armor and fairly high resists to everything (besides Lightsabers). Outlaws have ~13K HAM, pirates have ~15K HAM, and thugs have ~50K HAM. Thugs hit hard and are tough, about equal to some of the lower Corvette mobs, so be careful and be prepared.</font></p>
+<p align="left"><font face="Verdana" size="2">Anyway, once you finally loot a frequency code bring it back to the Captain and he will make you a “shield generator remote” to disable a specific base’s shields (found in the remote’s name).</font></p>
+<p align="left"><font face="Verdana" size="2">So how do you find where the base is that you have the remote for? Well, you can try searching around all of Dathomir until you stumble across the one you’re looking for (obviously not recommended), or you can try looting “a waypoint datapad” off the Sith Shadow base patrols (turn it into the Captain to get a waypoint to a base, which you can then check out to see if it’s the one), or you can simply check the forums for the base locations on your server.</font></p>
+<p align="left"><font face="Verdana" size="2">That’s right, “on your server”. The locations of the bases are different on each server and each time the phase comes around, that’s the tricky part about them. All servers have all 25 of the bases, but in different locations. The good news is that there seems to be set locations where the bases can potentially be located, so you at least have an idea where to look. The bad news is that there are more than 25 set locations, so there will be some “trial and error”, but at least it’s better than wandering around aimlessly.</font></p>
+<p align="left"><font face="Verdana" size="2">The 25 base names are:<br>alpha, beta, chi, delta, epsilon, eta, gamma, iota, kappa, lamda, mu, omega, omikron, phy, pi, psi, rho, sigma, tau, theta, xi, ypsylon, zed, zeta, nu</font></p>
+<p align="left"><font face="Verdana" size="2">The known set locations so far are:<br><font face="Courier New">.---------------------------------------------------------------.<br>| &nbsp;<font color="#66ff00">NW QUADRANT</font> &nbsp;| &nbsp;<font color="#66ff00">SW QUADRANT</font> &nbsp;| &nbsp;<font color="#66ff00">NE QUADRANT</font>&nbsp; | &nbsp;<font color="#66ff00">SE QUADRANT</font>&nbsp; |<br>|---------------|---------------|---------------|---------------|<br>|&nbsp; (-392,6004)&nbsp; |&nbsp;&nbsp;&nbsp;(-53,-165)&nbsp; |&nbsp;&nbsp;&nbsp;(700,750)&nbsp;&nbsp; |&nbsp; (3456,-1258) |<br>|&nbsp; (-410,2506)&nbsp; |&nbsp; (-362,-1914) |&nbsp; (1073,1860)&nbsp; |&nbsp; (4027,-1402) |<br>| (-1000,2300)&nbsp; |&nbsp; (-390,-1966) |&nbsp; (1311,1219)&nbsp; |&nbsp; (5313,-1145) |<br>| (-1092,2343)&nbsp; |&nbsp; (-614,-5290) |&nbsp; (1369,1217)&nbsp; |&nbsp; (5939,-2030) |<br>| (-1680,1703)&nbsp; |&nbsp; (-737,-5158) |&nbsp; (2960,45)&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>| (-1977,2234)&nbsp; | (-1000,-2800) |&nbsp; (3076,2174)&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>| (-2850,2366)&nbsp; | (-1017,-2873) |&nbsp; (3041,787)&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>| (-2932,738)&nbsp;&nbsp; | (-1721,-4684) |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>| (-3100,1170)&nbsp; | (-3824,-3011) |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>'---------------------------------------------------------------'<br></font><br>Note: To determine the name of a base just look for the little MSE “surveillance droids” near the base, they will have its name in theirs. For example, “a kappa surveillance droid” would indicate that it’s the “kappa” base.</font></p>
+<p align="left"><font face="Verdana" size="2">Note: The closest set locations to Aurilia are (5939,-2030), then (5315,-1145), and then (3456,-1258). I would recommend checking out those locations first to see if there are bases there on your server. If there are then make a note of their name(s) and try to get frequency codes for them.</font></p>
+<p align="left"><font face="Verdana" size="2">Okay, so you found the base that you have the remote for, now you have to bring down the shields by activating it. As soon as you do a horde of Sith Shadow thugs will begin spawning right in front of the base. Run away and regroup! You need to kill 5 of these thugs, but I highly recommend that you pull one or two out at a time to do it, the whole group of them will likely kill you within a few seconds.</font></p>
+<p align="left"><font face="Verdana" size="2">Note: If you die at any time after deactivating the shields (without a partner) you will fail the mission and need to start over.</font></p>
+<p align="left"><font face="Verdana" size="2">Once you kill the 5 you will get a message that the Commander has spawned in the base. To get to him in the base you’ll have to destroy a couple of gates (and it wouldn’t be a bad idea to destroy those three turrets now either). You best chance at getting into the base is to have somebody draw away the Sith Shadows guards and then go in. You can also wait for them to de-spawn and sneak in then, but they re-spawn fairly quickly and it can get messy.</font></p>
+<p align="left"><font face="Verdana" size="2">After you make it to the Commander you need to select “Capture” from his radial menu, once you do he will begin following you. Get clear of the base and then begin heading back to Aurilia.</font></p>
+<p align="left"><font face="Verdana" size="2">On the way back small groups of Sith Shadow pirates (2-3) will constantly try to rescue the Commander. If they get close enough to him he will escape. You will need to then catch up to him and select “Recapture” from his radial menu.</font></p>
+<p align="left"><font face="Verdana" size="2">Be aware that he will also take some biotoxins and eventually die from poisoning. It’s unknown exactly how long you have before this happens, but it seems to be accelerated every time he escapes. It could also be that he doesn’t take the biotoxins until the first time he escapes. More info is needed on this one.</font></p>
+<p align="left"><font face="Verdana" size="2">Anyway, once you lead the Commander safely back to the Captain you will complete the task, unlocking the FS branch and receiving your reward(s).</font></p>
+<p align="left"><font face="Verdana" size="2">Note that there is also the option to do this quest with a partner for an extra reward. If you decide you want to do it with a partner one of you <u>must</u> pick the option to bring down the shields and the other one <u>must</u> pick the option to capture the Commander. If you do not then you won’t both get credit. The person with the shields mission must bring down the base shields with the remote and then help kill five of the Sith Shadow thugs, all without dying until the Commander is captured. The other person must help kill the five thugs as well, and then capture the Commander and lead him back to the village without dying.</font></p>
+<p align="left"><font face="Verdana" size="2"></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> If you do this quest all by yourself you will receive a special Color Crystal, named Sunrider’s Destiny (aquamarine color). If you do it with a partner you will receive the same special Color Crystal and a Focused Crystal. The latter gives a +900 mind buff that lasts 1 hour and 30 minutes (<strong>cannot</strong> be used with other Mind buffs). It appears to be infinitely reusable and can be used once every 4 days.</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Reflexes: Search And Destroy II</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Dageerin (5238,-4189)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Enhanced Reflexes: Ranged Defense</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>You will be asked to strike 8 Sith Shadow camps to delay them from attacking Aurilia before the defenses have been rebuilt.</font></p>
+<p align="left"><font face="Verdana" size="2">In order to find the camps you will either be given a waypoint or a tracking device to be used with a Radiation Sensor that Dageerin gives you. The waypoints are obviously straight forward and lead you right to the camp, but the Radiation Sensor works by evaluating “threat level”.</font></p>
+<p align="left"><font face="Verdana" size="2">To use the Radiation Sensor, you access and “use” it from your Datapad, which will open up a small window. The window will update every few seconds while you’re moving (and only when you’re moving) to display the current “threat level”. Once you reach a constant speed and direction the window will either show a positive (green) or negative (red) number. The larger the positive number is, the closer you are to the direction that the camp is in (and vice versa for negative numbers). Once you get within 64 meters of the camp it will spawn and the Sensor window will let you know that you’re within range of the camp.</font></p>
+<p align="left"><font face="Verdana" size="2">At the camp you simply need to kill all the Sith Shadows there to pass that search and destroy mission. The camps are usually filled with Sith Shadow outlaws and pirates, however, the last two missions will have Sith Shadow task masters. These guys have 13K HAM and Light Armor with 70% resists to all (except Lightsaber), and they hit hard... so be prepared! Mission 7 will have one task master and mission 8 will have two of them.</font></p>
+<p align="left"><font face="Verdana" size="2">After you complete each mission you will need to return to Dageerin to complete the mission and get the next one. Sometimes he will tell you that they can’t locate any more camps and you will need to check back with him tomorrow for more missions. When he tells you this you’ll have to wait 24 hours (real-time) before you can get more missions from him. This usually seems to happen after the 3rd and 6th missions, so plan on this quest taking you at least 3 days to complete (there is a rumor that Jedi doing this quest do not need to wait [Update: this rumor is false, it takes 3 days for Jedi as well]).</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> Synthesized Muscle Stimulant, a buff item with 5 charges that boosts Ranged Defense by +10 for 5 minutes.</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Senses: Find Shield Generator Resources</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Eozlin (5200,-4141)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Heightened Senses: Luck</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font></strong><br>You’re asked to help find 50% concentrations for 8 different resource types to help rebuild the village’s defenses. </font></p>
+<p align="left"><font face="Verdana" size="2">You must have at least Novice Artisan to be eligible for this quest (though it will go much faster if you have some Surveying as well). You’ll also need Mineral, Gas, and either Wind or Solar Surveying Tools in order to be able to find everything required.</font></p>
+<p align="left"><font face="Verdana" size="2">To pass you simply need to Survey for the required resource type at a specific spot where the concentration is greater than or equal to the mission requirements. When you successfully do this your Quest Journal will update and you can simply look there for the next required resource type and concentration (without needing to return to Eozlin).</font></p>
+<p align="left"><font face="Verdana" size="2">You will also be given a random single unit of an Aurilian resource container each time you complete a task (except the last one). When you finish the entire quest your reward will also appear directly in your inventory as well.</font></p>
+<p align="left"><font face="Verdana" size="2">Note that you can find these concentrations on any planet, you’re not restricted to just Dathomir.</font></p>
+<p align="left"><font face="Verdana" size="2">Resource Types and required concentrations:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Iron</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Gas</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Aluminum</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Gemstone</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Steel</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">50% density of Copper</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> An Inorganic Survey Device (allows you to survey all inorganics), as well as the 8 units of Aurilian resource containers from the survey points.</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Crafting: Help Build Village Shields</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Quharek (5291,-4107)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Crafting Mastery: Experimentation</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font><br></strong>Quharek needs help rebuilding the village’s shields, similar to the defenses in Phase 2. To do this he is asking many crafters to aid with this community project. If you have at least Novice Artisan you can help him by donating a total of 20 Ingredients to contribute to rebuilding the shields.</font></p>
+<p align="left"><font face="Verdana" size="2">(Note: The number of people that can participate in the quest is limited for a phase.)</font></p>
+<p align="left"><font face="Verdana" size="2">Once you accept the quest, Quharek will send you to go see QT-QC (5193,-4196), a binary load lifter responsible for handling the shield Ingredients as you complete and contribute them. You can talk to it to get the schematics for the required Ingredients. You can also find out the current status of the project by talking to QT-QC or Quharek.</font></p>
+<p align="left"><font face="Verdana" size="2">You need to contribute at least 20 of any combination of the following Ingredients to pass this quest:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Endrost Alloy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Shield Housing</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Power Supply</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Unit Computer</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Regulator</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Shield Connections</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Primary Computer</font></div></li></ul>
+<p align="left"><font face="Verdana" size="2">The raw materials required by the Ingredients are those special Aurilian Resource Containers that can be looted off Sith Shadows, specifically Wind Crystal Energy, Ardanium II Energy, Rudic Ore, Ostrine Ore, and Endrine Ore. Also, the Ingredients can (and should) be experimented on, meaning you will need access to a weapon, droid, and general item crafting station.</font></p>
+<p align="left"><font face="Verdana" size="2">The schematic requirements and experimental properties are as follows:</font></p>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Endrost Alloy</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">8 Endrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Ostrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Wind Crystal Energy</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Quality = 50% OQ, 50% PE</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Toughness = 33% MA, 66% UT</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Shield Housing</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">6 Endrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">4 Rudic Ore</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">System Redundancy = 50% DR, 50% UT</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Power Supply</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">2 Ostrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">3 Endrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">5 Wind Crystal Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Power Supply (optional)</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Energy Resistance = 33% MA, 33% OQ, 33% PE</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Unit Computer</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">4 Rudic Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">6 Ardanium II Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Unit Computer (optional)</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Armor Effectiveness = 50% CD, 50% PE</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Regulator</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">5 Ostrine Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">5 Rudic Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Regulator (optional)</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Power Efficiency = 50% CD, 50% OQ</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Shield Connections</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">10 Ostrine Ore</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Grid Stability = 50% MA, 50% OQ</font></div></li></ul></ul>
+<p align="left"><font color="#66ff00" face="Verdana" size="2"><strong>Primary Computer</strong></font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">4 Rudic Ore</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">3 Ardanium II Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">3 Wind Crystal Energy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Primary Computer (optional)</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">System Response = 33% CD, 33% OQ, 33% PE</font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#66ff00">Village Shields</font></strong> (<em>cannot be crafted, for reference only</em>)</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">raw materials:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Endrost Alloy</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Shield Housing</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Power Supply</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Unit Computer</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Regulator</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Shield Connections</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">1 Primary Computer</font></div></li></ul>
+<li>
+<div align="left"><font face="Verdana" size="2">experimentation:</font></div></li>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Misc: Armor Integrity = 50% OQ, 50% UT</font></div></li></ul></ul>
+<p align="left"><font face="Verdana" size="2">In order to contribute the required 20 Ingredients you will need a total of approximately 200 (specific) Aurilian Resource Containers. To get these you can either look to your fellow players or attempt to collect them yourself. Players doing Eozlin’s quest will get 7 random units as rewards and combatants doing either Captain Sarguillos’ or Dageerin’s quests will also have opportunities to gather these resources. However, if you wish to gather them yourself you can go to perimeter of the various Sith Shadow Bases (from Captain Sarguillos’ quest) and look for Sith Shadow patrols to beat up and loot from (warning: they can be tough).</font></p>
+<p align="left"><font face="Verdana" size="2">Note: You may have noticed that some of the Ingredient schemas have the option for generational crafting, meaning you can put a previous Ingredient into a second Ingredient of the same type, increasing the new Ingredient’s quality. If you have the resources to do this several times, it's a good way to increase the quality of an Ingredient dramatically.</font></p>
+<p align="left"><font face="Verdana" size="2">At the end of the Phase, the project will be evaluated. Those that donated the most or highest quality of each of the Ingredients and of the overall project will receive rewards. That’s a total of 16 rewards given out this phase.</font></p>
+<p align="left"><font face="Verdana" size="2"></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> A Lightsaber Crafting Toolkit with a “guaranteed critical assembly” (Amazing Success on assembly). The top 2 crafters (quantity and quality) for the overall project get 20 charges on the tool. The top 2 crafters (quantity and quality) for each Ingredient get 5 charges on the tool.</font></p>
+<p align="left"><br><font color="#ff0000" face="Verdana" size="2"><strong>--- PHASE 4 ---</strong></font></p>
+<p align="left"><font color="#ffff00" face="Verdana" size="2"><strong><u>Combat/Reflexes: Village Assault!</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Captain Sarguillos (5313,-4161)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Combat Prowess: Ranged Speed <strong><u>OR</u></strong> Enhanced Reflexes: Melee Defense</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font></strong><br>You must defend the village from waves of attacking Sith Shadows. Every 90 minutes Aurilia will be raided by a horde of Sith Shadow outlaws, pirates, and thugs. In order to complete this quest you must kill (or help kill) 50 outlaws and 25 pirates (note that thugs do not give any credit for being killed).</font></p>
+<p align="left"><font face="Verdana" size="2">The Sith Shadows will continually spawn inside the village and just outside the North and South gates for 60 minutes. Following that there will be a 30 minute “downtime” before the next 90 minute wave starts.</font></p>
+<p align="left"><font face="Verdana" size="2">Be aware that these are the pumped up Phase 3 versions of Sith Shadows. They all have light armor and fairly high resists to everything (besides Lightsabers). Outlaws have ~13K HAM, pirates have ~15K HAM, and thugs have ~50K HAM. Thugs hit hard and are tough, about equal to some of the lower Corvette mobs, so be careful and be prepared.</font></p>
+<p align="left"><font face="Verdana" size="2">There are a few good strategies for completing this quest. First off, being in a big group is a big help (especially if you have a few Docs with you), so try to group up with everyone you see there and/or bring some friends to help. Another important thing to remember is that you only need to hit a pirate or outlaw once in order to get credit (and stay within range when it dies), if you have other people looking for what you’re killing give them a chance to hit it (if nearby) so they can get credit as well. Okay, on to the strategies...</font></p>
+<p align="left"><font face="Verdana" size="2">One strategy is to set up your party in the center of the village, with the Doc(s) hiding in one of the three central huts (now known as the “healing huts”) to fall back to in-case of trouble. For some reason the Sith Shadows usually won’t enter most huts in the village, so use that to your advantage. Basically, with this strategy you try to keep the group concentrated in the center of the village, clearing all Sith Shadows that come near it. Sometimes you’ll need to “fish” outside of the center for pirates, but try to lead them back to the village center as soon as they’ve switched to melee. Overall, this is a decent approach, but will likely lead to a lot of deaths and a slightly longer time to complete the quest.</font></p>
+<p align="left"><font face="Verdana" size="2">Another strategy is to stay outside the village walls and pick off Sith Shadows as they spawn near the North and South gates. Occasionally looking inside the village near the gates for potential targets as well to quickly jump in, kill, and get out. If you play it smart this strategy will not only result in less death, but will also probably have you completing the quest much more quickly. Not to mention that you probably don’t need a group when doing it this way (though it would still be beneficial to have one).</font></p>
+<p align="left"><font face="Verdana" size="2">You can unlock either Melee Defense or Ranged Speed with this quest, at the beginning of this quest you will be given the choice of which you wish to pursue. Note that the choice of unlock that you choose will impact the reward item that you receive.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward (Combat: Ranged Speed):</font></strong> An Aurilian Sculpture Section (1/4).</font></p>
+<p align="left"><font face="Verdana" size="2"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward (Reflexes: Melee Defense):</font></strong> Nothing</font></font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Senses: Healing Support</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Sivarra Mecheaux (5159,-4113)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Heightened Senses: Healing </font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font></strong><br>You need to aid in the defense of the village by assisting its defenders. Every 90 minutes Aurilia will be raided by a wave of Sith Shadow outlaws, pirates, and thugs. To complete this quest you will have to help players doing the “Village Assault” quest by providing medical support for them during their battles with Sith Shadows. If they get credit for a kill (pirates or outlaws) then you will get credit for healing them. Note that if they’ve already completed their quota for either pirates or outlaws you will not get credit for healing them in further encounters (since they’re no longer getting credit). Obviously this also means that you will get no credit for healing anybody during encounters with thugs, unfortunately.</font></p>
+<p align="left"><font face="Verdana" size="2">Medical support counts as almost any healing action. For example, healing damage, removing states, stopping bleeding, and resuscitation (as long as they still get credit for the kill) will all count towards healing credit. Note that you only have to perform a healing action once on a player, as long as you are within range when they get credit for the kill you will get credit for the heal.</font></p>
+<p align="left"><font face="Verdana" size="2">You can see how many healing credits you have by talking to Sivarra or her medical droid.</font></p>
+<p align="left"><font face="Verdana" size="2">Some survival tips for Medics/Docs/CM’s: First off, make sure you’re wearing Composite armor. These guys hit hard and you will likely get their attention sooner or later from healing the defenders, so be prepared for it. Full Dancer and Musician buffs are also extremely helpful, along with Brandy, Canape, and Muon. You will be healing a lot and you will always need your Mind to be in top shape to keep it up. Havla is obviously handy to have around as well, but you should also make sure you leave room for Synthsteak, it comes in very beneficial when you need to fetch a fallen defender from a gang of thugs. Also, carrying a Fishing Rod or Musical Instrument seems to help lower your chances of drawing aggro, but it could just be a matter of perception... it’s your call.</font></p>
+<p align="left"><font face="Verdana" size="2">After the initial 50 heals, you will unlock the FS branch and also have the option of doing another extended quest to heal an additional 50 defenders, for a total of 100 heals. Good luck!</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> Assist 50 defenders to unlock the FS branch, assist an additional 50 (extended, 100 total) to get a Bacta Tank (decoration).</font></p>
+<p align="left"><br><font color="#ffff00" face="Verdana" size="2"><strong><u>Crafting: Find a Replacement Computer Core for the Village of Aurilia Computers</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Villager:</font></strong> Chief Engineer of Aurilia (5388,-4122)</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">FS Branch Unlocked:</font></strong> Crafting Mastery: Repair</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Description:</font></strong><br>Aurilia’s computer core was damaged in the attacks, the new Chief Engineer needs you to locate and configure a replacement one.</font></p>
+<p align="left"><font face="Verdana" size="2">This is an involved and multi-step quest:</font></p>
+<p align="left"><font face="Verdana" size="2"><font color="#66ff00">Find a Gadget Specialist</font><br>Go to Keren on Naboo, Coronet on Corellia, or Mos Entha on Tatooine and speak to a gadget specialist to seek help finding a replacement computer core for the village of Aurilia on Dathomir. The Aurilia chief engineer can provide you with a waypoint to one of these locations if you wish. Simply speak with him. Once you locate the Gadget Specialist you need to purchase a Satellite Tracking Device Assembly Kit from him for 530 credits.</font></p>
+<p align="left"><font face="Verdana" size="2"><font color="#66ff00">Complete the Tracking Device Kit</font><br>Complete the satellite tracking device kit. Doing so will provide you with the means to find a downed satellite from which you could find a replacement computer core. Some pieces need to be looted off any normal NPC’s, like the other regular loot kits. The other pieces need to be crafted by a Master Artisan. Simply drag the pieces into the loot kit, and when all pieces are inserted it will create the “Downed Satellite Tracking Device”.<br>Tracking Device Assembly Kit pieces:</font></p>
+<ul>
+<li>
+<div align="left"><font face="Verdana" size="2">Tracking Device Assembly Bracket - First Segment</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Tracking Device Assembly Bracket - Second Segment</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Tracking Device Assembly Bracket - Third Segment</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Tracking Device Case - First Section</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Tracking Device Case - Second Section</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Tracking Device Case - Third Section</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Control Unit</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Energy Distributor</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Electronics Memory Module</font></div></li>
+<li>
+<div align="left"><font face="Verdana" size="2">Micro Sensor Suite</font></div></li></ul>
+<p align="left"><font face="Verdana"><font size="2"><font color="#66ff00">Obtain the Rights to an Abandoned Satellite</font><br><font color="#ff0000">NOTE: Make sure you complete the Satellite Tracking Device <strong><em>before</em></strong> this step, otherwise you will be bugged and will not be able to continue the quest.</font><br>Go to any major starport “ticket collector” droid and request their assistance to obtain the rights to an abandoned satellite. Doing so will provide you with tracking data for your satellite tracking device and will allow you to locate the fallen satellite. Rights must be purchased for 1100 credits from the droid (“Obtain Satellite Data” option on radial menu). After purchasing the rights your tracking device accesses the Central Satellite Database and retrieves the necessary Satellite information.</font></font></p>
+<p align="left"><font face="Verdana" size="2"><font color="#66ff00">Find the Fallen Satellite and Retrieve the Computer Core</font><br>Once you have the data in your tracking device go to it in your inventory and select “Activate Tracking Device” on its radial menu to determine which planet the satellite is on. After arriving on the specified planet use the “Activate Tracking Device” option again for the exact waypoint to the satellite. At the satellite select the “Retrieve Computer Core” menu option to obtain the core.</font></p>
+<p align="left"><font face="Verdana" size="2"><font color="#66ff00">Reconfigure the Computer Core's Interface</font><br>Modify the replacement computer core's interface so that it will be configured to be used with the computers of Aurilia. Do so by choosing the menu options under "Reconfigure Interface" from the computer core's radial menu.</font></p>
+<p align="left"><font face="Verdana" size="2">You will need to rewire the replacement computer core to match that of the village computers. There are four indicators on the core that will be lit when it has been properly configured.</font></p>
+<p align="left"><font face="Verdana" size="2">To reconfigure the core, you will need to connect four wires in the proper order to contacts on the core. There are red wires, yellow wires, and blue wires. Each color set of wires connects to a different power source, and any combination of the wires may be used to reconfigure the computer core.</font></p>
+<p align="left"><font face="Verdana" size="2">When you have the wires configured the way you desire, you may test the configuration to see if it is correct. For each wire that is connected to the correct contact, one of the four indicators will be lit. If the correct type of wire is used but is connected to the wrong contact, then one of the indicators will flicker. You can use this feedback to determine the final configuration of the interface for the new computer core.</font></p>
+<p align="left"><font face="Verdana" size="2">Be careful though... each time you test your configuration, power is sent through the core. An incomplete configuration can damage the core. This is reported as 'Circuit Integrity' which gives the percentage chance that the core is still viable. Be sure to keep an eye on this value. On average, a core can survive 6 - 7 attempts without significant damage, but beyond that you risk frying the computer core's circuits and rendering it useless.</font></p>
+<p align="left"><font face="Verdana" size="2">There’s no “easy” way to complete this puzzle. However, there is a decent logical strategy you can follow to eventually narrow down the possibilities until you solve it. First off you need to just try an initial set for a base experiment, so connect all the wires and test it. If you get some indicators lit up then that’s good, if not change all the connections and try the test again until you get some matches. Once you have some indicators lit it’s just a matter of trial and error from here. This time change just one of the connections. If the number of matches goes up then the connection was good. However, if the number goes down then you changed one that was good, change it back (and try changing the next connection as well to save integrity). Also, if the number does not change at all that means the connection you modified was not a good one, but you still have the wrong color wire connected, go back and change it to the third color not tried yet (and try changing the next connection as well to save integrity). The flickering indicators can be used in a similar manner to determine the correct colors, but it’s not as important, paying attention to the lit indicators should be your primary concern. If you work down all the connections this way you should have the core reconfigured within a few attempts.</font></p>
+<p align="left"><font face="Verdana" size="2"><font color="#66ff00">Bring the New Core to Aurilia's Chief Engineer</font><br>Bring the newly configured computer core to Aurilia's chief engineer so that he may use it to stabilize the village's primary computers and you can complete the quest.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong><font color="#3399ff">Reward:</font></strong> An Aurilian Sculpture Section (2/4)</font></p>
+
+
+<p><strong><u><font color="#ff0000" face="Verdana" size="2">SECTION 6: EXIT QUEST – DEFEAT MELLICHAE</font></u></strong></p>
+<p align="left"><font face="Verdana" size="2">After unlocking and purchasing six full FS branches you will receive another visit from the Old Man (same rules as before for the visit). This time he has a final mission for you: To go find and defeat Mellichae at his camp!</font></p>
+<p align="left"><font face="Verdana" size="2">You will be given a waypoint to his camp. Once you arrive there you will find Mellichae, Daktar Bloodmoon, 2 Sith Shadow thugs, 3 Sith Shadow mercenaries, and 4 Force Crystals embedded in the ground.</font></p>
+<p align="left"><font face="Verdana" size="2">Mellichae is a Zabrak with a cyborg arm and evil red eyes. He has 55K HAM, 80% resists to everything (except Lightsaber damage), medium armor, and uses a Lightsaber and Force powers (including Force Lightning)! Daktar also has 80% resists to all and medium armor, with about 25K HAM, but only uses normal weapons and atttacks so he isn’t much of a threat. The Sith Shadow thugs have 10K HAM with 45% resists and the Sith Shadow mercenaries have 11K HAM with 65% resists, so they’re not too difficult either. The real catch however, is the four Force Crystals.</font></p>
+<p align="left"><font face="Verdana" size="2">The Force Crystals will constantly heal Mellichae and Daktar in the camp, so you can’t defeat them until you destroy the crystals (40K hit points each). However, they will also heal one another... except one of them. There will always be one crystal that the others do not heal. You need to determine which one it is and destroy them one by one this way. Once they are all destroyed 4-5 more Sith Shadow thugs will spawn and now you can attempt to kill Mellichae. <em>(BTW, rumour has it that you can loot his cyborg arm!)</em></font></p>
+<p align="left"><font face="Verdana" size="2">Be warned that this can be a tough fight, and it wouldn’t hurt to bring some friends to help. If you die you will fail the quest and must wait for another visit from the Old Man**.</font></p>
+<p align="left"><font face="Verdana" size="2">However, if you successfully defeat him you will then be eligible to start the Padawan Trials. Congratulations!</font></p>
+<p align="left"><font face="Verdana" size="2"><em>**Note: Supposedly if you die and fail the quest you can simply shuttle and a waypoint to a new instance of Mellichae’s camp will be given, so you don’t have to actually wait for another visit from the Old Man.</em></font></p>
+<p align="left"><font face="Verdana" size="2"></font></p>
+<p align="left"><br><font color="#ff0000" face="Verdana" size="2"><strong><u>SECTION 7: PADAWAN TRAILS</u></strong></font></p>
+<p align="left"><font face="Verdana" size="2"><strong><u><font color="#ffff00">Introduction</font></u></strong><br>Once you defeat Mellichae you will receive a waypoint to the nearest Force Shrine. Once there, you can meditate** in front of a Force Shrine to begin the Jedi Padawan Trials. The shrine will then give you various trials (random order), which you must complete. At the eighth trial you will become a Jedi Initiate and gain the ability to craft and use Lightsabers, which in fact will be your trial at that point. If you successfully complete all sixteen of the trials you will pass the trials and become a Jedi Padawan!</font></p>
+<p align="left"><font face="Verdana" size="2">Be careful doing the trials, if you fail three trials you will lose all progress and have to start them over again from the beginning.</font></p>
+<p align="left"><font face="Verdana" size="2">BTW, you can restart the current trial at any time by revisiting a Force Shrine. Also, if you so wish, you can restart the Padawan Trials all the way from the beginning as well.</font></p>
+<p align="left"><font face="Verdana" size="2"><em>**Note: In order to meditate in front of the shrine, kneel and select the "meditate" option from the shrine's radial menu. You do NOT need the TKA meditate skill!</em></font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Architect Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must gather all possible information before making a decision.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to an architect by the name of Kant Graf in the city of [city]. An architect, Kant Graf, has asked you to clear some land so that he may build there.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Allow the Gungan to keep his land.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Artist Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must understand the motivations and desires of others without becoming emotionally involved.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to an artist named Sathme Forr in the city of [city]. An artist, Sathme Forr, has requested your help in getting her supplies from her assistant</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Tell Sathme that the assistant is not coming back, but you have her supplies.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Bad Cat Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must do everything possible to keep innocent civilians from being in danger.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to an actor named Yvana Bailer in the city of [city]. An actor named Yvana Bailer wants you to help put an end to a rampaging predator cat that has escaped.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill the kitty.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Chef Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must recognize chaos but not become a part of it.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you a chef named Seevi Nyed in to the city of [city]. A chef named Seevi Nyed wants you to stop a lowlife who stole his baked goods</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Tell Seevi that you won't do it. A pie is not worth a life, silly chef.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Pannaqa Trial</font></u></strong><br><strong>Trial:</strong> A Jedi should always be willing to lend a helping hand whenever possible.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Descrption:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a farmer named Pannaqa in the village of [city]. Pannaqa, a farmer, has asked for your help in getting a part he needs for his vibro-tiller.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Tell the drunken man that you will take it to the farmer and that you don't trust him.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Old Musician Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must always display respect and dignity when interacting with others.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a retired musician named Grizzlo the city of [city]. An elderly musician named Grizzlo has asked that you find any remaining members from his long forgotten musical group.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> To successfully complete the quest talk to all the people that you are sent to. One is in Mos Eisley, the next in Lok. After speaking with the man in Lok and getting the ring go back to Grizzlo. Tell Grizzlo Samston wanted him to have the ring and give it to him.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">People's Soldier Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must put aside personal feelings when aiding someone they might not find appealing.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to an old soldier named Torin Gundo in the city of [city].</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill the guy that Torin sends you to and return the stuff to him.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Sob Story Trial</font></u></strong><br><strong>Trial:</strong> A Jedi should remain calm in the face of emotion.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a young woman named Erim Thelcar in the city of [city]. Erim Thelcar asks that you find her brother... or at least her brothers remains... and retrieve a blaster that is a family heirloom.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Examine the corpse you are sent to and get the blaster, return it to Erim.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Spice Mom Trial</font></u></strong><br><strong>Trial:</strong> A Jedi should always strive for understanding rather than blind faith.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a woman named Sola Nosconda in the city of [city]. Sola Nosconda has asked you to pick up some supplies for her and bring them to her.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Go to the man that she sends you to. He is obviously a spice dealer, so tell the man you found the wrong guy and then to stay away from Sola, he will eventually give you the spice anyway. Go back to the Sola and do not give her the spice until she tells you about her son being in pain.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Surveyor Trial</font></u></strong><br><strong>Trial:</strong> A Jedi should be prepared to undertake that which others will not.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Descrption:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a surveyor named Par Doiae in the city of [city]. A surveyor, Par Doiae, has asked your help in clearing a sharnaff bull from a site where he needs to work.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill the Sharnaff Bull.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Politician Trial</font></u></strong><br><strong>Trial:</strong> A Jedi should be equally a public servant and a public defender.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a politician named Kaul Dysen in the city of [city]. A politician named Kaul Dysen would like your help destroying a bloodseeker mite that is wreaking havoc in the area.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill the Bloodseeker Mite.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">The Ring Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must be willing to put himself in danger in order to do what is right.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a man named Keicho in the city of [city]. Keicho wants you to retrieve a ring that he lost. This ring is the wedding ring of his wife's mother.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> To successfully complete the quest either kill the man or don't kill the man if possible, then return the ring to Keicho.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Kill Baz Nitch Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must be an able and courageous warrior.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to an environmentalist named Menchi in the city of [city]. An environmentalist named Menchi has asked you to kill 20 baz nitches. Total killed so far: ##</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill 20 Baz Nitches (of any type) on Dathomir. You can get missions (11k) for them or find them in the wild.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Kill Sludge Panther Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must do whatever is possible to protect the natural order of the universe.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to an ecologist named Luha Kellaro in the city of [city]. An ecologist named Luha Kellaro has asked you to kill 20 sludge panthers. Total killed so far: ##</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill 20 Sludge Panthers (of any type) on Talus. Minor Sludge Panthers spawn around Dearic, not many spawn at once so you will have to circle around the whole city on the outskirts, but eventually you will find them. However, these are usually static spawn cycling points, where several waves of spawns will cycle. If you keep killing the waves eventually a Minor Sludge Panther wave will come. If you stick to one of these points you will complete the trial in no time.<br>Here are the waypoints for known ones around Dearic (re-spawn rate is usually less than a minute):<br>(158,-2511)<br>(72,-3298)<br>(-39,-2574)<br>(405,-2376)<br>(500,-3400)<br>(986,-2975)</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Kill Falumpaset Trial</font></u></strong><br><strong>Trial:</strong> A Jedi must understand that there are times when a greater good outweighs a lesser evil.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description:</strong> Travel to the planet [planet]. Once there, a waypoint will be uploaded to your datapad leading you to a naturalist named Braganta in the city of [city]. A naturalist named Braganta has asked you to kill 20 falumpasets. Total killed so far: ##</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> Kill 20 Falumpasets (of any type) on Naboo. The best place for this is southeast of the Gungan Scared Palace POI. Gungan falumpasets also count as ones you can kill for credit so kill them if you like (level 25 Gungan Mercenary missions from Moenia?).</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Craft Lightsaber Trial</font></u></strong><br><strong>Trial:</strong> Thanks to your progress thus far, you have been granted the rank of Jedi Initiate.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description 1:</strong> With this honor comes the ability to craft your first lightsaber.Such is your next task... to craft yourself a lightsaber.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Description 2:</strong> Well done. Your first lightsaber is now complete. Before you may use it, though, it requires a Force crystal. As your next task, obtain and tune a Force crystal for use with your lightsaber.</font></p>
+<p align="left"><font face="Verdana" size="2"><strong>Solution:</strong> The time has come to craft your first Lightsaber! After successfully creating it tune a Color Force Crystal (non-white one) when told to (and only when told to). This is always the eighth trial and you will gain the Jedi Initiate status when given this trial.</font></p>
+<p align="left"><br><font face="Verdana" size="2"><strong><u><font color="#ffff00">Conclusion</font></u></strong><br>After successfully completing all sixteen trials you will gain the Jedi Padawan title, a Padawan Robe, and the ability to start training in the Jedi Disciplines. Also, you'll unlock your second character slot, with which you can do whatever you want, including becoming a Jedi again (but you will not unlock any further slots).</font></p>
+<p align="left"><font face="Verdana" size="2">Congratulations, you've earned it!</font></p>
+<p align="left"><br><font face="Verdana" size="2">So where do you go from here? Well, to understand everything about being a Jedi, I suggest that you now head over to my in-depth <strong>Jedi Revamp FAQ</strong> (shameless plug), which can be found here:<br><font color="#3399ff">http://forums.station.sony.com/swg/board/message?board.id=jedi&amp;message.id=473607</font></font></p>
+<p align="left"><br><font face="Verdana" size="2">May the Force be with you... always!</font></p>
+
+
+
+
+</main>
+
+</html>
