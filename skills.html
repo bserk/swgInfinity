@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      }
+
+      .floating-navbar {
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      /*width: 90%;
+      max-width: 1200px;*/
+      z-index: 1000;
+      
+      /* Flexbox positioning for contents */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      }
+
+      .nav-links iframe {
+          width: 100px;
+          height: 200px;
+          border: none;
+      }
+
+      .content {
+      padding-top: 10px; 
+      /*max-width: 800px;*/
+      margin: 0 110px;
+      }
+
+      .table-container {
+        margin: 10px 0;
+      }
+
+      .header-name {
+        background-color: white;
+        border: 0.5px solid #ddd;
+      }
+
+      .skill-selected {
+        background-color: #4d94f0;
+        border: 0.5px solid #ddd;
+      }
+
+      .skill-no {
+        background-color: #e3edf3;
+        border: 0.5px solid #ddd;
+      }
+
+      .outer-shell {
+        border: 0.5px solid #ddd;
+      }
+
+      table {
+        /* width: 70%; */
+        border-collapse: collapse; /* Merges cell borders */
+        font-family: sans-serif;
+      }
+
+      th, td {
+        padding: 3px 3px;
+        /*border: 0.5px solid #ddd;*/
+        font-size: 11px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+      
+        
+    </style>
+    <title>Interactive HTML Table</title>
+</head>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<body>
+  <main class="content">
+      <table>
+        <tr>
+          <td>
+
+            <div class="table-container">
+                <table id="skillsGroup">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <table id="skillsTable">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+          </td>
+        </tr>
+      </table>
+
+  </main>
+</body>
+
+<script>
+
+    const jsonSkillsGroup=[
+      {"name":"Bserk"},
+      {"name":"Reggie"},
+      {"name":"Grind"}
+    ];
+
+    const jsonDataSkills=[
+        {"name":"Phase 1","group":"Grind","skills":[
+            {"name":"Artisan (1)","tree":"Master"},
+            {"name":"Architect (2)","tree":"Master"},
+            {"name":"Medic (3)","tree":"Master"}
+        ]},
+        {"name":"Phase 2","group":"Grind","skills":[
+            {"name":"Artisan","tree":"0-0-0-4"},
+            {"name":"Medic","tree":"Master"},
+            {"name":"Brawler (4)","tree":"Master"},
+            {"name":"Teras Kasi Artist (5)","tree":"Master"}
+        ]},
+        {"name":"Phase 3","group":"Grind","skills":[
+            {"name":"Artisan","tree":"0-0-0-4"},
+            {"name":"Medic","tree":"Master"},
+            {"name":"Brawler","tree":"4-4-0-0"},
+            {"name":"Teras Kasi Artist","tree":"Master"},
+            {"name":"Fencer","tree":"4-4-0-0"}
+        ]},
+        {"name":"Guardsman","group":"Reggie","skills":[
+            {"name":"Artisan","tree":"0-0-0-4"},
+            {"name":"Scout","tree":"4-0-0-4"},
+            {"name":"Medic","tree":"Master"},
+            {"name":"Marksman","tree":"0-0-0-4"},
+            {"name":"Combat Medic","tree":"4-4-0-0"},
+            {"name":"Squad Leader","tree":"1-0-3-4"}
+        ]},
+        {"name":"First Responder","group":"Reggie","skills":[
+            {"name":"Artisan","tree":"4-4-4-4"},
+            {"name":"Medic","tree":"Master"},
+            {"name":"Architect","tree":"Master"},
+            {"name":"Doctor","tree":"0-4-0-4"},
+            {"name":"Merchant","tree":"Master"}
+        ]},
+        {"name":"Swashbuckler","group":"Reggie","skills":[
+            {"name":"Artisan","tree":"0-0-0-4"},
+            {"name":"Brawler","tree":"Master"},
+            {"name":"Teras Kasi Artist","tree":"Master"},
+            {"name":"Fencer","tree":"4-4-0-0"}
+        ]},
+        {"name":"Hunter","group":"Reggie","skills":[
+            {"name":"Scout","tree":"Master"},
+            {"name":"Brawler","tree":"4-4-0-0"},
+            {"name":"Teras Kasi Artist","tree":"Master"},
+            {"name":"Fencer","tree":"4-4-3-0"},
+            {"name":"Ranger","tree":"0-0-4-0"}
+        ]},
+        {"name":"Material Specialist","group":"Bserk","skills":[
+            {"name":"Artisan","tree":"Master"},
+            {"name":"Tailor","tree":"Master"},
+            {"name":"Armorsmith","tree":"Master"},
+            {"name":"Merchant","tree":"Master"}
+        ]},
+        {"name":"Foreman","group":"Bserk","skills":[
+            {"name":"Artisan","tree":"4-0-4-4"},
+            {"name":"Architect","tree":"Master"},
+            {"name":"Weaponsmith","tree":"Master"},
+            {"name":"Droid Engineer","tree":"Master"},
+            {"name":"Merchant","tree":"Master"}
+        ]},
+        {"name":"Medical Tactician","group":"Bserk","skills":[
+            {"name":"Artisan","tree":"0-0-4-4"},
+            {"name":"Medic","tree":"Master"},
+            {"name":"Marksman","tree":"0-0-0-4"},
+            {"name":"Doctor","tree":"0-4-0-4"},
+            {"name":"Combat Medic","tree":"Master"},
+            {"name":"Merchant","tree":"Master"}
+        ]},
+        {"name":"Slicer","group":"Bserk","skills":[
+            {"name":"Artisan","tree":"0-0-0-3"},
+            {"name":"Brawler","tree":"Master"},
+            {"name":"Marksman","tree":"0-4-0-0"},
+            {"name":"Teras Kasi Artist","tree":"Master"},
+            {"name":"Fencer","tree":"4-4-0-0"},
+            {"name":"Smuggler","tree":"0-4-0-0"}
+        ]}
+    ];
+
+    const tableBodyGrp=document.querySelector("#skillsGroup tbody");
+
+    const row=document.createElement('tr');
+    jsonSkillsGroup.forEach(group =>{
+        const groupCell=document.createElement('td');
+        let grp01 = '';
+        grp01 = '<button type="button">'+group.name+'</button>';
+        groupCell.textContent=group.name;
+        groupCell.innerHTML=grp01;
+        row.appendChild(groupCell);
+    });
+    tableBodyGrp.append(row);
+    
+    const table = document.getElementById('skillsGroup');
+
+    // Listen for a click anywhere inside the table
+    table.addEventListener('click', function(event) {
+        // Target the specific element that was clicked
+        const targetCell = event.target;
+
+        if (targetCell.type === 'button') {
+
+              document.querySelector('#skillsTable tbody').innerHTML = '';
+              const tableBody=document.querySelector("#skillsTable tbody");
+              jsonDataSkills.forEach(template =>{
+
+                if (template.group === targetCell.textContent) {
+                  
+                  const row=document.createElement('tr');
+
+                  const templateCell=document.createElement('td');
+                  templateCell.textContent=template.name;
+                  templateCell.className="outer-shell";
+                  row.appendChild(templateCell);
+
+                  template.skills.forEach(skill =>{
+
+                      const skillTable=document.createElement('td');
+                      skillTable.className="outer-shell";
+
+                      let tbl01 = '<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td>';
+                      let tbl02 = '<td colspan="23" rowspan="3" align="center" class="header-name">'+skill.name+'</td>';
+                      let tbl03 = '<td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td></tr><tr><td></td><td colspan="9"></td>';
+                      let skl17 = ''; 
+                      if(skill.tree === "Master"){skl17 = 'class="skill-selected"'}else{skl17= 'class="skill-no"'};
+                      let tbl04 = '<td colspan="5" rowspan="2" '+ skl17 +'></td>';
+                      let tbl05 = '<td colspan="9"></td><td></td></tr><tr><td></td><td colspan="9"></td><td colspan="9"></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td>';
+                      let skl13 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(0)==="4"){skl13 = 'class="skill-selected"'}else{skl13= 'class="skill-no"'};
+                      let tbl06 = '</tr><tr><td></td><td colspan="5" rowspan="2" '+skl13+'></td><td></td>';
+                      let skl14 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(2)==="4"){skl14 = 'class="skill-selected"'}else{skl14= 'class="skill-no"'};
+                      let tbl07 = '<td colspan="5" rowspan="2" '+skl14+'></td><td></td>';
+                      let skl15 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(4)==="4"){skl15 = 'class="skill-selected"'}else{skl15= 'class="skill-no"'};
+                      let tbl08 = '<td colspan="5" rowspan="2" '+skl15+'></td><td></td>';
+                      let skl16 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(6)==="4"){skl16 = 'class="skill-selected"'}else{skl16= 'class="skill-no"'};
+                      let tbl09 = '<td colspan="5" rowspan="2" '+skl16+'></td><td></td>';
+                      let tbl10 = '</tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td></tr>';
+                      let skl09 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(0)>="3"){skl09 = 'class="skill-selected"'}else{skl09= 'class="skill-no"'};
+                      let tbl11 = '</tr><tr><td></td><td colspan="5" rowspan="2" '+skl09+'></td><td></td>';
+                      let skl10 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(2)>="3"){skl10 = 'class="skill-selected"'}else{skl10= 'class="skill-no"'};
+                      let tbl12 = '<td colspan="5" rowspan="2" '+skl10+'></td><td></td>';
+                      let skl11 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(4)>="3"){skl11 = 'class="skill-selected"'}else{skl11= 'class="skill-no"'};
+                      let tbl13 = '<td colspan="5" rowspan="2" '+skl11+'></td><td></td>';
+                      let skl12 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(6)>="3"){skl12 = 'class="skill-selected"'}else{skl12= 'class="skill-no"'};
+                      let tbl14 = '<td colspan="5" rowspan="2" '+skl12+'></td><td></td>';
+                      let tbl15 = '</tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td></tr>';
+                      let skl05 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(0)>="2"){skl05 = 'class="skill-selected"'}else{skl05= 'class="skill-no"'};
+                      let tbl16 = '</tr><tr><td></td><td colspan="5" rowspan="2" '+skl05+'></td><td></td>';
+                      let skl06 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(2)>="2"){skl06 = 'class="skill-selected"'}else{skl06= 'class="skill-no"'};
+                      let tbl17 = '<td colspan="5" rowspan="2" '+skl06+'></td><td></td>';
+                      let skl07 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(4)>="2"){skl07='class="skill-selected"'}else{skl07='class="skill-no"'};
+                      let tbl18 = '<td colspan="5" rowspan="2" '+skl07+'></td><td></td>';
+                      let skl08 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(6)>="2"){skl08='class="skill-selected"'}else{skl08='class="skill-no"'};
+                      let tbl19 = '<td colspan="5" rowspan="2" '+skl08+'></td><td></td>';
+                      let tbl20 = '</tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td></tr>';
+                      let skl01 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(0)>="1"){skl01='class="skill-selected"'}else{skl01='class="skill-no"'};
+                      let tbl21 = '</tr><tr><td></td><td colspan="5" rowspan="2" '+skl01+'></td><td></td>';
+                      let skl02 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(2)>="1"){skl02='class="skill-selected"'}else{skl02='class="skill-no"'};
+                      let tbl22 = '<td colspan="5" rowspan="2" '+skl02+'></td><td></td>';
+                      let skl03 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(4)>="1"){skl03='class="skill-selected"'}else{skl03='class="skill-no"'};
+                      let tbl23 = '<td colspan="5" rowspan="2" '+skl03+'></td><td></td>';
+                      let skl04 = '';
+                      if(skill.tree === "Master" || skill.tree.charAt(6)>="1"){skl04='class="skill-selected"'}else{skl04='class="skill-no"'};
+                      let tbl24 = '<td colspan="5" rowspan="2" '+skl04+'></td><td></td>';
+                      let tbl25 = '</tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td></tr><tr><td></td><td colspan="9"></td><td colspan="5" rowspan="2" class="skill-selected"></td><td colspan="9"></td><td></td></tr><tr><td></td><td colspan="9"></td><td colspan="9"></td><td></td></tr><tr><td></td><td colspan="23"></td><td></td></tr></table>';
+                      skillTable.innerHTML = tbl01.concat(tbl02.concat(tbl03.concat(tbl04.concat(tbl05.concat(tbl06.concat(tbl07.concat(tbl08.concat(tbl09.concat(tbl10.concat(tbl11.concat(tbl12.concat(tbl13.concat(tbl14.concat(tbl15.concat(tbl16.concat(tbl17.concat(tbl18.concat(tbl19.concat(tbl20.concat(tbl21.concat(tbl22.concat(tbl23.concat(tbl24.concat(tbl25))))))))))))))))))))))));
+                      row.appendChild(skillTable);
+
+                  });
+
+                  tableBody.append(row);
+                  
+                };
+
+              });
+
+        };
+    });
+
+</script>
+</html>

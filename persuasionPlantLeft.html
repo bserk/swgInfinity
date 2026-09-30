@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      }
+
+      .floating-navbar {
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      /*width: 90%;
+      max-width: 1200px;*/
+      z-index: 1000;
+      
+      /* Flexbox positioning for contents */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      }
+
+      .nav-links iframe {
+          width: 100px;
+          height: 200px;
+          border: none;
+      }
+
+      .content {
+      padding-top: 10px; 
+      /*max-width: 800px;*/
+      margin: 0 110px;
+      }
+
+      .table-container {
+        margin: 10px 0;
+      }
+
+      .grid{
+        text-align: center;
+        column-width: 20px;
+      }
+
+      .hlX{
+        text-align: center;
+        column-width: 20px;
+        color: #ffffff;
+      }
+
+      table {
+        /* width: 70%; */
+        border-collapse: collapse; /* Merges cell borders */
+        font-family: sans-serif;
+      }
+
+      th, td {
+        padding: 7px 7px;
+        border: 0.5px solid #ddd;
+        font-size: 11px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      /* The highlight style */
+      td.highlight {
+        background-color: #007bff; /* Bright Yellow */
+        font-weight: bold;
+      }
+        
+    </style>
+    <title>Interactive HTML Table</title>
+</head>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<body>
+  <main class="content">
+      <table>
+        <tr>
+          <td>
+            <div class="table-container">
+                <table id="myTable" width="140">
+                    <thead>
+                        <th>Set 1</th>
+                        <th>Set 2</th>
+                        <th>Set 3</th>
+                    </thead>
+                    <tbody>    
+                    </tbody>
+                </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+  </main>
+</body>
+
+<script>
+
+  const jsonData=[
+    {"a":"1","b":"1","c":"1"},
+    {"a":"2","b":"2","c":"2"},
+    {"a":"3","b":"3","c":"3"},
+    {"a":"4","b":"4","c":"4"},
+    {"a":"5","b":"5","c":"5"}
+  ];
+
+    const tableBody=document.querySelector("#myTable tbody");
+    jsonData.forEach(rowData =>{
+        const row=document.createElement('tr');
+
+        const aCell=document.createElement('td');
+        aCell.textContent=rowData.a;
+        aCell.className = 'grid';
+        row.appendChild(aCell);
+
+        const bCell=document.createElement('td');
+        bCell.textContent=rowData.b;
+        bCell.className = 'grid';
+        row.appendChild(bCell);
+
+        const cCell=document.createElement('td');
+        cCell.textContent=rowData.c;
+        cCell.className = 'grid';
+        row.appendChild(cCell);
+
+        tableBody.append(row);
+
+    });
+
+    const table = document.getElementById('myTable');
+
+    // Listen for a click anywhere inside the table
+    table.addEventListener('click', function(event) {
+        // Target the specific element that was clicked
+        const targetCell = event.target;
+
+        // Make sure the clicked element is actually a table cell (TD)
+        if (targetCell.tagName === 'TD') {
+            // Toggle the 'highlight' class
+            targetCell.classList.toggle('highlight');
+        };
+    });
+
+</script>
+</html>

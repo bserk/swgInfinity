@@ -1,0 +1,3080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      }
+
+      .floating-navbar {
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      /*width: 90%;
+      max-width: 1200px;*/
+      z-index: 1000;
+      
+      /* Flexbox positioning for contents */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      }
+
+      .nav-links iframe {
+          width: 100px;
+          height: 200px;
+          border: none;
+      }
+
+      .content {
+      padding-top: 10px; 
+      /*max-width: 800px;*/
+      margin: 0 110px;
+      }
+
+      .table-container {
+        max-height: 200px;    /* Caps the layout height at 300px */
+        overflow-y: hidden;     /* Adds a vertical scrollbar only if content overflows */
+        border: 1px solid #ccc; /* Optional: gives a clean boundary to the container */
+      }
+
+      table {
+        /* width: 70%; */
+        border-collapse: collapse; /* Merges cell borders */
+        font-family: sans-serif;
+        margin: 10px 0;
+      }
+
+      th, td {
+        padding: 10px 10px;
+        text-align: left;
+        border-bottom: 0.5px solid #ddd;
+        font-size: 11px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer; /* Shows user the header is clickable */
+        user-select: none;
+      }
+
+      th:hover {
+        background-color: #0056b3;
+      }
+
+      /* Zebra striping for readability */
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+        /*background-color: #f9f9f9;*/
+      }
+    </style>
+    <title>Interactive HTML Table</title>
+</head>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<body>
+  <main class="content">
+    
+    <table>
+      <tr><td colspan="3">Ubese Armor</td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/hide_leathery" target="_blank">Leathery Hide</a>
+        <div class="table-container">
+        <table id="leatheryHide" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">SR</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/steel_neutronium" target="_blank">Neutronium Steel</a>
+        <div class="table-container">
+        <table id="neutroniumSteel" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA<br>212</th>
+              <th data-type="number">OQ<br>1000</th>
+              <th data-type="number">SR<br>765</th>
+              <th data-type="number">UT<br>718</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/hide_wooly" target="_blank">Wooly Hide</a>
+        <div class="table-container">
+        <table id="woolyHide" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">SR</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/metal" target="_blank">Metal</a>
+        <div class="table-container">
+        <table id="metal" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA<br>212</th>
+              <th data-type="number">OQ<br>1000</th>
+              <th data-type="number">SR<br>765</th>
+              <th data-type="number">UT<br>718</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/iron" target="_blank">Iron</a>
+        <div class="table-container">
+        <table id="iron" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">SR</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/steel" target="_blank">Steel</a>
+        <div class="table-container">
+        <table id="steel" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">SR</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/gemstone_armophous" target="_blank">Amorphous Gemstone</a>
+        <div class="table-container">
+        <table id="amorphousGemstone" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">SR</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/polymer" target="_blank">Polymer</a>
+        <div class="table-container">
+        <table id="polymer" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">SR</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/iron_axidite" target="_blank">Axidite Iron</a>
+        <div class="table-container">
+        <table id="axiditeIron" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">MA<br>248</th>
+              <th data-type="number">OQ<br>1000</th>
+              <th data-type="number">SR<br>648</th>
+              <th data-type="number">UT<br>648</th>
+              <th data-type="number">OQ/MA<br>50/50</th>
+              <th data-type="number">OQ/SR<br>50/50</th>
+              <th data-type="number">OQ/UT<br>50/50</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+    </table>
+
+    <table>
+      <tr><td colspan="3">Ranged Heal</td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/fruit_berries_dantooine" target="_blank">Dantooine Berry Fruit</a>
+        <div class="table-container">
+        <table id="dantooineBerry" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/water_vapor_talus" target="_blank">Talusian Water Vapor</a>
+        <div class="table-container">
+        <table id="talusianWaterVapor" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/petrochem_fuel_liquid_type4" target="_blank">Class 4 Liquid Petro Fuel</a>
+        <div class="table-container">
+        <table id="class4liquidPetroFuel" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/meat_herbivore" target="_blank">Herbivore Meat</a>
+        <div class="table-container">
+        <table id="herbivoreMeat" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">PE<br>700</th>
+              <th data-type="number">OQ<br>1000</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/fiberplast_tatooine" target="_blank">Tatooinian Fiberplast</a>
+        <div class="table-container">
+        <table id="tatooinianFiberplast" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+              <th data-type="number">OQ/UT<br>67/33</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/wheat_wild_lok" target="_blank">Lokian Wild Wheat</a>
+        <div class="table-container">
+        <table id="lokianWildWheat" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">PE<br>700</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+              <th data-type="number">OQ/UT<br>67/33</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/aluminum" target="_blank">Aluminum</a>
+        <div class="table-container">
+        <table id="aluminum" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">CD</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/CD<br>67/33</th>
+              <th data-type="number">OQ/UT<br>67/33</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/organic" target="_blank">Organic</a>
+        <div class="table-container">
+        <table id="organic" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">CD</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/PE<br>67/33</th>
+              <th data-type="number">OQ/UT<br>67/33</th>
+              <th data-type="number">All</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/fiberplast" target="_blank">Fiberplast</a>
+        <div class="table-container">
+        <table id="fiberplast" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">CD</th>
+              <th data-type="number">PE</th>
+              <th data-type="number">OQ</th>
+              <th data-type="number">UT</th>
+              <th data-type="number">OQ/UT<br>67/33</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+    </table>
+
+    <table>
+      <tr><td colspan="5">Lance</td></tr>
+      <tr valign="top" style="background-color: transparent;"><td>
+        <a href="https://galaxyharvester.net/resourceType.py/copper_desh" target="_blank">Desh Copper</a>
+        <div class="table-container">
+        <table id="deshCopper" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">UT<br>372</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/petrochem_fuel_solid_type3" target="_blank">Class 3 Solid Petro Fuel</a>
+        <div class="table-container">
+        <table id="class3solidPetroFuel" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">UT</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/copper_platinite" target="_blank">Platinite Copper</a>
+        <div class="table-container">
+        <table id="platiniteCopper" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">UT<br>761</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/metal" target="_blank">Metal</a>
+        <div class="table-container">
+        <table id="metalLance" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">SR</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td>
+      <td>
+        <a href="https://galaxyharvester.net/resourceType.py/metal_ferrous" target="_blank">Ferrous Metal</a>
+        <div class="table-container">
+        <table id="ferrousMetal" class="sortable-table">
+          <thead>
+            <tr>
+              <th data-type="type">Type</th>
+              <th data-type="name">Name</th>
+              <th data-type="number">SR</th>
+            </tr>
+          </thead>
+          <tbody>    
+          </tbody>
+        </table>
+        </div>
+      </td></tr>
+    </table>
+
+
+
+
+    <table id="allFields" class="sortable-table">
+      <thead>
+        <tr>
+          <th data-type="sub0">Group</th>
+          <th data-type="sub1">Sub1</th>
+          <th data-type="sub2">Sub2</th>
+          <th data-type="sub3">Sub3</th>
+          <th data-type="sub4">Sub4</th>
+          <th data-type="sub5">Sub5</th>
+          <th data-type="type">Type</th>
+          <th data-type="name">Name</th>
+          <th data-type="number">ER</th>
+          <th data-type="number">CR</th>
+          <th data-type="number">CD</th>
+          <th data-type="number">DR</th>
+          <th data-type="number">FL</th>
+          <th data-type="number">HR</th>
+          <th data-type="number">MA</th>
+          <th data-type="number">PE</th>
+          <th data-type="number">OQ</th>
+          <th data-type="number">SR</th>
+          <th data-type="number">UT</th>
+        </tr>
+      </thead>
+      <tbody>    
+      </tbody>
+    </table>
+
+  </main>
+</body>
+
+<script>
+  const jsonData76=[
+    {"sub7_76":"Corellian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Dantooine Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Dathomirian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Endorian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Kashyyyk Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Lokian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Nabooian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Rori Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Talusian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Tatooinian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Yavinian Vegetable Beans","sub6_76":"Beans"},
+    {"sub7_76":"Corellian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Dantooine Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Dathomirian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Endorian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Kashyyyk Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Lokian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Nabooian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Rori Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Talusian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Tatooinian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Yavinian Berry Fruit","sub6_76":"Berries"},
+    {"sub7_76":"Corellian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Dantooine Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Dathomirian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Endorian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Kashyyyk Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Lokian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Nabooian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Rori Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Talusian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Tatooinian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Yavinian Domesticated Corn","sub6_76":"Domesticated Corn"},
+    {"sub7_76":"Corellian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Dantooine Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Dathomirian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Endorian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Kashyyyk Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Lokian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Nabooian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Rori Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Talusian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Tatooinian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Yavinian Domesticated Oats","sub6_76":"Domesticated Oats"},
+    {"sub7_76":"Corellian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Dantooine Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Dathomirian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Endorian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Kashyyyk Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Lokian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Nabooian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Rori Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Talusian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Tatooinian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Yavinian Domesticated Rice","sub6_76":"Domesticated Rice"},
+    {"sub7_76":"Corellian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Dantooine Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Dathomirian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Endorian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Kashyyyk Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Lokian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Nabooian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Rori Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Talusian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Tatooinian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Yavinian Domesticated Wheat","sub6_76":"Domesticated Wheat"},
+    {"sub7_76":"Corellian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Dantooine Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Dathomirian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Endorian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Kashyyyk Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Lokian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Nabooian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Rori Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Talusian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Tatooinian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Yavinian Evergreen Wood","sub6_76":"Evergreen Soft Wood"},
+    {"sub7_76":"Corellian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Dantooine Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Dathomirian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Endorian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Kashyyyk Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Lokian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Nabooian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Rori Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Talusian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Tatooinian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Yavinian Flower Fruit","sub6_76":"Flowers"},
+    {"sub7_76":"Corellian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Dantooine Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Dathomirian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Endorian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Kashyyyk Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Lokian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Mixed Fruits","sub6_76":"Fruits"},
+    {"sub7_76":"Nabooian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Rori Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Talusian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Tatooinian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Yavinian Fruit","sub6_76":"Fruits"},
+    {"sub7_76":"Corellian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Dantooine Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Dathomirian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Endorian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Kashyyyk Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Lokian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Nabooian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Rori Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Talusian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Tatooinian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Yavinian Vegetable Fungus","sub6_76":"Fungi"},
+    {"sub7_76":"Corellian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Dantooine Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Dathomirian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Endorian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Kashyyyk Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Lokian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Nabooian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Rori Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Talusian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Tatooinian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Yavinian Vegetable Greens","sub6_76":"Greens"},
+    {"sub7_76":"Corellian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Dantooine Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Dathomirian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Endorian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Kashyyyk Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Lokian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Nabooian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Rori Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Talusian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Tatooinian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Yavinian Vegetable Tubers","sub6_76":"Tubers"},
+    {"sub7_76":"Corellian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Dantooine Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Dathomirian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Endorian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Kashyyyk Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Lokian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Nabooian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Rori Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Talusian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Tatooinian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Yavinian Wild Corn","sub6_76":"Wild Corn"},
+    {"sub7_76":"Corellian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Dantooine Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Dathomirian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Endorian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Kashyyyk Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Lokian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Nabooian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Rori Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Talusian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Tatooinian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Yavinian Wild Oats","sub6_76":"Wild Oats"},
+    {"sub7_76":"Corellian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Dantooine Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Dathomirian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Endorian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Kashyyyk Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Lokian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Nabooian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Rori Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Talusian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Tatooinian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Yavinian Wild Rice","sub6_76":"Wild Rice"},
+    {"sub7_76":"Corellian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Dantooine Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Dathomirian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Endorian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Kashyyyk Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Lokian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Nabooian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Rori Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Talusian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Tatooinian Wild Wheat","sub6_76":"Wild Wheat"},
+    {"sub7_76":"Yavinian Wild Wheat","sub6_76":"Wild Wheat"}
+  ];
+
+  const jsonData65=[
+    {"sub6_65":"Agrinium Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Chromium Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Duralumin Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Galvanicyn Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Kashyyyk Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Link-Steel Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Perovskitic Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Phrik Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Smelted Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Titanium Aluminum","sub5_65":"Aluminum"},
+    {"sub6_65":"Corellian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Dantooine Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Dathomirian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Endorian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Kashyyyk Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Lokian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Nabooian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Rori Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Talusian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Tatooinian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Yavinian Animal Bones","sub5_65":"Animal Bones"},
+    {"sub6_65":"Corellian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Dantooine Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Dathomirian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Endorian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Kashyyyk Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Lokian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Nabooian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Rori Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Talusian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Tatooinian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Yavinian Avian Bones","sub5_65":"Avian Bones"},
+    {"sub6_65":"Corellian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Dantooine Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Dathomirian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Endorian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Kashyyyk Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Lokian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Nabooian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Rori Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Talusian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Tatooinian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Yavinian Avian Meat","sub5_65":"Avian Meat"},
+    {"sub6_65":"Corellian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Dantooine Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Dathomirian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Endorian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Kashyyyk Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Lokian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Nabooian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Rori Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Talusian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Tatooinian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Yavinian Bristley Hide","sub5_65":"Bristley Hide"},
+    {"sub6_65":"Alantium Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Barthierium Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Calabite Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Chromite Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Frasium Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Kashyyyk Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Lommite Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Ostrine Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Varium Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Zinsiam Carbonate Ore","sub5_65":"Carbonate Ore"},
+    {"sub6_65":"Corellian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Dantooine Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Dathomirian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Endorian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Kashyyyk Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Lokian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Nabooian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Rori Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Talusian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Tatooinian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Yavinian Carnivore Meat","sub5_65":"Carnivore Meat"},
+    {"sub6_65":"Beyrllius Copper","sub5_65":"Copper"},
+    {"sub6_65":"Cagunese Copper","sub5_65":"Copper"},
+    {"sub6_65":"Codoan Copper","sub5_65":"Copper"},
+    {"sub6_65":"Conductive Borcarbitic Copper","sub5_65":"Copper"},
+    {"sub6_65":"Desh Copper","sub5_65":"Copper"},
+    {"sub6_65":"Diatium Copper","sub5_65":"Copper"},
+    {"sub6_65":"Kashyyyk Copper","sub5_65":"Copper"},
+    {"sub6_65":"Kelsh Copper","sub5_65":"Copper"},
+    {"sub6_65":"Mythra Copper","sub5_65":"Copper"},
+    {"sub6_65":"Platinite Copper","sub5_65":"Copper"},
+    {"sub6_65":"Polysteel Copper","sub5_65":"Copper"},
+    {"sub6_65":"Smelted Copper","sub5_65":"Copper"},
+    {"sub6_65":"Thallium Copper","sub5_65":"Copper"},
+    {"sub6_65":"Domesticated Corn","sub5_65":"Corn"},
+    {"sub6_65":"Wild Corn","sub5_65":"Corn"},
+    {"sub6_65":"Corellian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Dantooine Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Dathomirian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Endorian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Kashyyyk Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Lokian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Nabooian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Processed Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Rori Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Talusian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Tatooinian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Yavinian Crustacean Meat","sub5_65":"Crustacean Meat"},
+    {"sub6_65":"Corellian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Dantooine Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Dathomirian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Endorian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Kashyyyk Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Lokian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Nabooian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Rori Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Talusian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Tatooinian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Yavinian Domesticated Meat","sub5_65":"Domesticated Meat"},
+    {"sub6_65":"Corellian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Dantooine Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Dathomirian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Endorian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Kashyyyk Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Lokian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Nabooian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Rori Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Talusian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Tatooinian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Yavinian Domesticated Milk","sub5_65":"Domesticated Milk"},
+    {"sub6_65":"Corellian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Dantooine Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Dathomirian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Endorian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Kashyyyk Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Lokian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Nabooian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Rori Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Talusian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Tatooinian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Yavinian Egg Meat","sub5_65":"Egg Meat"},
+    {"sub6_65":"Bene Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Chronamite Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Ilimium Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Kalonterium Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Kashyyyk Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Keschel Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Lidium Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Maganite Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Maranium Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Pholokite Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Quadrenium Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Vintrium Extrusive Ore","sub5_65":"Extrusive Ore"},
+    {"sub6_65":"Corellian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Dantooine Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Dathomirian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Endorian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Kashyyyk Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Lokian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Nabooian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Rori Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Talusian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Tatooinian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Yavinian Fish Meat","sub5_65":"Fish Meat"},
+    {"sub6_65":"Berries","sub5_65":"Fruit"},
+    {"sub6_65":"Flowers","sub5_65":"Fruit"},
+    {"sub6_65":"Fruits","sub5_65":"Fruit"},
+    {"sub6_65":"Corellian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Dantooine Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Dathomirian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Endorian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Kashyyyk Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Lokian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Nabooian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Rori Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Talusian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Tatooinian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Yavinian Deciduous Wood","sub5_65":"Hard Wood"},
+    {"sub6_65":"Corellian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Dantooine Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Dathomirian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Endorian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Kashyyyk Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Lokian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Nabooian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Rori Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Talusian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Tatooinian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Yavinian Herbivore Meat","sub5_65":"Herbivore Meat"},
+    {"sub6_65":"Corellian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Dantooine Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Dathomirian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Endorian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Kashyyyk Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Lokian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Nabooian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Rori Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Talusian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Tatooinian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Yavinian Insect Meat","sub5_65":"Insect Meat"},
+    {"sub6_65":"Berubium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Chanlon Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Corintium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Derillium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Dylinium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Galatite Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Hollinium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Ionite Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Kashyyyk Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Katrium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Oridium Intrusive Ore","sub5_65":"Intrusive Ore"},
+    {"sub6_65":"Axidite Iron","sub5_65":"Iron"},
+    {"sub6_65":"Bronzium Iron","sub5_65":"Iron"},
+    {"sub6_65":"Colat Iron","sub5_65":"Iron"},
+    {"sub6_65":"Dolovite Iron","sub5_65":"Iron"},
+    {"sub6_65":"Doonium Iron","sub5_65":"Iron"},
+    {"sub6_65":"Hemalite Iron","sub5_65":"Iron"},
+    {"sub6_65":"Kammris Iron","sub5_65":"Iron"},
+    {"sub6_65":"Kashyyyk Iron","sub5_65":"Iron"},
+    {"sub6_65":"Plumbum Iron","sub5_65":"Iron"},
+    {"sub6_65":"Polonium Iron","sub5_65":"Iron"},
+    {"sub6_65":"Smelted Iron","sub5_65":"Iron"},
+    {"sub6_65":"Corellian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Dantooine Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Dathomirian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Endorian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Kashyyyk Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Lokian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Nabooian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Rori Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Talusian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Tatooinian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Yavinian Leathery Hide","sub5_65":"Leathery Hide"},
+    {"sub6_65":"Corellian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Dantooine Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Dathomirian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Endorian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Kashyyyk Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Lokian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Nabooian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Rori Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Talusian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Tatooinian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Yavinian Mollusk Meat","sub5_65":"Mollusk Meat"},
+    {"sub6_65":"Domesticated Oats","sub5_65":"Oats"},
+    {"sub6_65":"Wild Oats","sub5_65":"Oats"},
+    {"sub6_65":"Corellian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Dantooine Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Dathomirian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Endorian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Kashyyyk Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Lokian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Nabooian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Rori Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Talusian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Tatooinian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Yavinian Reptillian Meat","sub5_65":"Reptillian Meat"},
+    {"sub6_65":"Domesticated Rice","sub5_65":"Rice"},
+    {"sub6_65":"Wild Rice","sub5_65":"Rice"},
+    {"sub6_65":"Corellian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Dantooine Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Dathomirian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Endorian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Kashyyyk Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Lokian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Nabooian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Rori Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Talusian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Tatooinian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Yavinian Scaley Hide","sub5_65":"Scaley Hide"},
+    {"sub6_65":"Ardanium Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Cortosis Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Crism Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Fermionic Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Kashyyyk Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Malab Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Robindun Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Tertian Siliclastic Ore","sub5_65":"Siliclastic Ore"},
+    {"sub6_65":"Corellian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Dantooine Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Dathomirian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Endorian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Evergreen Soft Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Kashyyyk Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Lokian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Nabooian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Rori Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Talusian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Tatooinian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Yavinian Conifer Wood","sub5_65":"Soft Wood"},
+    {"sub6_65":"Carbonite Steel","sub5_65":"Steel"},
+    {"sub6_65":"Crystallized Bicorbantium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Cubirian Steel","sub5_65":"Steel"},
+    {"sub6_65":"Ditanium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Duralloy Steel","sub5_65":"Steel"},
+    {"sub6_65":"Duranium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Hardened Arveshium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Hothian Steel","sub5_65":"Steel"},
+    {"sub6_65":"Kashyyyk Steel","sub5_65":"Steel"},
+    {"sub6_65":"Kiirium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Neutronium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Quadranium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Rhodium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Smelted Steel","sub5_65":"Steel"},
+    {"sub6_65":"Thoranium Steel","sub5_65":"Steel"},
+    {"sub6_65":"Beans","sub5_65":"Vegetables"},
+    {"sub6_65":"Fungi","sub5_65":"Vegetables"},
+    {"sub6_65":"Greens","sub5_65":"Vegetables"},
+    {"sub6_65":"Mixed Vegetables","sub5_65":"Vegetables"},
+    {"sub6_65":"Tubers","sub5_65":"Vegetables"},
+    {"sub6_65":"Domesticated Wheat","sub5_65":"Wheat"},
+    {"sub6_65":"Wild Wheat","sub5_65":"Wheat"},
+    {"sub6_65":"Corellian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Dantooine Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Dathomirian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Endorian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Kashyyyk Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Lokian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Nabooian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Rori Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Talusian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Tatooinian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Yavinian Wild Meat","sub5_65":"Wild Meat"},
+    {"sub6_65":"Corellian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Dantooine Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Dathomirian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Endorian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Kashyyyk Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Lokian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Nabooian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Rori Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Talusian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Tatooinian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Yavinian Wild Milk","sub5_65":"Wild Milk"},
+    {"sub6_65":"Corellian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Dantooine Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Dathomirian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Endorian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Kashyyyk Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Lokian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Nabooian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Rori Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Talusian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Tatooinian Wooly Hide","sub5_65":"Wooly Hide"},
+    {"sub6_65":"Yavinian Wooly Hide","sub5_65":"Wooly Hide"}
+  ];
+
+  const jsonData54=[
+    {"sub5_54":"Bal'ta'ran Crystal Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Baradium Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Bospridium Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Kashyyyk Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Plexite Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Regvis Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Rudic Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Ryll Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Sedrellium Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Stygium Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Vendusii Crystal Amorphous Gemstone","sub4_54":"Amorphous Gemstone"},
+    {"sub5_54":"Animal Bones","sub4_54":"Bone"},
+    {"sub5_54":"Avian Bones","sub4_54":"Bone"},
+    {"sub5_54":"Ground Bones","sub4_54":"Bone"},
+    {"sub5_54":"Corn","sub4_54":"Cereal"},
+    {"sub5_54":"Oats","sub4_54":"Cereal"},
+    {"sub5_54":"Processed Cereal","sub4_54":"Cereal"},
+    {"sub5_54":"Rice","sub4_54":"Cereal"},
+    {"sub5_54":"Wheat","sub4_54":"Cereal"},
+    {"sub5_54":"Byrothsis Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Gallinorian Rainbow Gem Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Green Diamond Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Kashyyyk Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Kerol Fire-Gem Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Laboi Mineral Crystal Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Seafah Jewel Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Sormahil Fire Gem Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Vertex Crystalline Gemstone","sub4_54":"Crystalline Gemstone"},
+    {"sub5_54":"Iron","sub4_54":"Ferrous Metal"},
+    {"sub5_54":"Smelted Ferrous Metal","sub4_54":"Ferrous Metal"},
+    {"sub5_54":"Steel","sub4_54":"Ferrous Metal"},
+    {"sub5_54":"Unknown Ferrous Metal","sub4_54":"Ferrous Metal"},
+    {"sub5_54":"Corellian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Dantooine Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Dathomirian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Endorian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Kashyyyk Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Lokian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Nabooian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Rori Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Talusian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Tatooinian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Weak Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Yavinian Geothermal Renewable Energy","sub4_54":"Geothermal Energy"},
+    {"sub5_54":"Bristley Hide","sub4_54":"Hide"},
+    {"sub5_54":"Leathery Hide","sub4_54":"Hide"},
+    {"sub5_54":"Scaley Hide","sub4_54":"Hide"},
+    {"sub5_54":"Wooly Hide","sub4_54":"Hide"},
+    {"sub5_54":"Corellian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Dantooine Horn","sub4_54":"Horn"},
+    {"sub5_54":"Dathomirian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Endorian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Ground Horn","sub4_54":"Horn"},
+    {"sub5_54":"Kashyyyk Horn","sub4_54":"Horn"},
+    {"sub5_54":"Lokian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Nabooian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Rori Horn","sub4_54":"Horn"},
+    {"sub5_54":"Talusian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Tatooinian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Yavinian Horn","sub4_54":"Horn"},
+    {"sub5_54":"Corellian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Dantooine Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Dathomirian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Endorian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Kashyyyk Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Lokian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Nabooian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Rori Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Talusian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Tatooinian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Weak Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Yavinian Hydron-3 Renewable Energy","sub4_54":"Hydron-3 Energy"},
+    {"sub5_54":"Extrusive Ore","sub4_54":"Igneous Ore"},
+    {"sub5_54":"Intrusive Ore","sub4_54":"Igneous Ore"},
+    {"sub5_54":"Unknown Igneous Ore","sub4_54":"Igneous Ore"},
+    {"sub5_54":"Bilal Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Corthel Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Culsion Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Dioxis Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Hurlothrombic Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Hydron-3 Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Kashyyyk Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Kaylon Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Korfaise Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Malium Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Methanagen Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Mirth Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Mixed Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Obah Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Rethin Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Rylon Inert Gas","sub4_54":"Known Inert Gas"},
+    {"sub5_54":"Class 1 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Class 2 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Class 3 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Class 4 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Class 5 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Class 6 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Class 7 Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Combined Radioactive Isotopes","sub4_54":"Known Radioactive"},
+    {"sub5_54":"High Grade Polymetric Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Kashyyyk Radioactive","sub4_54":"Known Radioactive"},
+    {"sub5_54":"Eleton Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Irolunn Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Kashyyyk Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Methane Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Mixed Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Orveth Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Sig Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Skevon Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Tolium Reactive Gas","sub4_54":"Known Reactive Gas"},
+    {"sub5_54":"Class 1 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Class 2 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Class 3 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Class 4 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Class 5 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Class 6 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Class 7 Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Degraded Solid Petrochem Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Kashyyyk Solid Petro Fuel","sub4_54":"Known Solid Petrochem Fuel"},
+    {"sub5_54":"Avian Meat","sub4_54":"Meat"},
+    {"sub5_54":"Carnivore Meat","sub4_54":"Meat"},
+    {"sub5_54":"Domesticated Meat","sub4_54":"Meat"},
+    {"sub5_54":"Egg Meat","sub4_54":"Meat"},
+    {"sub5_54":"Herbivore Meat","sub4_54":"Meat"},
+    {"sub5_54":"Insect Meat","sub4_54":"Meat"},
+    {"sub5_54":"Reptillian Meat","sub4_54":"Meat"},
+    {"sub5_54":"Wild Meat","sub4_54":"Meat"},
+    {"sub5_54":"Domesticated Milk","sub4_54":"Milk"},
+    {"sub5_54":"Homogenized Milk","sub4_54":"Milk"},
+    {"sub5_54":"Wild Milk","sub4_54":"Milk"},
+    {"sub5_54":"Aluminum","sub4_54":"Non-Ferrous Metal"},
+    {"sub5_54":"Copper","sub4_54":"Non-Ferrous Metal"},
+    {"sub5_54":"Smelted Non-Ferrous Metal","sub4_54":"Non-Ferrous Metal"},
+    {"sub5_54":"Unknown Non-Ferrous Metal","sub4_54":"Non-Ferrous Metal"},
+    {"sub5_54":"Crustacean Meat","sub4_54":"Seafood"},
+    {"sub5_54":"Fish Meat","sub4_54":"Seafood"},
+    {"sub5_54":"Mollusk Meat","sub4_54":"Seafood"},
+    {"sub5_54":"Processed Seafood","sub4_54":"Seafood"},
+    {"sub5_54":"Carbonate Ore","sub4_54":"Sedimentary Ore"},
+    {"sub5_54":"Siliclastic Ore","sub4_54":"Sedimentary Ore"},
+    {"sub5_54":"Unknown Sedimentary Ore","sub4_54":"Sedimentary Ore"},
+    {"sub5_54":"Fruit","sub4_54":"Seeds"},
+    {"sub5_54":"Vegetables","sub4_54":"Seeds"},
+    {"sub5_54":"Corellian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Dantooine Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Dathomirian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Endorian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Kashyyyk Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Lokian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Nabooian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Rori Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Talusian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Tatooinian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Weak Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Yavinian Solar Renewable Energy","sub4_54":"Solar Energy"},
+    {"sub5_54":"Corellian Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Dantooine Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Dathomirian Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Endor Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Kashyyyk Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Lokian Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Naboo Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Rori Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Talusian Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Tatooinian Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Weak Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Yavinian Tidal Renewable Energy","sub4_54":"Tidal Energy"},
+    {"sub5_54":"Corellian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Dantooine Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Dathomirian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Endorian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Kashyyyk Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Lokian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Nabooian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Rori Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Talusian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Tatooinian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Weak Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Yavinian Wind Renewable Energy","sub4_54":"Wind Energy"},
+    {"sub5_54":"Blended Wood","sub4_54":"Wood"},
+    {"sub5_54":"Hard Wood","sub4_54":"Wood"},
+    {"sub5_54":"Soft Wood","sub4_54":"Wood"}
+  ];
+
+  const jsonData43=[
+    {"sub4_43":"Meat","sub3_43":"Creature Food"},
+    {"sub4_43":"Milk","sub3_43":"Creature Food"},
+    {"sub4_43":"Seafood","sub3_43":"Creature Food"},
+    {"sub4_43":"Bone","sub3_43":"Creature Structural"},
+    {"sub4_43":"Hide","sub3_43":"Creature Structural"},
+    {"sub4_43":"Horn","sub3_43":"Creature Structural"},
+    {"sub4_43":"Corellian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Dantooine Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Dathomirian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Endorian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Gravitonic Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Kashyyyk Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Lokian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Nabooian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Rori Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Talusian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Tatooinian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Yavinian Fiberplast","sub3_43":"Fiberplast"},
+    {"sub4_43":"Cereal","sub3_43":"Flora Food"},
+    {"sub4_43":"Seeds","sub3_43":"Flora Food"},
+    {"sub4_43":"Wood","sub3_43":"Flora Structural"},
+    {"sub4_43":"Amorphous Gemstone","sub3_43":"Gemstone"},
+    {"sub4_43":"Crystalline Gemstone","sub3_43":"Gemstone"},
+    {"sub4_43":"Known Inert Gas","sub3_43":"Inert Gas"},
+    {"sub4_43":"Unknown Inert Gas","sub3_43":"Inert Gas"},
+    {"sub4_43":"Lubricating Oil","sub3_43":"Inert Petrochemical"},
+    {"sub4_43":"Polymer","sub3_43":"Inert Petrochemical"},
+    {"sub4_43":"Class 1 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Class 2 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Class 3 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Class 4 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Class 5 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Class 6 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Class 7 Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Kashyyyk Liquid Petro Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Unknown Liquid Petrochem Fuel","sub3_43":"Liquid Petrochem Fuel"},
+    {"sub4_43":"Igneous Ore","sub3_43":"Low-Grade Ore"},
+    {"sub4_43":"Sedimentary Ore","sub3_43":"Low-Grade Ore"},
+    {"sub4_43":"Ferrous Metal","sub3_43":"Metal"},
+    {"sub4_43":"Non-Ferrous Metal","sub3_43":"Metal"},
+    {"sub4_43":"Solar Energy","sub3_43":"Non Site-Restricted Renewable Energy"},
+    {"sub4_43":"Wind Energy","sub3_43":"Non Site-Restricted Renewable Energy"},
+    {"sub4_43":"Known Radioactive","sub3_43":"Radioactive"},
+    {"sub4_43":"Unknown Radioactive","sub3_43":"Radioactive"},
+    {"sub4_43":"Known Reactive Gas","sub3_43":"Reactive Gas"},
+    {"sub4_43":"Unknown Reactive Gas","sub3_43":"Reactive Gas"},
+    {"sub4_43":"Unstable Organometallic Reactive Gas","sub3_43":"Reactive Gas"},
+    {"sub4_43":"Geothermal Energy","sub3_43":"Site-Restricted Renewable Energy"},
+    {"sub4_43":"Hydron-3 Energy","sub3_43":"Site-Restricted Renewable Energy"},
+    {"sub4_43":"Tidal Energy","sub3_43":"Site-Restricted Renewable Energy"},
+    {"sub4_43":"Known Solid Petrochem Fuel","sub3_43":"Solid Petrochem Fuel"},
+    {"sub4_43":"Unknown Solid Petrochem Fuel","sub3_43":"Solid Petrochem Fuel"}
+  ];
+
+  const jsonData32=[
+    {"sub3_32":"Chemical Compound","sub2_32":"Chemical"},
+    {"sub3_32":"Fiberplast","sub2_32":"Chemical"},
+    {"sub3_32":"Inert Petrochemical","sub2_32":"Chemical"},
+    {"sub3_32":"Liquid Petrochem Fuel","sub2_32":"Chemical"},
+    {"sub3_32":"Creature Food","sub2_32":"Creature Resources"},
+    {"sub3_32":"Creature Structural","sub2_32":"Creature Resources"},
+    {"sub3_32":"Flora Food","sub2_32":"Flora Resources"},
+    {"sub3_32":"Flora Structural","sub2_32":"Flora Resources"},
+    {"sub3_32":"Inert Gas","sub2_32":"Gas"},
+    {"sub3_32":"Reactive Gas","sub2_32":"Gas"},
+    {"sub3_32":"Gemstone","sub2_32":"Mineral"},
+    {"sub3_32":"Low-Grade Ore","sub2_32":"Mineral"},
+    {"sub3_32":"Metal","sub2_32":"Mineral"},
+    {"sub3_32":"Radioactive","sub2_32":"Mineral"},
+    {"sub3_32":"Solid Petrochem Fuel","sub2_32":"Mineral"},
+    {"sub3_32":"Non Site-Restricted Renewable Energy","sub2_32":"Renewable energy"},
+    {"sub3_32":"Site-Restricted Renewable Energy","sub2_32":"Renewable energy"},
+    {"sub3_32":"Corellian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Dantooine Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Dathomirian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Endorian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Kashyyyk Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Lokian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Nabooian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Rori Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Talusian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Tatooinian Water Vapor","sub2_32":"Water"},
+    {"sub3_32":"Yavinian Water Vapor","sub2_32":"Water"}
+  ];
+
+  const jsonData21=[
+    {"sub2_21":"Renewable energy","sub1_21":"Energy"},
+    {"sub2_21":"Chemical","sub1_21":"Inorganic"},
+    {"sub2_21":"Gas","sub1_21":"Inorganic"},
+    {"sub2_21":"Mineral","sub1_21":"Inorganic"},
+    {"sub2_21":"Renewable energy","sub1_21":"Inorganic"},
+    {"sub2_21":"Water","sub1_21":"Inorganic"},
+    {"sub2_21":"Creature Resources","sub1_21":"Organic"},
+    {"sub2_21":"Flora Resources","sub1_21":"Organic"}
+  ];
+
+  const jsonDataResource=[
+    {"type":"Lubricating Oil","name":"Daotwoian","er":"","cr":"","cd":"","dr":"714","fl":"","hr":"","ma":"","pe":"","oq":"984","sr":"","ut":""},
+    {"type":"Lubricating Oil","name":"Ricaiam","er":"","cr":"","cd":"","dr":"401","fl":"","hr":"","ma":"","pe":"","oq":"972","sr":"","ut":""},
+    {"type":"Kammris Iron","name":"Ceoda","er":"","cr":"750","cd":"480","dr":"964","fl":"","hr":"956","ma":"517","pe":"","oq":"966","sr":"980","ut":"952"},
+    {"type":"Kammris Iron","name":"Micokiide","er":"","cr":"676","cd":"484","dr":"953","fl":"","hr":"939","ma":"568","pe":"","oq":"965","sr":"926","ut":"950"},
+    {"type":"Eleton Reactive Gas","name":"Ffochooene","er":"","cr":"","cd":"","dr":"77","fl":"","hr":"","ma":"","pe":"","oq":"954","sr":"","ut":""},
+    {"type":"Nabooian Berry Fruit","name":"Feolcho","er":"","cr":"","cd":"","dr":"873","fl":"397","hr":"","ma":"","pe":"504","oq":"954","sr":"","ut":""},
+    {"type":"Vendusii Crystal Amorphous Gemstone","name":"Paweium","er":"630","cr":"816","cd":"","dr":"822","fl":"","hr":"940","ma":"558","pe":"","oq":"1000","sr":"856","ut":"846"},
+    {"type":"Tatooinian Fiberplast","name":"Rouce","er":"","cr":"","cd":"","dr":"478","fl":"","hr":"","ma":"889","pe":"","oq":"923","sr":"936","ut":"970"},
+    {"type":"Class 2 Solid Petro Fuel","name":"Oekao","er":"","cr":"","cd":"","dr":"202","fl":"","hr":"","ma":"","pe":"527","oq":"938","sr":"","ut":""},
+    {"type":"Dolovite Iron","name":"Vaje","er":"","cr":"524","cd":"387","dr":"758","fl":"","hr":"802","ma":"416","pe":"","oq":"969","sr":"859","ut":"862"},
+    {"type":"Endorian Leathery Hide","name":"Ieda","er":"","cr":"","cd":"","dr":"317","fl":"","hr":"","ma":"330","pe":"","oq":"924","sr":"897","ut":"944"},
+    {"type":"Nabooian Water Vapor","name":"Heedero","er":"","cr":"","cd":"","dr":"220","fl":"","hr":"","ma":"","pe":"","oq":"927","sr":"","ut":""},
+    {"type":"Lokian Domesticated Oats","name":"Sadia","er":"","cr":"","cd":"","dr":"631","fl":"416","hr":"","ma":"","pe":"832","oq":"925","sr":"","ut":""},
+    {"type":"Corellian Fiberplast","name":"Bodwo","er":"","cr":"","cd":"","dr":"118","fl":"","hr":"","ma":"651","pe":"","oq":"889","sr":"109","ut":"990"},
+    {"type":"Fermionic Siliclastic Ore","name":"Heusteiite","er":"","cr":"731","cd":"","dr":"557","fl":"","hr":"6","ma":"989","pe":"","oq":"964","sr":"965","ut":"823"},
+    {"type":"Class 4 Liquid Petro Fuel","name":"Theikaian","er":"","cr":"","cd":"","dr":"105","fl":"","hr":"","ma":"","pe":"722","oq":"909","sr":"","ut":""},
+    {"type":"Corellian Wooly Hide","name":"Sevimo","er":"","cr":"","cd":"","dr":"988","fl":"","hr":"","ma":"796","pe":"","oq":"972","sr":"584","ut":"714"},
+    {"type":"Quadranium Steel","name":"Peemo","er":"","cr":"624","cd":"485","dr":"889","fl":"","hr":"913","ma":"287","pe":"","oq":"878","sr":"857","ut":"843"},
+    {"type":"Duralumin Aluminum","name":"Kagirta","er":"","cr":"504","cd":"587","dr":"460","fl":"","hr":"470","ma":"640","pe":"","oq":"927","sr":"729","ut":"699"},
+    {"type":"Phrik Aluminum","name":"Atifaism","er":"","cr":"788","cd":"754","dr":"797","fl":"","hr":"690","ma":"907","pe":"","oq":"838","sr":"783","ut":"863"},
+    {"type":"Platinite Copper","name":"Helei","er":"","cr":"690","cd":"955","dr":"596","fl":"","hr":"594","ma":"950","pe":"","oq":"917","sr":"723","ut":"702"},
+    {"type":"Beyrllius Copper","name":"Pefoiian","er":"","cr":"245","cd":"657","dr":"140","fl":"","hr":"316","ma":"604","pe":"","oq":"973","sr":"402","ut":"481"},
+    {"type":"Kerol Fire-Gem Crystalline Gemstone","name":"Teofe","er":"750","cr":"483","cd":"","dr":"477","fl":"","hr":"845","ma":"176","pe":"","oq":"906","sr":"622","ut":"563"},
+    {"type":"Phrik Aluminum","name":"Korogo","er":"","cr":"633","cd":"787","dr":"730","fl":"","hr":"728","ma":"915","pe":"","oq":"779","sr":"838","ut":"806"},
+    {"type":"Laboi Mineral Crystal Crystalline Gemstone","name":"Lleri","er":"891","cr":"876","cd":"","dr":"744","fl":"","hr":"942","ma":"326","pe":"","oq":"703","sr":"897","ut":"891"},
+    {"type":"Beyrllius Copper","name":"Ralaic","er":"","cr":"181","cd":"644","dr":"133","fl":"","hr":"352","ma":"680","pe":"","oq":"928","sr":"429","ut":"398"},
+    {"type":"Nabooian Leathery Hide","name":"Oite","er":"","cr":"","cd":"","dr":"469","fl":"","hr":"","ma":"493","pe":"","oq":"894","sr":"360","ut":"415"},
+    {"type":"Rori Wooly Hide","name":"Gladreca","er":"","cr":"","cd":"","dr":"215","fl":"","hr":"","ma":"820","pe":"","oq":"994","sr":"790","ut":"130"},
+    {"type":"Rudic Amorphous Gemstone","name":"Seweofai","er":"412","cr":"530","cd":"","dr":"494","fl":"","hr":"807","ma":"262","pe":"","oq":"800","sr":"401","ut":"509"},
+    {"type":"Neutronium Steel","name":"Hegaris","er":"","cr":"300","cd":"275","dr":"685","fl":"","hr":"795","ma":"181","pe":"","oq":"599","sr":"700","ut":"667"},
+    {"type":"Nabooian Fiberplast","name":"Kloutre","er":"","cr":"","cd":"","dr":"272","fl":"","hr":"","ma":"998","pe":"","oq":"881","sr":"618","ut":"66"},
+    {"type":"Bospridium Amorphous Gemstone","name":"Lisoiryiam","er":"95","cr":"110","cd":"","dr":"60","fl":"","hr":"626","ma":"74","pe":"","oq":"894","sr":"27","ut":"14"},
+    {"type":"Polymer","name":"Louczapau","er":"","cr":"","cd":"","dr":"867","fl":"","hr":"","ma":"763","pe":"","oq":"848","sr":"937","ut":"70"},
+    {"type":"Nabooian Leathery Hide","name":"Abyeilki","er":"","cr":"","cd":"","dr":"263","fl":"","hr":"","ma":"556","pe":"","oq":"579","sr":"710","ut":"548"},
+    {"type":"Phrik Aluminum","name":"Hoseite","er":"","cr":"700","cd":"747","dr":"725","fl":"","hr":"750","ma":"941","pe":"","oq":"418","sr":"825","ut":"836"},
+    {"type":"Nabooian Bristley Hide","name":"Mewoi","er":"","cr":"","cd":"","dr":"770","fl":"","hr":"","ma":"686","pe":"","oq":"742","sr":"999","ut":"119"},
+    {"type":"Kammris Iron","name":"Sevowi","er":"","cr":"727","cd":"477","dr":"943","fl":"","hr":"941","ma":"554","pe":"","oq":"292","sr":"914","ut":"986"},
+    {"type":"Nabooian Leathery Hide","name":"Clumo","er":"","cr":"","cd":"","dr":"102","fl":"","hr":"","ma":"620","pe":"","oq":"342","sr":"605","ut":"799"},
+    {"type":"Link-Steel Aluminum","name":"Gnaeto","er":"","cr":"630","cd":"730","dr":"504","fl":"","hr":"582","ma":"875","pe":"","oq":"284","sr":"765","ut":"786"},
+    {"type":"Beyrllius Copper","name":"Vefaieru","er":"","cr":"186","cd":"649","dr":"195","fl":"","hr":"300","ma":"630","pe":"","oq":"476","sr":"414","ut":"396"},
+    {"type":"Barthierium Carbonate Ore","name":"Vigwoiri","er":"","cr":"470","cd":"","dr":"71","fl":"","hr":"461","ma":"454","pe":"","oq":"424","sr":"119","ut":"279"},
+    {"type":"Vendusii Crystal Amorphous Gemstone","name":"Hokaine","er":"657","cr":"773","cd":"","dr":"907","fl":"","hr":"921","ma":"541","pe":"","oq":"133","sr":"868","ut":"830"},
+    {"type":"Neutronium Steel","name":"Ekamoi","er":"","cr":"398","cd":"330","dr":"712","fl":"","hr":"807","ma":"204","pe":"","oq":"162","sr":"716","ut":"698"},
+    {"type":"Regvis Amorphous Gemstone","name":"Nigee","er":"261","cr":"315","cd":"","dr":"243","fl":"","hr":"674","ma":"137","pe":"","oq":"222","sr":"225","ut":"215"},
+    {"type":"Rudic Amorphous Gemstone","name":"Saifede","er":"373","cr":"481","cd":"","dr":"489","fl":"","hr":"794","ma":"268","pe":"","oq":"61","sr":"514","ut":"524"},
+    {"type":"Methanagen Inert Gas","name":"Omooate","er":"","cr":"","cd":"","dr":"545","fl":"","hr":"","ma":"","pe":"","oq":"187","sr":"","ut":""},
+    {"type":"Rudic Amorphous Gemstone","name":"Viefegiine","er":"361","cr":"473","cd":"","dr":"530","fl":"","hr":"804","ma":"272","pe":"","oq":"79","sr":"399","ut":"406"},
+    {"type":"Frasium Carbonate Ore","name":"Soeski","er":"","cr":"643","cd":"","dr":"313","fl":"","hr":"678","ma":"561","pe":"","oq":"22","sr":"357","ut":"495"},
+    {"type":"Irolunn Reactive Gas","name":"Kokegaate","er":"","cr":"","cd":"","dr":"362","fl":"","hr":"","ma":"","pe":"","oq":"11","sr":"","ut":""},
+    {"type":"Neutronium Steel","name":"Ogaiam","er":"","cr":"379","cd":"293","dr":"746","fl":"","hr":"772","ma":"208","pe":"","oq":"896","sr":"723","ut":"655"},
+    {"type":"Polymer","name":"Rihaium","er":"","cr":"","cd":"","dr":"592","fl":"","hr":"","ma":"848","pe":"","oq":"897","sr":"844","ut":"944"},
+    {"type":"Dantooine Berry Fruit","name":"Laghto","er":"","cr":"","cd":"","dr":"631","fl":"276","hr":"","ma":"","pe":"954","oq":"941","sr":"","ut":""},
+    {"type":"Talusian Water Vapor","name":"Kaepi","er":"","cr":"","cd":"","dr":"506","fl":"","hr":"","ma":"","pe":"","oq":"932","sr":"","ut":""},
+    {"type":"Class 4 Liquid Petro Fuel","name":"Yanaiwoate","er":"","cr":"","cd":"","dr":"333","fl":"","hr":"","ma":"","pe":"854","oq":"953","sr":"","ut":""},
+    {"type":"Katrium Intrusive Ore","name":"Geniine","er":"","cr":"964","cd":"","dr":"998","fl":"","hr":"981","ma":"562","pe":"","oq":"841","sr":"952","ut":"927"},
+    {"type":"Platinite Copper","name":"Adehe","er":"","cr":"704","cd":"882","dr":"521","fl":"","hr":"595","ma":"953","pe":"","oq":"918","sr":"714","ut":"677"},
+    {"type":"Desh Copper","name":"Pirokoium","er":"","cr":"29","cd":"564","dr":"17","fl":"","hr":"216","ma":"501","pe":"","oq":"978","sr":"364","ut":"362"},
+    {"type":"Yavinian Herbivore Meat","name":"Aukatao","er":"","cr":"","cd":"","dr":"417","fl":"360","hr":"","ma":"","pe":"582","oq":"918","sr":"","ut":""},
+    {"type":"Polymer","name":"Sebiate","er":"","cr":"","cd":"","dr":"578","fl":"","hr":"","ma":"977","pe":"","oq":"223","sr":"579","ut":"712"},
+    {"type":"Dathomirian Fiberplast","name":"Auckopi","er":"","cr":"","cd":"","dr":"709","fl":"","hr":"","ma":"922","pe":"","oq":"925","sr":"567","ut":"69"},
+    {"type":"Culsion Inert Gas","name":"Wesepoism","er":"","cr":"","cd":"","dr":"248","fl":"","hr":"","ma":"","pe":"","oq":"997","sr":"","ut":""},
+    {"type":"Stygium Amorphous Gemstone","name":"Peillaate","er":"584","cr":"801","cd":"","dr":"754","fl":"","hr":"890","ma":"436","pe":"","oq":"694","sr":"721","ut":"748"},
+    {"type":"Quadranium Steel","name":"Tesmeite","er":"","cr":"591","cd":"532","dr":"839","fl":"","hr":"917","ma":"306","pe":"","oq":"372","sr":"839","ut":"816"},
+    {"type":"Ostrine Carbonate Ore","name":"Waosiide","er":"","cr":"781","cd":"","dr":"543","fl":"","hr":"863","ma":"807","pe":"","oq":"95","sr":"489","ut":"724"},
+    {"type":"Ostrine Carbonate Ore","name":"Tehiro","er":"","cr":"712","cd":"","dr":"538","fl":"","hr":"818","ma":"794","pe":"","oq":"236","sr":"471","ut":"799"},
+    {"type":"Neutronium Steel","name":"Eekaic","er":"","cr":"312","cd":"340","dr":"731","fl":"","hr":"811","ma":"154","pe":"","oq":"460","sr":"741","ut":"669"},
+    {"type":"Neutronium Steel","name":"Ecefea","er":"","cr":"391","cd":"324","dr":"754","fl":"","hr":"774","ma":"170","pe":"","oq":"598","sr":"734","ut":"648"},
+    {"type":"Laboi Mineral Crystal Crystalline Gemstone","name":"Oriote","er":"921","cr":"881","cd":"","dr":"790","fl":"","hr":"963","ma":"290","pe":"","oq":"452","sr":"920","ut":"817"},
+    {"type":"Vertex Crystalline Gemstone","name":"Desaviine","er":"962","cr":"971","cd":"","dr":"944","fl":"","hr":"960","ma":"396","pe":"","oq":"889","sr":"956","ut":"923"},
+    {"type":"Varium Carbonate Ore","name":"Vaosaite","er":"","cr":"810","cd":"","dr":"513","fl":"","hr":"926","ma":"866","pe":"","oq":"454","sr":"552","ut":"866"},
+    {"type":"Oridium Intrusive Ore","name":"Egoris","er":"","cr":"565","cd":"","dr":"683","fl":"","hr":"834","ma":"320","pe":"","oq":"874","sr":"740","ut":"737"},
+    {"type":"Kelsh Copper","name":"Nohipeine","er":"","cr":"503","cd":"797","dr":"448","fl":"","hr":"496","ma":"826","pe":"","oq":"166","sr":"607","ut":"609"},
+    {"type":"Hardened Arveshium Steel","name":"Dirdy","er":"","cr":"805","cd":"1000","dr":"329","fl":"","hr":"450","ma":"657","pe":"","oq":"831","sr":"780","ut":"534"},
+    {"type":"Green Diamond Crystalline Gemstone","name":"Witaian","er":"633","cr":"387","cd":"","dr":"368","fl":"","hr":"784","ma":"164","pe":"","oq":"827","sr":"471","ut":"576"},
+    {"type":"Gallinorian Rainbow Gem Crystalline Gemstone","name":"Wotwalleia","er":"584","cr":"234","cd":"","dr":"138","fl":"","hr":"763","ma":"89","pe":"","oq":"827","sr":"402","ut":"388"},
+    {"type":"Duranium Steel","name":"Seatoiiam","er":"","cr":"463","cd":"394","dr":"784","fl":"","hr":"816","ma":"241","pe":"","oq":"811","sr":"808","ut":"743"},
+    {"type":"Crism Siliclastic Ore","name":"Ritearis","er":"","cr":"513","cd":"","dr":"234","fl":"","hr":"517","ma":"550","pe":"","oq":"1000","sr":"318","ut":"361"},
+    {"type":"Crism Siliclastic Ore","name":"Koemai","er":"","cr":"611","cd":"","dr":"371","fl":"","hr":"598","ma":"638","pe":"","oq":"993","sr":"195","ut":"279"},
+    {"type":"Axidite Iron","name":"Sesasis","er":"","cr":"203","cd":"144","dr":"582","fl":"","hr":"689","ma":"186","pe":"","oq":"765","sr":"613","ut":"567"},
+    {"type":"Nabooian Domesticated Rice","name":"Prehou","er":"","cr":"","cd":"","dr":"248","fl":"491","hr":"","ma":"","pe":"958","oq":"985","sr":"","ut":""},
+    {"type":"Nabooian Wooly Hide","name":"Schebilce","er":"","cr":"","cd":"","dr":"323","fl":"","hr":"","ma":"352","pe":"","oq":"532","sr":"207","ut":"840"},
+    {"type":"Nabooian Scaley Hide","name":"Hebaca","er":"","cr":"","cd":"","dr":"919","fl":"","hr":"","ma":"105","pe":"","oq":"466","sr":"937","ut":"588"},
+    {"type":"Nabooian Bristley Hide","name":"Geusnaita","er":"","cr":"","cd":"","dr":"927","fl":"","hr":"","ma":"103","pe":"","oq":"310","sr":"599","ut":"231"},
+    {"type":"Nabooian Avian Bones","name":"Wraobeu","er":"","cr":"","cd":"","dr":"632","fl":"","hr":"","ma":"273","pe":"","oq":"986","sr":"262","ut":"484"},
+    {"type":"Nabooian Avian Bones","name":"Sitsi","er":"","cr":"","cd":"","dr":"186","fl":"","hr":"","ma":"417","pe":"","oq":"934","sr":"143","ut":"27"},
+    {"type":"Nabooian Water Vapor","name":"Makeictio","er":"","cr":"","cd":"","dr":"899","fl":"","hr":"","ma":"","pe":"","oq":"734","sr":"","ut":""},
+    {"type":"Nabooian Water Vapor","name":"Gnereiasta","er":"","cr":"","cd":"","dr":"156","fl":"","hr":"","ma":"","pe":"","oq":"998","sr":"","ut":""},
+    {"type":"Nabooian Water Vapor","name":"Ghtiwelda","er":"","cr":"","cd":"","dr":"933","fl":"","hr":"","ma":"","pe":"","oq":"753","sr":"","ut":""},
+    {"type":"Axidite Iron","name":"Scewi","er":"","cr":"229","cd":"169","dr":"577","fl":"","hr":"677","ma":"141","pe":"","oq":"810","sr":"556","ut":"642"},
+    {"type":"Ostrine Carbonate Ore","name":"Vowaeian","er":"","cr":"818","cd":"","dr":"534","fl":"","hr":"767","ma":"","pe":"","oq":"601","sr":"419","ut":"757"},
+    {"type":"Polymer","name":"Vovegeate","er":"","cr":"","cd":"","dr":"820","fl":"","hr":"","ma":"911","pe":"","oq":"915","sr":"605","ut":"958"},
+    {"type":"Phrik Aluminum","name":"Mouwauine","er":"","cr":"794","cd":"768","dr":"698","fl":"","hr":"750","ma":"866","pe":"","oq":"933","sr":"876","ut":"835"},
+    {"type":"Axidite Iron","name":"Kesafe","er":"","cr":"258","cd":"185","dr":"573","fl":"","hr":"613","ma":"202","pe":"","oq":"816","sr":"627","ut":"611"},
+    {"type":"Hothian Steel","name":"Tineium","er":"","cr":"754","cd":"631","dr":"967","fl":"","hr":"962","ma":"383","pe":"","oq":"945","sr":"971","ut":"961"},
+    {"type":"Neutronium Steel","name":"Haela","er":"","cr":"414","cd":"289","dr":"756","fl":"","hr":"753","ma":"196","pe":"","oq":"846","sr":"701","ut":"710"},
+    {"type":"Unknown Ferrous Metal","name":"Habegoaide","er":"","cr":"309","cd":"518","dr":"965","fl":"","hr":"696","ma":"498","pe":"","oq":"520","sr":"998","ut":"732"}
+      
+    /*{"type":"Rori Leathery Hide","name":"Poeve","er":"","cr":"","cd":"","dr":"577","fl":"","hr":"","ma":"981","pe":"","oq":"429","sr":"973","ut":"706"},
+    {"type":"Duranium Steel","name":"Sheogisis","er":"","cr":"446","cd":"323","dr":"748","fl":"","hr":"815","ma":"203","pe":"","oq":"972","sr":"759","ut":"767"},
+    {"type":"Ditanium Steel","name":"Seraide","er":"","cr":"558","cd":"436","dr":"865","fl":"","hr":"859","ma":"271","pe":"","oq":"884","sr":"819","ut":"789"}*/
+  ];
+
+  const sub5Lookup=new Map(jsonData76.map(item => [item.sub7_76, item.sub6_76]));
+  const sub4Lookup=new Map(jsonData65.map(item => [item.sub6_65, item.sub5_65]));
+  const sub3Lookup=new Map(jsonData54.map(item => [item.sub5_54, item.sub4_54]));
+  const sub2Lookup=new Map(jsonData43.map(item => [item.sub4_43, item.sub3_43]));
+  const sub1Lookup=new Map(jsonData32.map(item => [item.sub3_32, item.sub2_32]));
+  const sub0Lookup=new Map(jsonData21.map(item => [item.sub2_21, item.sub1_21]));
+  
+  const tableBodyNeutroniumSteel=document.querySelector("#neutroniumSteel tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const nsOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      nsOqMaCell.textContent=resource.oq;
+    }else {
+      nsOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(nsOqMaCell);
+
+    const nsOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      nsOqSrCell.textContent=resource.oq;
+    }else {
+      nsOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(nsOqSrCell);
+
+    const nsOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      nsOqUtCell.textContent=resource.oq;
+    }else {
+      nsOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(nsOqUtCell);
+
+    const nsOaCell=document.createElement('td');
+    nsOaCell.textContent = Math.round(((nsOqMaCell.textContent * 1.0) + (nsOqSrCell.textContent * 1.0) + (nsOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(nsOaCell);
+
+    if (sub5Cell.textContent === "Neutronium Steel") {
+      tableBodyNeutroniumSteel.append(row);
+    };
+
+  });
+
+  const tableBodyLeatheryHide=document.querySelector("#leatheryHide tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const lhOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      lhOqMaCell.textContent=resource.oq;
+    }else {
+      lhOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(lhOqMaCell);
+
+    const lhOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      lhOqSrCell.textContent=resource.oq;
+    }else {
+      lhOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(lhOqSrCell);
+
+    const lhOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      lhOqUtCell.textContent=resource.oq;
+    }else {
+      lhOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(lhOqUtCell);
+
+    const lhOaCell=document.createElement('td');
+    lhOaCell.textContent = Math.round(((lhOqMaCell.textContent * 1.0) + (lhOqSrCell.textContent * 1.0) + (lhOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(lhOaCell);
+    
+
+    if (sub4Cell.textContent === "Leathery Hide") {
+      tableBodyLeatheryHide.append(row);
+    };
+
+  });
+
+  const tableBodyWoolyHide=document.querySelector("#woolyHide tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const whOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      whOqMaCell.textContent=resource.oq;
+    }else {
+      whOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(whOqMaCell);
+
+    const whOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      whOqSrCell.textContent=resource.oq;
+    }else {
+      whOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(whOqSrCell);
+
+    const whOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      whOqUtCell.textContent=resource.oq;
+    }else {
+      whOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(whOqUtCell);
+
+    const whOaCell=document.createElement('td');
+    whOaCell.textContent = Math.round(((whOqMaCell.textContent * 1.0) + (whOqSrCell.textContent * 1.0) + (whOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(whOaCell);
+    
+
+    if (sub4Cell.textContent === "Wooly Hide") {
+      tableBodyWoolyHide.append(row);
+    };
+
+  });
+
+  const tableBodyMetal=document.querySelector("#metal tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const mOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      mOqMaCell.textContent=resource.oq;
+    }else {
+      mOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(mOqMaCell);
+
+    const mOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      mOqSrCell.textContent=resource.oq;
+    }else {
+      mOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(mOqSrCell);
+
+    const mOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      mOqUtCell.textContent=resource.oq;
+    }else {
+      mOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(mOqUtCell);
+
+    const mOaCell=document.createElement('td');
+    mOaCell.textContent = Math.round(((mOqMaCell.textContent * 1.0) + (mOqSrCell.textContent * 1.0) + (mOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(mOaCell);
+
+    if (sub2Cell.textContent === "Metal") {
+      tableBodyMetal.append(row);
+    };
+
+  });
+
+  const tableBodyIron=document.querySelector("#iron tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const iOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      iOqMaCell.textContent=resource.oq;
+    }else {
+      iOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(iOqMaCell);
+
+    const iOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      iOqSrCell.textContent=resource.oq;
+    }else {
+      iOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(iOqSrCell);
+
+    const iOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      iOqUtCell.textContent=resource.oq;
+    }else {
+      iOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(iOqUtCell);
+
+    const iOaCell=document.createElement('td');
+    iOaCell.textContent = Math.round(((iOqMaCell.textContent * 1.0) + (iOqSrCell.textContent * 1.0) + (iOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(iOaCell);
+
+    if (sub4Cell.textContent === "Iron") {
+      tableBodyIron.append(row);
+    };
+
+  });
+
+  const tableBodySteel=document.querySelector("#steel tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const sOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      sOqMaCell.textContent=resource.oq;
+    }else {
+      sOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(sOqMaCell);
+
+    const sOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      sOqSrCell.textContent=resource.oq;
+    }else {
+      sOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(sOqSrCell);
+
+    const sOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      sOqUtCell.textContent=resource.oq;
+    }else {
+      sOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(sOqUtCell);
+
+    const sOaCell=document.createElement('td');
+    sOaCell.textContent = Math.round(((sOqMaCell.textContent * 1.0) + (sOqSrCell.textContent * 1.0) + (sOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(sOaCell);
+
+    if (sub4Cell.textContent === "Steel") {
+      tableBodySteel.append(row);
+    };
+
+  });
+
+  const tableBodyPolymer=document.querySelector("#polymer tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const pOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      pOqMaCell.textContent=resource.oq;
+    }else {
+      pOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(pOqMaCell);
+
+    const pOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      pOqSrCell.textContent=resource.oq;
+    }else {
+      pOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(pOqSrCell);
+
+    const pOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      pOqUtCell.textContent=resource.oq;
+    }else {
+      pOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(pOqUtCell);
+
+    const pOaCell=document.createElement('td');
+    pOaCell.textContent = Math.round(((pOqMaCell.textContent * 1.0) + (pOqSrCell.textContent * 1.0) + (pOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(pOaCell);
+
+    if (sub3Cell.textContent === "Polymer") {
+      tableBodyPolymer.append(row);
+    };
+
+  });
+
+  const tableBodyAmorphousGemstone=document.querySelector("#amorphousGemstone tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const agOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      agOqMaCell.textContent=resource.oq;
+    }else {
+      agOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(agOqMaCell);
+
+    const agOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      agOqSrCell.textContent=resource.oq;
+    }else {
+      agOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(agOqSrCell);
+
+    const agOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      agOqUtCell.textContent=resource.oq;
+    }else {
+      agOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(agOqUtCell);
+
+    const agOaCell=document.createElement('td');
+    agOaCell.textContent = Math.round(((agOqMaCell.textContent * 1.0) + (agOqSrCell.textContent * 1.0) + (agOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(agOaCell);
+
+    if (sub3Cell.textContent === "Amorphous Gemstone") {
+      tableBodyAmorphousGemstone.append(row);
+    };
+
+  });
+
+  const tableBodyAxiditeIron=document.querySelector("#axiditeIron tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const aiOqMaCell=document.createElement('td');
+    if (maCell.textContent === "") {
+      aiOqMaCell.textContent=resource.oq;
+    }else {
+      aiOqMaCell.textContent = Math.round((oqCell.textContent * 0.50) + (maCell.textContent * 0.50));
+    };
+    row.appendChild(aiOqMaCell);
+
+    const aiOqSrCell=document.createElement('td');
+    if (srCell.textContent === "") {
+      aiOqSrCell.textContent=resource.oq;
+    }else {
+      aiOqSrCell.textContent = Math.round((oqCell.textContent * 0.50) + (srCell.textContent * 0.50));
+    };
+    row.appendChild(aiOqSrCell);
+
+    const aiOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      aiOqUtCell.textContent=resource.oq;
+    }else {
+      aiOqUtCell.textContent = Math.round((oqCell.textContent * 0.50) + (utCell.textContent * 0.50));
+    };
+    row.appendChild(aiOqUtCell);
+
+    const aiOaCell=document.createElement('td');
+    aiOaCell.textContent = Math.round(((aiOqMaCell.textContent * 1.0) + (aiOqSrCell.textContent * 1.0) + (aiOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(aiOaCell);
+
+    if (sub5Cell.textContent === "Axidite Iron") {
+      tableBodyAxiditeIron.append(row);
+    };
+
+  });
+
+  const tableBodyDantooineBerry=document.querySelector("#dantooineBerry tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const dbfOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      dbfOqPeCell.textContent=resource.oq;
+    }else {
+      dbfOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(dbfOqPeCell);
+
+    if (typeCell.textContent === "Dantooine Berry Fruit") {
+      tableBodyDantooineBerry.append(row);
+    };
+
+  });
+
+  const tableBodyTalusianWaterVapor=document.querySelector("#talusianWaterVapor tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const twvOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      twvOqPeCell.textContent=resource.oq;
+    }else {
+      twvOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(twvOqPeCell);
+
+    if (sub2Cell.textContent === "Talusian Water Vapor") {
+      tableBodyTalusianWaterVapor.append(row);
+    };
+
+  });
+
+  const tableBodyClass4liquidPetroFuel=document.querySelector("#class4liquidPetroFuel tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const c4lpfOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      c4lpfOqPeCell.textContent=resource.oq;
+    }else {
+      c4lpfOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(c4lpfOqPeCell);
+
+    if (sub3Cell.textContent === "Class 4 Liquid Petro Fuel") {
+      tableBodyClass4liquidPetroFuel.append(row);
+    };
+
+  });
+
+  const tableBodyHerbivoreMeat=document.querySelector("#herbivoreMeat tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const hmOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      hmOqPeCell.textContent=resource.oq;
+    }else {
+      hmOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(hmOqPeCell);
+
+    if (sub4Cell.textContent === "Herbivore Meat") {
+      tableBodyHerbivoreMeat.append(row);
+    };
+
+  });
+
+  const tableBodyTatooinianFiberplast=document.querySelector("#tatooinianFiberplast tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const tfOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      tfOqPeCell.textContent=resource.oq;
+    }else {
+      tfOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(tfOqPeCell);
+
+    const tfOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      tfOqUtCell.textContent=resource.oq;
+    }else {
+      tfOqUtCell.textContent = Math.round((oqCell.textContent * 0.67) + (utCell.textContent * 0.33));
+    };
+    row.appendChild(tfOqUtCell);
+
+    const tfOaCell=document.createElement('td');
+    tfOaCell.textContent = Math.round(((tfOqPeCell.textContent * 1.0) + (tfOqUtCell.textContent * 1.0)) / 2.0);
+    row.appendChild(tfOaCell);
+
+    if (sub3Cell.textContent === "Tatooinian Fiberplast") {
+      tableBodyTatooinianFiberplast.append(row);
+    };
+
+  });
+
+  const tableBodyLokianWildWheat=document.querySelector("#lokianWildWheat tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const lwwOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      lwwOqPeCell.textContent=resource.oq;
+    }else {
+      lwwOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(lwwOqPeCell);
+
+    const lwwOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      lwwOqUtCell.textContent=resource.oq;
+    }else {
+      lwwOqUtCell.textContent = Math.round((oqCell.textContent * 0.67) + (utCell.textContent * 0.33));
+    };
+    row.appendChild(lwwOqUtCell);
+
+    const lwwOaCell=document.createElement('td');
+    lwwOaCell.textContent = Math.round(((lwwOqPeCell.textContent * 1.0) + (lwwOqUtCell.textContent * 1.0)) / 2.0);
+    row.appendChild(lwwOaCell);
+
+    if (typeCell.textContent === "Lokian Wild Wheat") {
+      tableBodyLokianWildWheat.append(row);
+    };
+
+  });
+
+  const tableBodyAluminum=document.querySelector("#aluminum tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const cdCell=document.createElement('td');
+    cdCell.textContent=resource.cd;
+    row.appendChild(cdCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const aOqCdCell=document.createElement('td');
+    if (cdCell.textContent === "") {
+      aOqCdCell.textContent=resource.oq;
+    }else {
+      aOqCdCell.textContent = Math.round((oqCell.textContent * 0.67) + (cdCell.textContent * 0.33));
+    };
+    row.appendChild(aOqCdCell);
+
+    const aOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      aOqUtCell.textContent=resource.oq;
+    }else {
+      aOqUtCell.textContent = Math.round((oqCell.textContent * 0.67) + (utCell.textContent * 0.33));
+    };
+    row.appendChild(aOqUtCell);
+
+    const aOaCell=document.createElement('td');
+    aOaCell.textContent = Math.round(((aOqCdCell.textContent * 1.0) + (aOqUtCell.textContent * 1.0)) / 2.0);
+    row.appendChild(aOaCell);
+
+    if (sub4Cell.textContent === "Aluminum") {
+      tableBodyAluminum.append(row);
+    };
+
+  });
+
+  const tableBodyOrganic=document.querySelector("#organic tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const cdCell=document.createElement('td');
+    cdCell.textContent=resource.cd;
+    row.appendChild(cdCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const oOqPeCell=document.createElement('td');
+    if (peCell.textContent === "") {
+      oOqPeCell.textContent=resource.oq;
+    }else {
+      oOqPeCell.textContent = Math.round((oqCell.textContent * 0.67) + (peCell.textContent * 0.33));
+    };
+    row.appendChild(oOqPeCell);
+
+    const oOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      oOqUtCell.textContent=resource.oq;
+    }else {
+      oOqUtCell.textContent = Math.round((oqCell.textContent * 0.67) + (utCell.textContent * 0.33));
+    };
+    row.appendChild(oOqUtCell);
+
+    const oOaCell=document.createElement('td');
+    oOaCell.textContent = Math.round(((oOqPeCell.textContent * 1.0) + (oOqPeCell.textContent * 1.0) + (oOqUtCell.textContent * 1.0)) / 3.0);
+    row.appendChild(oOaCell);
+
+    if (sub0Cell.textContent === "Organic") {
+      tableBodyOrganic.append(row);
+    };
+
+  });
+
+  const tableBodyFiberplast=document.querySelector("#fiberplast tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const cdCell=document.createElement('td');
+    cdCell.textContent=resource.cd;
+    row.appendChild(cdCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    const fOqUtCell=document.createElement('td');
+    if (utCell.textContent === "") {
+      fOqUtCell.textContent=resource.oq;
+    }else {
+      fOqUtCell.textContent = Math.round((oqCell.textContent * 0.67) + (utCell.textContent * 0.33));
+    };
+    row.appendChild(fOqUtCell);
+
+    if (sub2Cell.textContent === "Fiberplast") {
+      tableBodyFiberplast.append(row);
+    };
+
+  });
+
+  const tableBodyDeshCopper=document.querySelector("#deshCopper tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    if (sub5Cell.textContent === "Desh Copper") {
+      tableBodyDeshCopper.append(row);
+    };
+
+  });
+
+  const tableBodyClass3solidPetroFuel=document.querySelector("#class3solidPetroFuel tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    if (sub3Cell.textContent === "Class 3 Solid Petro Fuel") {
+      tableBodyClass3solidPetroFuel.append(row);
+    };
+
+  });
+
+  const tableBodyPlatiniteCopper=document.querySelector("#platiniteCopper tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    if (sub5Cell.textContent === "Platinite Copper") {
+      tableBodyPlatiniteCopper.append(row);
+    };
+
+  });
+
+  const tableBodyMetalLance=document.querySelector("#metalLance tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    if (sub2Cell.textContent === "Metal") {
+      tableBodyMetalLance.append(row);
+    };
+
+  });
+
+  const tableBodyFerrousMetal=document.querySelector("#ferrousMetal tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    if (sub3Cell.textContent === "Ferrous Metal") {
+      tableBodyFerrousMetal.append(row);
+    };
+
+  });
+
+
+  const tableBody=document.querySelector("#allFields tbody");
+  jsonDataResource.forEach(resource =>{
+    const row=document.createElement('tr');
+    
+    const typeCell=document.createElement('td');
+    typeCell.textContent=resource.type;
+
+    const sub5Cell=document.createElement('td');
+    sub5Cell.textContent=sub5Lookup.get(resource.type) || resource.type;
+
+    const sub4Cell=document.createElement('td');
+    sub4Cell.textContent=sub4Lookup.get(sub5Cell.textContent) || sub5Cell.textContent;
+    
+    const sub3Cell=document.createElement('td');
+    sub3Cell.textContent=sub3Lookup.get(sub4Cell.textContent) || sub4Cell.textContent;
+    
+    const sub2Cell=document.createElement('td');
+    sub2Cell.textContent=sub2Lookup.get(sub3Cell.textContent) || sub3Cell.textContent;
+    
+    const sub1Cell=document.createElement('td');
+    sub1Cell.textContent=sub1Lookup.get(sub2Cell.textContent) || sub2Cell.textContent;
+    
+    const sub0Cell=document.createElement('td');
+    sub0Cell.textContent=sub0Lookup.get(sub1Cell.textContent) || sub1Cell.textContent;
+    
+    const nameCell=document.createElement('td');
+    nameCell.textContent=resource.name;
+
+    row.appendChild(sub0Cell);
+    row.appendChild(sub1Cell);
+    row.appendChild(sub2Cell);
+    row.appendChild(sub3Cell);
+    row.appendChild(sub4Cell);
+    row.appendChild(sub5Cell);
+    row.appendChild(typeCell);
+    row.appendChild(nameCell);
+    
+    const erCell=document.createElement('td');
+    erCell.textContent=resource.er;
+    row.appendChild(erCell);
+
+    const crCell=document.createElement('td');
+    crCell.textContent=resource.cr;
+    row.appendChild(crCell);
+
+    const cdCell=document.createElement('td');
+    cdCell.textContent=resource.cd;
+    row.appendChild(cdCell);
+
+    const drCell=document.createElement('td');
+    drCell.textContent=resource.dr;
+    row.appendChild(drCell);
+
+    const flCell=document.createElement('td');
+    flCell.textContent=resource.fl;
+    row.appendChild(flCell);
+
+    const hrCell=document.createElement('td');
+    hrCell.textContent=resource.hr;
+    row.appendChild(hrCell);
+
+    const maCell=document.createElement('td');
+    maCell.textContent=resource.ma;
+    row.appendChild(maCell);
+
+    const peCell=document.createElement('td');
+    peCell.textContent=resource.pe;
+    row.appendChild(peCell);
+
+    const oqCell=document.createElement('td');
+    oqCell.textContent=resource.oq;
+    row.appendChild(oqCell);
+
+    const srCell=document.createElement('td');
+    srCell.textContent=resource.sr;
+    row.appendChild(srCell);
+
+    const utCell=document.createElement('td');
+    utCell.textContent=resource.ut;
+    row.appendChild(utCell);
+
+    tableBody.append(row);
+    
+  });
+
+  document.querySelectorAll(".sortable-table th").forEach(headerCell => {
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Find the parent table and its body rows
+      const tableElement = headerCell.closest("table");
+      const tbody = tableElement.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      
+      // 2. Determine the column index and sorting direction
+      let columnIndex = 2;
+      const currentIsDescending = headerCell.classList.contains("th-sort-desc");
+
+      if (tableElement.id === "neutroniumSteel") {
+        columnIndex = 10
+      } else if (tableElement.id === "leatheryHide") {
+        columnIndex = 10
+      } else if (tableElement.id === "woolyHide") {
+        columnIndex = 10
+      } else if (tableElement.id === "metal") {
+        columnIndex = 10
+      } else if (tableElement.id === "iron") {
+        columnIndex = 10
+      } else if (tableElement.id === "steel") {
+        columnIndex = 10
+      } else if (tableElement.id === "polymer") {
+        columnIndex = 10
+      } else if (tableElement.id === "amorphousGemstone") {
+        columnIndex = 10
+      } else if (tableElement.id === "axiditeIron") {
+        columnIndex = 10
+      } else if (tableElement.id === "dantooineBerry") {
+        columnIndex = 5
+      } else if (tableElement.id === "talusianWaterVapor") {
+        columnIndex = 5
+      } else if (tableElement.id === "class4liquidPetroFuel") {
+        columnIndex = 5
+      } else if (tableElement.id === "herbivoreMeat") {
+        columnIndex = 5
+      } else if (tableElement.id === "tatoonianFiberplast") {
+        columnIndex = 8
+      } else if (tableElement.id === "lokianWildWheat") {
+        columnIndex = 4
+      } else if (tableElement.id === "aluminum") {
+        columnIndex = 9
+      } else if (tableElement.id === "organic") {
+        columnIndex = 9
+      } else if (tableElement.id === "fiberplast") {
+        columnIndex = 7
+      } else if (tableElement.id === "deshCopper") {
+        columnIndex = 3
+      } else if (tableElement.id === "class3solidPetroFuel") {
+        columnIndex = 3
+      } else if (tableElement.id === "platiniteCopper") {
+        columnIndex = 3
+      } else if (tableElement.id === "metalLance") {
+        columnIndex = 3
+      } else if (tableElement.id === "ferrousMetal") {
+        columnIndex = 3
+      } else if (tableElement.id === "allFields") {
+        columnIndex = 8
+      };
+
+      // 3. Perform the sort logic
+      const sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${columnIndex})`).textContent.trim() + "10000";
+        const bColText = b.querySelector(`td:nth-child(${columnIndex})`).textContent.trim() + "10000";
+
+        // Auto-detect numbers vs strings
+        const aValue = isNaN(aColText) ? aColText : (parseFloat(aColText) + 10000);
+        const bValue = isNaN(bColText) ? bColText : (parseFloat(bColText) + 10000);
+        
+        if (typeof aValue === "number" && typeof bValue === "number") {
+          return currentIsDescending ? aValue - bValue : bValue - aValue;
+        }
+        
+        return currentIsDescending 
+          ? aColText.localeCompare(bColText)
+          : bColText.localeCompare(aColText);
+      });
+      
+      // 4. Clear existing direction indicators from this table's headers
+      tableElement.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-desc", "th-sort-ssc"));
+      
+      // 5. Re-apply rows to the DOM and track the new direction
+      tbody.append(...sortedRows);
+      headerCell.classList.toggle("th-sort-desc", !currentIsDescending);
+      headerCell.classList.toggle("th-sort-asc", currentIsDescending);
+    });
+
+    headerCell.addEventListener("click", () => {
+      // 1. Find the parent table and its body rows
+      const tableElement = headerCell.closest("table");
+      const tbody = tableElement.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      
+      // 2. Determine the column index and sorting direction
+      const columnIndex = Array.from(headerCell.parentNode.children).indexOf(headerCell);
+      const currentIsDescending = headerCell.classList.contains("th-sort-desc");
+      
+      // 3. Perform the sort logic
+      const sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim() + "10000";
+        const bColText = b.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim() + "10000";
+        
+        // Auto-detect numbers vs strings
+        const aValue = isNaN(aColText) ? aColText : (parseFloat(aColText) + 10000);
+        const bValue = isNaN(bColText) ? bColText : (parseFloat(bColText) + 10000);
+        
+        if (typeof aValue === "number" && typeof bValue === "number") {
+          return currentIsDescending ? aValue - bValue : bValue - aValue;
+        }
+        
+        return currentIsDescending 
+          ? aColText.localeCompare(bColText)
+          : bColText.localeCompare(aColText);
+      });
+      
+      // 4. Clear existing direction indicators from this table's headers
+      tableElement.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-desc", "th-sort-ssc"));
+      
+      // 5. Re-apply rows to the DOM and track the new direction
+      tbody.append(...sortedRows);
+      headerCell.classList.toggle("th-sort-desc", !currentIsDescending);
+      headerCell.classList.toggle("th-sort-asc", currentIsDescending);
+    });
+  });
+
+</script>
+</html>

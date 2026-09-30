@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Horizontal Frames Example</title>
+</head>
+
+<!-- Use <frameset> instead of <body> -->
+<frameset cols="290px, *">
+    <frame src="persuasionPlantLeft.html" name="leftFrame">
+    <frame src="persuasionPlantRight.html" name="rightFrame">
+    
+    <!-- Fallback for old browsers that don't support frames -->
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+        </body>
+    </noframes>
+</frameset>
+
+</html>

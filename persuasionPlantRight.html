@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      }
+
+      .table-container {
+        margin: 10px 0;
+      }
+
+      .med1{
+        text-align: center;
+        column-width: 110px;
+      }
+
+      .med2{
+        text-align: center;
+      }
+
+      .hlX{
+        text-align: center;
+        column-width: 20px;
+        color: #ffffff;
+      }
+
+      .stim{
+        text-align: right;
+        column-width: 150px;
+      }
+
+      .grid{
+        text-align: center;
+        column-width: 20px;
+      }
+
+      .splt{
+        background-color: #cecece;
+        text-align: center;
+        column-width: 5px;
+      }
+
+      .set1{
+        text-align: center;
+        column-width: 20px;
+      }
+
+      .set3{
+        text-align: center;
+        /*column-width: 45px;*/
+      }
+
+      .set5{
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        /*column-width: 100px;*/
+      }
+
+      .set9{
+        text-align: center;
+        /*column-width: 100px;*/
+      }
+
+      table {
+        /* width: 70%; */
+        border-collapse: collapse; /* Merges cell borders */
+        font-family: sans-serif;
+      }
+
+      th, td {
+        padding: 7px 7px;
+        border: 0.5px solid #ddd;
+        font-size: 11px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      /* The highlight style */
+      td.highlight {
+        background-color: #007bff;
+        font-weight: bold;
+      }
+        
+    </style>
+    <title>Interactive HTML Table</title>
+</head>
+
+<body>
+  <main>
+      <table>
+        <tr valign="top">
+          <td>
+            <div class="table-container">
+                <table id="symptomsTable">
+                    <thead>
+                        <th colspan="2">Symptom(s)</th>
+                        <th> X </th>
+                    </thead>
+                    <tbody>    
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <button onclick="window.location.reload()">Refresh Page</button>
+            <br><br> Friday 9-14-2026
+          </td>
+          <td>
+            <div class="table-container">
+                <table id="medCountTable">
+                    <thead>
+                    </thead>
+                    <tbody>    
+                    </tbody>
+                </table>
+            </div>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td></td>
+          <td>
+            <div class="table-container">
+                <table id="medCraftTable">
+                    <thead>
+                    </thead>
+                    <tbody>    
+                    </tbody>
+                </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+  </main>
+</body>
+
+<script>
+
+  const jsonData=[
+    {"e":"1","f":"fever","g":"vomiting","h":"X"},
+    {"e":"1","f":"open sores","g":"puss filled lesions","h":"X"},
+    {"e":"1","f":"erratic heart rate","g":"respiratory failure","h":"X"},
+    {"e":"1","f":"lost vision","g":"partial paralysis","h":"X"},
+    {"e":"2","f":"violent spasms","h":"X"},
+    {"e":"2","f":"bloody cough","h":"X"},
+    {"e":"2","f":"swelling","h":"X"},
+    {"e":"2","f":"internal bleeding","h":"X"}
+  ];
+
+  const jsonMedCount=[
+  {"a":"","b":"","c":"Set 1","d":"","e":"","f":"","g":"","h":"","i":"Set 2","j":"","k":"","l":"","m":"","n":"","o":"Set 3","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"5"},
+  {"a":"Internal Bleeding","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Swelling","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Bloody Cough","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Violent Spasms","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Paralysis Lost Vision","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Erratic Heart Resp Failure","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Lesions Open Sores","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Vomit Fever","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+
+  {"a":"","b":"","c":"Set A","d":"","e":"","f":"","g":"","h":"","i":"Set B","j":"","k":"","l":"","m":"","n":"","o":"Set C","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"5"},
+  {"a":"Internal Bleeding","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Swelling","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Bloody Cough","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Violent Spasms","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Paralysis Lost Vision","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Erratic Heart Resp Failure","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Lesions Open Sores","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"},
+  {"a":"Vomit Fever","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"}
+  ];
+
+  const jsonMedCraft=[
+  {"a":"","b":"","c":"","d":"","e":"","f":"Organic (5)","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"Inorganic (10)","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"9"},
+  {"a":"","b":"","c":"","d":"","e":"","f":"High","g":"","h":"","i":"Medium","j":"","k":"","l":"Low","m":"","n":"","o":"High","p":"","q":"","r":"Medium","s":"","t":"","u":"Low","v":"","w":"","spn":"3"},
+  {"a":"","b":"","c":"","d":"","e":"","f":"Sadia","g":"","h":"","i":"Kasopo","j":"","k":"","l":"Havero","m":"","n":"","o":"Micokiide","p":"","q":"","r":"Toiggi","s":"","t":"","u":"Sabaeite","v":"","w":"","spn":"3"},
+  {"a":"Internal Bleeding","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Swelling","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Bloody Cough","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Violent Spasms","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Paralysis Lost Vision","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Erratic Heart Resp Failure","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Lesions Open Sores","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"Vomit Fever","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"3"},
+  {"a":"","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":"","k":"","l":"","m":"","n":"","o":"","p":"","q":"","r":"","s":"","t":"","u":"","v":"","w":"","spn":"1"}
+  ];
+
+    const tableBody=document.querySelector("#symptomsTable tbody");
+    jsonData.forEach(rowData =>{
+        const row=document.createElement('tr');
+
+        const eCell=document.createElement('td');
+        eCell.textContent=rowData.e;
+
+        const fCell=document.createElement('td');
+        fCell.textContent=rowData.f;
+        fCell.colSpan = eCell.textContent;
+        if (eCell.textContent === "1"){
+          fCell.className = 'med1';
+        }else{
+          fCell.className = 'med2';
+        };
+        row.appendChild(fCell);
+
+        const gCell=document.createElement('td');
+        gCell.textContent=rowData.g;
+        if (eCell.textContent === "1"){
+          gCell.className = 'med1';
+          row.appendChild(gCell);
+        };
+
+        const hCell=document.createElement('td');
+        hCell.textContent=rowData.h;
+        hCell.className = 'hlX';
+        row.appendChild(hCell);
+
+        tableBody.append(row);
+
+    });
+
+  const tableBodyCount=document.querySelector("#medCountTable tbody");
+  jsonMedCount.forEach(med =>{
+    const row=document.createElement('tr');
+
+    const spnCell=document.createElement('td');
+    spnCell.textContent=med.spn; 
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=med.a;
+    aCell.className = 'stim';
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=med.b;
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=med.c;
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=med.d;
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=med.e;
+
+    const fCell=document.createElement('td');
+    fCell.textContent=med.f;
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=med.g;
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=med.h;
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=med.i;
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=med.j;
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=med.k;
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=med.l;
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=med.m;
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=med.n;
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=med.o;
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=med.p;
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=med.q;
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=med.r;
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=med.s;
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=med.t;
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=med.u;
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=med.v;
+    
+    const wCell=document.createElement('td');
+    wCell.textContent=med.w;
+
+
+    row.appendChild(aCell);
+
+    if (spnCell.textContent === "5"){
+      bCell.className = 'splt';
+      row.appendChild(bCell);
+      cCell.colSpan = 5;
+      cCell.className = 'set5';
+      row.appendChild(cCell);
+      hCell.className = 'splt';
+      row.appendChild(hCell);
+      iCell.colSpan = 5;
+      iCell.className = 'set5';
+      row.appendChild(iCell);
+      nCell.className = 'splt';
+      row.appendChild(nCell);
+      oCell.colSpan = 5;
+      oCell.className = 'set5';
+      row.appendChild(oCell);
+      tCell.className = 'splt';
+      row.appendChild(tCell);
+    }else if(spnCell.textContent === "1"){
+
+      bCell.className = 'splt';
+      row.appendChild(bCell);
+
+        cCell.className = 'set1';
+        row.appendChild(cCell);
+        dCell.className = 'set1';
+        row.appendChild(dCell);
+        eCell.className = 'set1';
+        row.appendChild(eCell);
+        fCell.className = 'set1';
+        row.appendChild(fCell);
+        gCell.className = 'set1';
+        row.appendChild(gCell);
+
+      hCell.className = 'splt';
+      row.appendChild(hCell);
+
+        iCell.className = 'set1';
+        row.appendChild(iCell);
+        jCell.className = 'set1';
+        row.appendChild(jCell);
+        kCell.className = 'set1';
+        row.appendChild(kCell);
+        lCell.className = 'set1';
+        row.appendChild(lCell);
+        mCell.className = 'set1';
+        row.appendChild(mCell);
+
+      nCell.className = 'splt';
+      row.appendChild(nCell);
+
+        oCell.className = 'set1';
+        row.appendChild(oCell);
+        pCell.className = 'set1';
+        row.appendChild(pCell);
+        qCell.className = 'set1';
+        row.appendChild(qCell);
+        rCell.className = 'set1';
+        row.appendChild(rCell);
+        sCell.className = 'set1';
+        row.appendChild(sCell);
+
+      tCell.className = 'splt';
+      row.appendChild(tCell);
+    };
+    
+    tableBodyCount.append(row);
+    
+  });
+
+    const table = document.getElementById('symptomsTable');
+
+    // Listen for a click anywhere inside the table
+    table.addEventListener('click', function(event) {
+        // Target the specific element that was clicked
+        const targetCell = event.target;
+
+        // Make sure the clicked element is actually a table cell (TD)
+        if (targetCell.tagName === 'TD') {
+            // Toggle the 'highlight' class
+            targetCell.classList.toggle('highlight');
+        };
+    });
+
+    const table2 = document.getElementById('medCountTable');
+
+    // Listen for a click anywhere inside the table
+    table2.addEventListener('click', function(event) {
+        // Target the specific element that was clicked
+        const targetCell = event.target;
+
+        // Make sure the clicked element is actually a table cell (TD)
+        if (targetCell.tagName === 'TD') {
+            // Toggle the 'highlight' class
+            targetCell.classList.toggle('highlight');
+
+            document.querySelector('#medCraftTable tbody').innerHTML = '';
+
+            const tableBodyMed=document.querySelector("#medCraftTable tbody");
+            jsonMedCraft.forEach(med =>{
+
+                    let intBleedingAll = 0;
+                    let swellingAll = 0;
+                    let bldCoughAll = 0;
+                    let vlntSpasmAll = 0;
+                    let paralVisAll = 0;
+                    let hrtRespAll = 0;
+                    let lesSoreAll = 0;
+                    let vmtFvrAll = 0;
+                    
+                    table2.children.item(1).childNodes.forEach(trItem => {
+
+                    const row=document.createElement('tr');
+                    const trCell=document.createElement('td');
+                    trCell.textContent=trItem.innerHTML;
+
+                    if (med.a==="Internal Bleeding" && trCell.textContent.includes(med.a)){intBleedingAll = intBleedingAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Swelling" && trCell.textContent.includes(med.a)){swellingAll = swellingAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Bloody Cough" && trCell.textContent.includes(med.a)){bldCoughAll = bldCoughAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Violent Spasms" && trCell.textContent.includes(med.a)){vlntSpasmAll = vlntSpasmAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Paralysis Lost Vision" && trCell.textContent.includes(med.a)){paralVisAll = paralVisAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Erratic Heart Resp Failure" && trCell.textContent.includes(med.a)){hrtRespAll = hrtRespAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Lesions Open Sores" && trCell.textContent.includes(med.a)){lesSoreAll = lesSoreAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+                    if (med.a==="Vomit Fever" && trCell.textContent.includes(med.a)){vmtFvrAll = vmtFvrAll + ((((trCell.childNodes.item(0).length-(440 + med.a.length))+10)/10)-1)};
+
+
+                    });
+
+              const row=document.createElement('tr');
+
+              const spnCell=document.createElement('td');
+              spnCell.textContent=med.spn; 
+              
+              const aCell=document.createElement('td');
+              aCell.textContent=med.a;
+              aCell.className = 'stim';
+              
+              const bCell=document.createElement('td');
+              bCell.textContent=med.b;
+              bCell.className = 'grid';
+              
+              const cCell=document.createElement('td');
+              cCell.textContent=med.c;
+              cCell.className = 'grid';
+              
+              const dCell=document.createElement('td');
+              dCell.textContent=med.d;
+              dCell.className = 'grid';
+
+              const eCell=document.createElement('td');
+              if(aCell.textContent === "Internal Bleeding")                 {eCell.textContent=30 - intBleedingAll
+              }else if(aCell.textContent === "Swelling")                    {eCell.textContent=30 - swellingAll
+              }else if(aCell.textContent === "Bloody Cough")                {eCell.textContent=30 - bldCoughAll
+              }else if(aCell.textContent === "Violent Spasms")              {eCell.textContent=30 - vlntSpasmAll
+              }else if(aCell.textContent === "Paralysis Lost Vision")       {eCell.textContent=30 - paralVisAll
+              }else if(aCell.textContent === "Erratic Heart Resp Failure")  {eCell.textContent=30 - hrtRespAll
+              }else if(aCell.textContent === "Lesions Open Sores")          {eCell.textContent=30 - lesSoreAll
+              }else if(aCell.textContent === "Vomit Fever")                 {eCell.textContent=30 - vmtFvrAll
+              };
+              eCell.className = 'grid';
+              
+              const fCell=document.createElement('td');
+              if(aCell.textContent === "Internal Bleeding")                 {fCell.textContent=(30 - intBleedingAll)*5
+              }else {fCell.textContent=med.f};
+              
+              const gCell=document.createElement('td');
+              gCell.textContent=med.g;
+              
+              const hCell=document.createElement('td');
+              hCell.textContent=med.h;
+              
+              const iCell=document.createElement('td');
+              if(aCell.textContent === "Swelling")                          {iCell.textContent=(30 - swellingAll)*5
+              }else if(aCell.textContent === "Bloody Cough")                {iCell.textContent=(30 - bldCoughAll)*5
+              }else if(aCell.textContent === "Violent Spasms")              {iCell.textContent=(30 - vlntSpasmAll)*5
+              }else if(aCell.textContent === "Paralysis Lost Vision")       {iCell.textContent=(30 - paralVisAll)*5
+              }else {iCell.textContent=med.i};
+              
+              const jCell=document.createElement('td');
+              jCell.textContent=med.j;
+              
+              const kCell=document.createElement('td');
+              kCell.textContent=med.k;
+              
+              const lCell=document.createElement('td');
+              if(aCell.textContent === "Erratic Heart Resp Failure")        {lCell.textContent=(30 - hrtRespAll)*5
+              }else if(aCell.textContent === "Lesions Open Sores")          {lCell.textContent=(30 - lesSoreAll)*5
+              }else if(aCell.textContent === "Vomit Fever")                 {lCell.textContent=(30 - vmtFvrAll)*5
+              }else {lCell.textContent=med.l};
+              
+              const mCell=document.createElement('td');
+              mCell.textContent=med.m;
+              
+              const nCell=document.createElement('td');
+              nCell.textContent=med.n;
+              
+              const oCell=document.createElement('td');
+              if(aCell.textContent === "Internal Bleeding")                 {oCell.textContent=(30 - intBleedingAll)*10
+              }else if(aCell.textContent === "Swelling")                    {oCell.textContent=(30 - swellingAll)*10
+              }else if(aCell.textContent === "Bloody Cough")                {oCell.textContent=(30 - bldCoughAll)*10
+              }else if(aCell.textContent === "Violent Spasms")              {oCell.textContent=(30 - vlntSpasmAll)*10
+              }else if(aCell.textContent === "Paralysis Lost Vision")       {oCell.textContent=(30 - paralVisAll)*10
+              }else if(aCell.textContent === "Erratic Heart Resp Failure")  {oCell.textContent=(30 - hrtRespAll)*10
+              }else {oCell.textContent=med.o};
+              
+              const pCell=document.createElement('td');
+              pCell.textContent=med.p;
+              
+              const qCell=document.createElement('td');
+              qCell.textContent=med.q;
+              
+              const rCell=document.createElement('td');
+              if(aCell.textContent === "Lesions Open Sores")          {rCell.textContent=(30 - lesSoreAll)*10
+              }else {rCell.textContent=med.r};
+              
+              const sCell=document.createElement('td');
+              sCell.textContent=med.s;
+              
+              const tCell=document.createElement('td');
+              tCell.textContent=med.t;
+              
+              const uCell=document.createElement('td');
+              if(aCell.textContent === "Vomit Fever")                 {uCell.textContent=(30 - vmtFvrAll)*10
+              }else {uCell.textContent=med.u};
+              
+              const vCell=document.createElement('td');
+              vCell.textContent=med.v;
+              
+              const wCell=document.createElement('td');
+              wCell.textContent=med.w;
+
+              row.appendChild(aCell);
+              row.appendChild(bCell);
+              row.appendChild(cCell);
+              row.appendChild(dCell);
+              row.appendChild(eCell);
+
+              if (spnCell.textContent === "9"){
+                fCell.colSpan = 9;
+                fCell.className = 'set9';
+                row.appendChild(fCell);
+                oCell.colSpan = 9;
+                oCell.className = 'set9';
+                row.appendChild(oCell);
+              }else if(spnCell.textContent === "3"){
+                fCell.colSpan = 3;
+                fCell.className = 'set3';
+                row.appendChild(fCell);
+                iCell.colSpan = 3;
+                iCell.className = 'set3';
+                row.appendChild(iCell);
+                lCell.colSpan = 3;
+                lCell.className = 'set3';
+                row.appendChild(lCell);
+                oCell.colSpan = 3;
+                oCell.className = 'set3';
+                row.appendChild(oCell);
+                rCell.colSpan = 3;
+                rCell.className = 'set3';
+                row.appendChild(rCell);
+                uCell.colSpan = 3;
+                uCell.className = 'set3';
+                row.appendChild(uCell);
+              }else if(spnCell.textContent === "1"){
+                fCell.className = 'set1';
+                row.appendChild(fCell);
+                gCell.className = 'set1';
+                row.appendChild(gCell);
+                hCell.className = 'set1';
+                row.appendChild(hCell);
+                iCell.className = 'set1';
+                row.appendChild(iCell);
+                jCell.className = 'set1';
+                row.appendChild(jCell);
+                kCell.className = 'set1';
+                row.appendChild(kCell);
+                lCell.className = 'set1';
+                row.appendChild(lCell);
+                mCell.className = 'set1';
+                row.appendChild(mCell);
+                nCell.className = 'set1';
+                row.appendChild(nCell);
+                oCell.className = 'set1';
+                row.appendChild(oCell);
+                pCell.className = 'set1';
+                row.appendChild(pCell);
+                qCell.className = 'set1';
+                row.appendChild(qCell);
+                rCell.className = 'set1';
+                row.appendChild(rCell);
+                sCell.className = 'set1';
+                row.appendChild(sCell);
+                tCell.className = 'set1';
+                row.appendChild(tCell); 
+                uCell.className = 'set1'; 
+                row.appendChild(uCell);
+                vCell.className = 'set1';
+                row.appendChild(vCell);
+                wCell.className = 'set1';
+                row.appendChild(wCell);
+              };
+              
+              tableBodyMed.append(row);
+              
+            });
+
+            /*
+            const tableBody=document.querySelector("#test tbody");
+            table.children.item(1).childNodes.forEach(trItem => {
+
+              const row=document.createElement('tr');
+
+              const trCell=document.createElement('td');
+              const trCell2=document.createElement('td');
+
+              trCell.textContent=trItem.innerHTML;
+            
+            });
+            */
+        };
+    });
+
+    const table3 = document.getElementById('medCraftTable');
+
+    // Listen for a click anywhere inside the table
+    table3.addEventListener('click', function(event) {
+        // Target the specific element that was clicked
+        const targetCell = event.target;
+
+        // Make sure the clicked element is actually a table cell (TD)
+        if (targetCell.tagName === 'TD') {
+            // Toggle the 'highlight' class
+            targetCell.classList.toggle('highlight');
+
+        };
+    });
+
+</script>
+</html>

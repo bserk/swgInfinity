@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      }
+
+      .floating-navbar {
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      /*width: 90%;
+      max-width: 1200px;*/
+      z-index: 1000;
+      
+      /* Flexbox positioning for contents */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      }
+
+      .nav-links iframe {
+          width: 100px;
+          height: 200px;
+          border: none;
+      }
+
+      .content {
+      padding-top: 10px; 
+      /*max-width: 800px;*/
+      margin: 0 110px;
+      }
+
+      .table-container {
+        margin: 10px 0;
+      }
+
+      .table-container2 {
+        max-height: 250px;    /* Caps the layout height at 300px */
+        overflow-y: auto;     /* Adds a vertical scrollbar only if content overflows */
+      }
+
+      .header-topper {
+        background-color: #76b8ff;
+        text-align: center;
+      }
+
+      .header-container {
+        text-align: center;
+      }
+
+      .header-spacer {
+        text-align: center;
+        column-width: 20px;
+      }
+
+      .spn01{
+        text-align: center;
+        column-width: 150px;
+      }
+
+      .spn02{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .spn03{
+        text-align: center;
+        column-width: 20px;
+      }
+
+      .v00{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v01{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v02{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v03{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v04{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v05{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v06{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v07{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v08{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v09{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v10{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v11{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v12{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v13{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v14{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v15{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v16{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v17{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      .v18{
+        text-align: center;
+        column-width: 20px;
+        background-color: #ffeb3b; /* Bright Yellow */
+      }
+
+      table {
+        /* width: 70%; */
+        border-collapse: collapse; /* Merges cell borders */
+        font-family: sans-serif;
+      }
+
+      th, td {
+        padding: 7px 7px;
+        border: 0.5px solid #ddd;
+        font-size: 11px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      /* Zebra striping for readability */
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+        /* The highlight style */
+        td.highlight {
+            background-color: #ffeb3b; /* Bright Yellow */
+            font-weight: bold;
+        }
+        
+    </style>
+    <title>Interactive HTML Table</title>
+</head>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<body>
+  <main class="content">
+      <table>
+        <tr>
+          <td>
+            <div class="table-container" style="white-space: pre-line;">
+                <table id="plantHeaderHealth">
+                    <thead>
+                        <th>Planet</th>
+                        <th>Badge Type</th>
+                        <th>Badge Name</th>
+                        <th>Unlock</th>
+                        <th>X Coord</th>
+                        <th>Y Coord</th>
+                    </thead>
+                    <tbody>    
+                    </tbody>
+                </table>
+            </div>
+          </td>
+          <!--<td>
+              
+              <table id="test">
+                  <thead>
+                  </thead>
+                  <tbody>    
+                  </tbody>
+              </table>
+              
+          </td>-->
+        </tr>
+      </table>
+
+      <table>
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Left</td>
+              <td>Right</td>
+            </tr>
+            <tr>
+              <td>Orange</td>
+              <td>Bottom</td>
+            </tr>
+            <tr>
+              <td>720</td>
+            </tr>
+            <tr>
+              <td>Sir!</td>
+            </tr>
+          </tbody>
+      </table>
+
+  </main>
+</body>
+
+<script>
+/*
+const ju00=[{"a":"Naboo","b":"Profession Badge 1","c":"Master Artisan","d":"","e":"","f":"","v":"v00"}];
+const ju01=[{"a":"Naboo","b":"Profession Badge 2","c":"Master Architect","d":"","e":"","f":"","v":"v01"}];
+const ju02=[{"a":"Naboo","b":"Profession Badge 3","c":"Master Medic","d":"","e":"","f":"","v":"v02"}];
+const ju03=[{"a":"Naboo","b":"Profession Badge 4","c":"Master Brawler","d":"","e":"","f":"","v":"v03"}];
+const ju04=[{"a":"Naboo","b":"Profession Badge 5","c":"Master Teras Kasi Artist","d":"","e":"","f":"","v":"v04"}];
+const ju05=[{"a":"Naboo","b":"Finish Skills","c":"4400 Fencer","d":"","e":"","f":"","v":"v05"}];
+const ju06=[{"a":"Dantooine","b":"Content Badge 1","c":"The Warren - Compassion","d":"","e":"-564","f":"-3797","v":"v06"}];
+const ju07=[{"a":"Dantooine","b":"Jedi POI 1","c":"Jedi Temple Ruins","d":"","e":"4259","f":"5344","v":"v07"}];
+const ju08=[{"a":"Lok","b":"Content Badge 2","c":"Nym`s Themepark","d":"","e":"","f":"","v":"v08"}];
+const ju09=[{"a":"Tatooine","b":"Difficult POI 1","c":"Krayt Dragon Graveyard","d":"","e":"7396","f":"4478","v":"v09"}];
+const ju10=[{"a":"Tatooine","b":"Easy POI 1","c":"Lars` Homestead","d":"","e":"-2571","f":"-5505","v":"v10"}];
+const ju11=[{"a":"Tatooine","b":"Easy POI 2","c":"Escape Pod","d":"","e":"-3925","f":"-4420","v":"v11"}];
+const ju12=[{"a":"Tatooine","b":"Jedi POI 2","c":"Ben Kenobi`s House","d":"","e":"-4512","f":"-2270","v":"v12"}];
+const ju13=[{"a":"Tatooine","b":"Difficult POI 2","c":"Great Pit of Carkoon","d":"","e":"-6176","f":"-3372","v":"v13"}];
+const ju14=[{"a":"Yavin IV","b":"Jedi POI 3","c":"The Temple of Exar K`un","d":"","e":"2640","f":"6490","v":"v14"}];
+const ju15=[{"a":"Naboo","b":"Easy POI 3","c":"Amidala`s Beach","d":"","e":"-5828","f":"-93","v":"v15"}];
+const ju16=[{"a":"Naboo","b":"Easy POI 4","c":"Dee`ja Peak Waterfall","d":"","e":"5157","f":"-1634","v":"v16"}];
+const ju17=[{"a":"Naboo","b":"Easy POI 5","c":"Theed Waterfall","d":"","e":"-4609","f":"4254","v":"v17"}];
+const ju18=[{"a":"Naboo","b":"Content Badge 3","c":"The Warren - Imperial Hero","d":"","e":"","f":"","v":"v18"}];
+*/
+
+const ju00=[{"a":"Naboo","b":"Profession Badge 1","c":"Master Artisan","d":"","e":"","f":"","v":"v00"}];
+const ju01=[{"a":"Naboo","b":"Profession Badge 2","c":"Master Architect","d":"","e":"","f":"","v":"v01"}];
+const ju02=[{"a":"Naboo","b":"Profession Badge 3","c":"Master Medic","d":"","e":"","f":"","v":"v02"}];
+const ju03=[{"a":"Naboo","b":"Profession Badge 4","c":"Master Brawler","d":"","e":"","f":"","v":"v03"}];
+const ju04=[{"a":"Naboo","b":"Profession Badge 5","c":"Master Teras Kasi Artist","d":"","e":"","f":"","v":"v04"}];
+const ju05=[{"a":"Naboo","b":"Finish Skills","c":"4400 Fencer","d":"","e":"","f":"","v":"v05"}];
+const ju06=[{"a":"Dantooine","b":"Content Badge 1","c":"The Warren - Compassion","d":"","e":"-564","f":"-3797","v":"v06"}];
+const ju07=[{"a":"Dantooine","b":"Jedi POI 1","c":"Jedi Temple Ruins","d":"","e":"4259","f":"5344","v":"v07"}];
+const ju08=[{"a":"Lok","b":"Content Badge 2","c":"Nym`s Themepark","d":"","e":"","f":"","v":"v08"}];
+const ju09=[{"a":"Tatooine","b":"Difficult POI 1","c":"Krayt Dragon Graveyard","d":"","e":"7396","f":"4478","v":"v09"}];
+const ju10=[{"a":"Tatooine","b":"Easy POI 1","c":"Lars` Homestead","d":"","e":"-2571","f":"-5505","v":"v10"}];
+const ju11=[{"a":"Tatooine","b":"Easy POI 2","c":"Escape Pod","d":"","e":"-3925","f":"-4420","v":"v11"}];
+const ju12=[{"a":"Tatooine","b":"Jedi POI 2","c":"Ben Kenobi`s House","d":"","e":"-4512","f":"-2270","v":"v12"}];
+const ju13=[{"a":"Tatooine","b":"Difficult POI 2","c":"Great Pit of Carkoon","d":"","e":"-6176","f":"-3372","v":"v13"}];
+const ju14=[{"a":"Yavin IV","b":"Jedi POI 3","c":"The Temple of Exar K`un","d":"","e":"2640\n\n5080","f":"6490\n\n5558","v":"v14"}];
+const ju15=[{"a":"Naboo","b":"Easy POI 3","c":"Amidala`s Beach","d":"","e":"-5828","f":"-93","v":"v15"}];
+const ju16=[{"a":"Naboo","b":"Easy POI 4","c":"Dee`ja Peak Waterfall","d":"","e":"5157","f":"-1634","v":"v16"}];
+const ju17=[{"a":"Naboo","b":"Easy POI 5","c":"Theed Waterfall","d":"","e":"-4609","f":"4254","v":"v17"}];
+const ju18=[{"a":"Naboo","b":"Content Badge 3","c":"The Warren - Imperial Hero","d":"","e":"","f":"","v":"v18"}];
+    
+    const plantHeaderH = ju00.concat(ju01.concat(ju02.concat(ju03.concat(ju04.concat(ju05.concat(ju06.concat(ju07.concat(ju08.concat(ju09.concat(ju10.concat(ju11.concat(ju12.concat(ju13.concat(ju14.concat(ju15.concat(ju16.concat(ju17.concat(ju18))))))))))))))))));
+
+    const tableBodyPHH=document.querySelector("#plantHeaderHealth tbody");
+    plantHeaderH.forEach(plant =>{
+        const row=document.createElement('tr');
+
+        const aCell=document.createElement('td');
+        aCell.textContent=plant.a;
+        aCell.className = 'spn01';
+        row.appendChild(aCell);
+
+        const bCell=document.createElement('td');
+        bCell.textContent=plant.b;
+        bCell.className = 'spn01';
+        row.appendChild(bCell);
+
+        const cCell=document.createElement('td');
+        cCell.textContent=plant.c;
+        cCell.className = 'spn01';
+        row.appendChild(cCell);
+
+        const vCell=document.createElement('td');
+        vCell.textContent=plant.v;
+
+        const dCell=document.createElement('td');
+        dCell.textContent=plant.d;
+        if (dCell.textContent === vCell.textContent){
+            dCell.className = vCell.textContent;
+        }else{
+            dCell.className = 'spn03';
+        };
+        dCell.textContent=vCell.textContent;
+        row.appendChild(dCell);
+
+        const eCell=document.createElement('td');
+        eCell.textContent=plant.e;
+        eCell.className = 'spn01';
+        row.appendChild(eCell);
+
+        const fCell=document.createElement('td');
+        fCell.textContent=plant.f;
+        fCell.className = 'spn01';
+        row.appendChild(fCell);
+
+        tableBodyPHH.append(row);
+
+    });
+
+    
+    const table = document.getElementById('plantHeaderHealth');
+
+    // Listen for a click anywhere inside the table
+    table.addEventListener('click', function(event) {
+        // Target the specific element that was clicked
+        const targetCell = event.target;
+
+        // Make sure the clicked element is actually a table cell (TD)
+        if (targetCell.tagName === 'TD') {
+            // Toggle the 'highlight' class
+            targetCell.classList.toggle('highlight');
+
+            /*
+            document.querySelector('#test tbody').innerHTML = '';
+            const tableBody=document.querySelector("#test tbody");
+            table.children.item(1).childNodes.forEach(trItem => {
+
+              const row=document.createElement('tr');
+
+              const trCell=document.createElement('td');
+              const trCell2=document.createElement('td');
+              const qualify = 'const';
+              const vee = 'ss="v';
+              const hl = 'highlight';
+
+              const vee00 = 'v00';
+              const vee01 = 'v01';
+              const vee02 = 'v02';
+              const vee03 = 'v03';
+              const vee04 = 'v04';
+              const vee05 = 'v05';
+              const vee06 = 'v06';
+              const vee07 = 'v07';
+              const vee08 = 'v08';
+              const vee09 = 'v09';
+              const vee10 = 'v10';
+              const vee11 = 'v11';
+              const vee12 = 'v12';
+              const vee13 = 'v13';
+              const vee14 = 'v14';
+              const vee15 = 'v15';
+              const vee16 = 'v16';
+              const vee17 = 'v17';
+              const vee18 = 'v18';
+
+              trCell.textContent=trItem.innerHTML;
+
+              if (trCell.textContent.includes(vee) || trCell.textContent.includes(hl)) {
+                if (trCell.textContent.includes(vee00)){ trCell2.textContent = '    const ju00=[{"a":"Naboo","b":"Profession Badge 1","c":"Master Artisan","d":"v00","e":"","f":"","v":"v00"}];'};
+                if (trCell.textContent.includes(vee01)){ trCell2.textContent = '    const ju01=[{"a":"Naboo","b":"Profession Badge 2","c":"Master Architect","d":"v01","e":"","f":"","v":"v01"}];'};
+                if (trCell.textContent.includes(vee02)){ trCell2.textContent = '    const ju02=[{"a":"Naboo","b":"Profession Badge 3","c":"Master Medic","d":"v02","e":"","f":"","v":"v02"}];'};
+                if (trCell.textContent.includes(vee03)){ trCell2.textContent = '    const ju03=[{"a":"Naboo","b":"Profession Badge 4","c":"Master Brawler","d":"v03","e":"","f":"","v":"v03"}];'};
+                if (trCell.textContent.includes(vee04)){ trCell2.textContent = '    const ju04=[{"a":"Naboo","b":"Profession Badge 5","c":"Master Teras Kasi Artist","d":"v04","e":"","f":"","v":"v04"}];'};
+                if (trCell.textContent.includes(vee05)){ trCell2.textContent = '    const ju05=[{"a":"Naboo","b":"Finish Skills","c":"4400 Fencer","d":"v05","e":"","f":"","v":"v05"}];'};
+                if (trCell.textContent.includes(vee06)){ trCell2.textContent = '    const ju06=[{"a":"Dantooine","b":"Content Badge 1","c":"The Warren - Compassion","d":"v06","e":"-564","f":"-3797","v":"v06"}];'};
+                if (trCell.textContent.includes(vee07)){ trCell2.textContent = '    const ju07=[{"a":"Dantooine","b":"Jedi POI 1","c":"Jedi Temple Ruins","d":"v07","e":"4259","f":"5344","v":"v07"}];'};
+                if (trCell.textContent.includes(vee08)){ trCell2.textContent = '    const ju08=[{"a":"Lok","b":"Content Badge 2","c":"Nym`s Themepark","d":"v08","e":"","f":"","v":"v08"}];'};
+                if (trCell.textContent.includes(vee09)){ trCell2.textContent = '    const ju09=[{"a":"Tatooine","b":"Difficult POI 1","c":"Krayt Dragon Graveyard","d":"v09","e":"7396","f":"4478","v":"v09"}];'};
+                if (trCell.textContent.includes(vee10)){ trCell2.textContent = '    const ju10=[{"a":"Tatooine","b":"Easy POI 1","c":"Lars` Homestead","d":"v10","e":"-2571","f":"-5505","v":"v10"}];'};
+                if (trCell.textContent.includes(vee11)){ trCell2.textContent = '    const ju11=[{"a":"Tatooine","b":"Easy POI 2","c":"Escape Pod","d":"v11","e":"-3925","f":"-4420","v":"v11"}];'};
+                if (trCell.textContent.includes(vee12)){ trCell2.textContent = '    const ju12=[{"a":"Tatooine","b":"Jedi POI 2","c":"Ben Kenobi`s House","d":"v12","e":"-4512","f":"-2270","v":"v12"}];'};
+                if (trCell.textContent.includes(vee13)){ trCell2.textContent = '    const ju13=[{"a":"Tatooine","b":"Difficult POI 2","c":"Great Pit of Carkoon","d":"v13","e":"-6176","f":"-3372","v":"v13"}];'};
+                if (trCell.textContent.includes(vee14)){ trCell2.textContent = '    const ju14=[{"a":"Yavin IV","b":"Jedi POI 3","c":"The Temple of Exar K`un","d":"v14","e":"2640","f":"6490","v":"v14"}];'};
+                if (trCell.textContent.includes(vee15)){ trCell2.textContent = '    const ju15=[{"a":"Naboo","b":"Easy POI 3","c":"Amidala`s Beach","d":"v15","e":"-5828","f":"-93","v":"v15"}];'};
+                if (trCell.textContent.includes(vee16)){ trCell2.textContent = '    const ju16=[{"a":"Naboo","b":"Easy POI 4","c":"Dee`ja Peak Waterfall","d":"v16","e":"5157","f":"-1634","v":"v16"}];'};
+                if (trCell.textContent.includes(vee17)){ trCell2.textContent = '    const ju17=[{"a":"Naboo","b":"Easy POI 5","c":"Theed Waterfall","d":"v17","e":"-4609","f":"4254","v":"v17"}];'};
+                if (trCell.textContent.includes(vee18)){ trCell2.textContent = '    const ju18=[{"a":"Naboo","b":"Content Badge 3","c":"The Warren - Imperial Hero","d":"v18","e":"","f":"","v":"v18"}];'};
+                
+              } else {
+                if (trCell.textContent.includes(vee00)){ trCell2.textContent = '    const ju00=[{"a":"Naboo","b":"Profession Badge 1","c":"Master Artisan","d":"","e":"","f":"","v":"v00"}];'};
+                if (trCell.textContent.includes(vee01)){ trCell2.textContent = '    const ju01=[{"a":"Naboo","b":"Profession Badge 2","c":"Master Architect","d":"","e":"","f":"","v":"v01"}];'};
+                if (trCell.textContent.includes(vee02)){ trCell2.textContent = '    const ju02=[{"a":"Naboo","b":"Profession Badge 3","c":"Master Medic","d":"","e":"","f":"","v":"v02"}];'};
+                if (trCell.textContent.includes(vee03)){ trCell2.textContent = '    const ju03=[{"a":"Naboo","b":"Profession Badge 4","c":"Master Brawler","d":"","e":"","f":"","v":"v03"}];'};
+                if (trCell.textContent.includes(vee04)){ trCell2.textContent = '    const ju04=[{"a":"Naboo","b":"Profession Badge 5","c":"Master Teras Kasi Artist","d":"","e":"","f":"","v":"v04"}];'};
+                if (trCell.textContent.includes(vee05)){ trCell2.textContent = '    const ju05=[{"a":"Naboo","b":"Finish Skills","c":"4400 Fencer","d":"","e":"","f":"","v":"v05"}];'};
+                if (trCell.textContent.includes(vee06)){ trCell2.textContent = '    const ju06=[{"a":"Dantooine","b":"Content Badge 1","c":"The Warren - Compassion","d":"","e":"-564","f":"-3797","v":"v06"}];'};
+                if (trCell.textContent.includes(vee07)){ trCell2.textContent = '    const ju07=[{"a":"Dantooine","b":"Jedi POI 1","c":"Jedi Temple Ruins","d":"","e":"4259","f":"5344","v":"v07"}];'};
+                if (trCell.textContent.includes(vee08)){ trCell2.textContent = '    const ju08=[{"a":"Lok","b":"Content Badge 2","c":"Nym`s Themepark","d":"","e":"","f":"","v":"v08"}];'};
+                if (trCell.textContent.includes(vee09)){ trCell2.textContent = '    const ju09=[{"a":"Tatooine","b":"Difficult POI 1","c":"Krayt Dragon Graveyard","d":"","e":"7396","f":"4478","v":"v09"}];'};
+                if (trCell.textContent.includes(vee10)){ trCell2.textContent = '    const ju10=[{"a":"Tatooine","b":"Easy POI 1","c":"Lars` Homestead","d":"","e":"-2571","f":"-5505","v":"v10"}];'};
+                if (trCell.textContent.includes(vee11)){ trCell2.textContent = '    const ju11=[{"a":"Tatooine","b":"Easy POI 2","c":"Escape Pod","d":"","e":"-3925","f":"-4420","v":"v11"}];'};
+                if (trCell.textContent.includes(vee12)){ trCell2.textContent = '    const ju12=[{"a":"Tatooine","b":"Jedi POI 2","c":"Ben Kenobi`s House","d":"","e":"-4512","f":"-2270","v":"v12"}];'};
+                if (trCell.textContent.includes(vee13)){ trCell2.textContent = '    const ju13=[{"a":"Tatooine","b":"Difficult POI 2","c":"Great Pit of Carkoon","d":"","e":"-6176","f":"-3372","v":"v13"}];'};
+                if (trCell.textContent.includes(vee14)){ trCell2.textContent = '    const ju14=[{"a":"Yavin IV","b":"Jedi POI 3","c":"The Temple of Exar K`un","d":"","e":"2640","f":"6490","v":"v14"}];'};
+                if (trCell.textContent.includes(vee15)){ trCell2.textContent = '    const ju15=[{"a":"Naboo","b":"Easy POI 3","c":"Amidala`s Beach","d":"","e":"-5828","f":"-93","v":"v15"}];'};
+                if (trCell.textContent.includes(vee16)){ trCell2.textContent = '    const ju16=[{"a":"Naboo","b":"Easy POI 4","c":"Dee`ja Peak Waterfall","d":"","e":"5157","f":"-1634","v":"v16"}];'};
+                if (trCell.textContent.includes(vee17)){ trCell2.textContent = '    const ju17=[{"a":"Naboo","b":"Easy POI 5","c":"Theed Waterfall","d":"","e":"-4609","f":"4254","v":"v17"}];'};
+                if (trCell.textContent.includes(vee18)){ trCell2.textContent = '    const ju18=[{"a":"Naboo","b":"Content Badge 3","c":"The Warren - Imperial Hero","d":"","e":"","f":"","v":"v18"}];'};
+              };
+              if (trCell2.textContent.includes(qualify)) {
+                row.appendChild(trCell2);
+              };
+              tableBody.append(row);
+            });*/
+        };
+    });
+    
+
+</script>
+</html>

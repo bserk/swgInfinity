@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      }
+
+      .floating-navbar {
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      /*width: 90%;
+      max-width: 1200px;*/
+      z-index: 1000;
+      
+      /* Flexbox positioning for contents */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      }
+
+      .nav-links iframe {
+          width: 100px;
+          height: 200px;
+          border: none;
+      }
+
+      .content {
+      padding-top: 10px; 
+      /*max-width: 800px;*/
+      margin: 0 110px;
+      }
+
+      .table-container {
+        margin: 10px 0;
+      }
+
+      .table-container2 {
+        max-height: 250px;    /* Caps the layout height at 300px */
+        overflow-y: auto;     /* Adds a vertical scrollbar only if content overflows */
+      }
+
+      .header-topper {
+        background-color: #76b8ff;
+        text-align: center;
+      }
+
+      .header-container {
+        text-align: center;
+      }
+
+      .header-spacer {
+        text-align: center;
+        column-width: 20px;
+      }
+
+      .col01{
+        text-align: center;
+        column-width: 50px;
+      }
+
+      .col02{
+        text-align: center;
+        column-width: 46px;
+      }
+
+      .col03{
+        text-align: center;
+        column-width: 42px;
+      }
+
+      .col04{
+        text-align: center;
+        column-width: 48px;
+      }
+
+      .col05{
+        text-align: center;
+        column-width: 92px;
+      }
+
+      .col06{
+        text-align: center;
+        column-width: 96px;
+      }
+
+      .spn01{
+        text-align: center;
+        column-width: 91px;
+      }
+
+      .grid{
+        text-align: center;
+        column-width: 38px;
+      }
+
+      .col01b{
+        text-align: center;
+        column-width: 50px;
+        background-color: #007bff;
+      }
+
+      .col02b{
+        text-align: center;
+        column-width: 46px;
+        background-color: #007bff;
+      }
+
+      .col03b{
+        text-align: center;
+        column-width: 42px;
+        background-color: #007bff;
+      }
+
+      .col04b{
+        text-align: center;
+        column-width: 48px;
+        background-color: #007bff;
+      }
+
+      .col05b{
+        text-align: center;
+        column-width: 92px;
+        background-color: #007bff;
+      }
+
+      .col06b{
+        text-align: center;
+        column-width: 96px;
+        background-color: #007bff;
+      }
+
+      .gridb{
+        text-align: center;
+        column-width: 38px;
+        background-color: #007bff;
+      }
+
+      table {
+        /* width: 70%; */
+        border-collapse: collapse; /* Merges cell borders */
+        font-family: sans-serif;
+      }
+
+      th, td {
+        padding: 7px 7px;
+        border: 0.5px solid #ddd;
+        font-size: 11px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer; /* Shows user the header is clickable */
+        user-select: none;
+      }
+
+      th:hover {
+        background-color: #0056b3;
+      }
+
+      /* Zebra striping for readability */
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <title>Interactive HTML Table</title>
+</head>
+
+<nav class="floating-navbar">
+  <div class="nav-links">
+    <iframe src="links.html" scrolling="no"></iframe>
+  </div>
+</nav>
+
+<body>
+  <main class="content">
+
+    <div class="table-container">
+        <table id="plantHeaderHealth">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <table id="plantHeaderA1">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantHeaderB1">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantDetails1">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+
+    <br><br>
+
+    <div class="table-container">
+        <table id="plantHeaderA2">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantHeaderB2">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantDetails2">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+
+    <br><br>
+
+    <div class="table-container">
+        <table id="plantHeaderA3">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantHeaderB3">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantDetails3">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+
+    <br><br>
+
+    <div class="table-container">
+        <table id="plantHeaderA4">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantHeaderB4">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    <div class="table-container2">
+        <table id="plantDetails4">
+            <thead>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+
+
+  </main>
+</body>
+
+<script>
+    const plantHeaderH=[
+    {"plant":"","size":"","date":"","time":"","growth":"Growth","health":"",
+    "a":"Dying","b":"Withering","c":"Wilting","d":"Very Slow","e":"Slow","f":"Below Normal","g":"Normal","h":"Above Normal","i":"Fast","j":"Very Fast","k":"Extraordinary"},
+    {"plant":"","size":"","date":"","time":"","growth":"Health","health":"",
+    "a":"Dead","b":"Near Death","c":"Severly Wilted","d":"Wilted","e":"Fair","f":"Good","g":"Very Good","h":"Excellent","i":"Vibrant","j":"Full of Life","k":"Perfect"}
+    ];
+
+    const plantHeaderA=[
+    {"plant":"","size":"","date":"","time":"","growth":"Water (w)","health":"",
+    "a":"Desert-like","b":"Arid","c":"Very Dry","d":"Dry","e":"Below Normal","f":"Normal","g":"Moist","h":"Wet","i":"Very Wet","j":"Drenched","k":"Waterlogged"},
+    {"plant":"","size":"","date":"","time":"","growth":"Nutrient (n)","health":"",
+    "a":"Barren","b":"Fallow","c":"Miniscule","d":"Very Low","e":"Low","f":"Normal","g":"Above Normal","h":"High","i":"Very High","j":"Rich","k":"Fertile"}
+    ];
+
+    const plantHeaderB=[
+    {"plant":"Plant","size":"Size","date":"Date","time":"Time","growth":"Growth","health":"Health",
+    "a":"a","b":"b","c":"a","d":"b","e":"a","f":"b","g":"a","h":"b","i":"a","j":"b","k":"a","l":"b","m":"a","n":"b","o":"a","p":"b","q":"a","r":"b","s":"a","t":"b","u":"a","v":"b"}
+    ];
+
+ /*  |                |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+     |  Desert-like   |       Arid      |    Very Dry     |       Dry       |   Below Normal  |     Normal      |      Moist      |       Wet       |     Very Wet    |    Drenched     |    Waterlogged  |
+     |    Barren      |      Fallow     |    Miniscule    |     Very Low    |       Low       |     Normal      |   Above Normal  |       High      |     Very High   |      Rich       |      Fertile    |*/
+    const jsonDataPlant1=[
+    {"a":"  ","b":"  ","c":" n","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"w ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"6:30 AM","date":"9/30/26","growth":"","health":"","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":" n","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"w ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"12:30 PM","date":"9/29/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":" n","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"6:30 AM","date":"9/29/26","growth":"Normal","health":"Perfect Condition","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":" n","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"w ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"3:13 PM","date":"9/28/26","growth":"Below Normal","health":"Full of Life","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":" n","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"9:13 AM","date":"9/28/26","growth":"Below Normal","health":"Full of Life","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":" n","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"3:13 AM","date":"9/28/26","growth":"Normal","health":"Full of Life","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":" n","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"9:13 PM","date":"9/27/26","growth":"Below Normal","health":"Vibrant and Colorful","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":" n","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"3:13 PM","date":"9/27/26","growth":"Below Normal","health":"Vibrant and Colorful","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"w ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":" n","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"9:13 AM","date":"9/27/26","growth":"Withering","health":"Vibrant and Colorful","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"wn","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 PM","date":"9/26/26","growth":"Wilting","health":"Vibrant and Colorful","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"wn","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 AM","date":"9/26/26","growth":"Wilting","health":"Vibrant and Colorful","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"wn","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 AM","date":"9/26/26","growth":"Wilting","health":"Vibrant and Colorful","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"wn","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 PM","date":"9/25/26","growth":"Withering","health":"Full of Life","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"wn","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 AM","date":"9/25/26","growth":"Wilting","health":"Perfect Condition","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"wn","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 AM","date":"9/25/26","growth":"Wilting","health":"Perfect Condition","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 PM","date":"9/24/26","growth":"Wilting","health":"Perfect Condition","plant":"Plant15","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 PM","date":"9/22/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 AM","date":"9/22/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 AM","date":"9/22/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:35 AM","date":"9/21/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:35 AM","date":"9/21/26","growth":"Above Normal","health":"Full of Life","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"8:05 PM","date":"9/20/26","growth":"Above Normal","health":"Full of Life","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"2:05 PM","date":"9/20/26","growth":"Above Normal","health":"Vibrant and Colorful","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 AM","date":"9/20/26","growth":"Above Normal","health":"Vibrant and Colorful","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":"  ","l":" n","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 PM","date":"9/19/26","growth":"Above Normal","health":"Excellent","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"wn","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"1:30 PM","date":"9/19/26","growth":"Below Normal","health":"Very Good","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"w ","k":" n","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 AM","date":"9/19/26","growth":"Normal","health":"Very Good","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":" n","h":"w ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"1:30 AM","date":"9/19/26","growth":"Wilting","health":"Very Good","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"wn","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 PM","date":"9/18/26","growth":"Below Normal","health":"Very Good","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"wn","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"1:30 PM","date":"9/18/26","growth":"Wilting","health":"Very Good","plant":"Plant15","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 AM","date":"9/18/26","growth":"Slow","health":"Good","plant":"Plant15","size":"Small"}
+ 
+    ];
+
+ /*  |                |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+     |  Desert-like   |       Arid      |    Very Dry     |       Dry       |   Below Normal  |     Normal      |      Moist      |       Wet       |     Very Wet    |    Drenched     |    Waterlogged  |
+     |    Barren      |      Fallow     |    Miniscule    |     Very Low    |       Low       |     Normal      |   Above Normal  |       High      |     Very High   |      Rich       |      Fertile    |*/
+    const jsonDataPlant2=[
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"6:30 AM","date":"9/30/26","growth":"","health":"Perfect Condition","plant":"Plant16","size":"Large"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"6:30 AM","date":"9/29/26","growth":"Fast","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"3:13 PM","date":"9/28/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"9:13 AM","date":"9/28/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"3:13 AM","date":"9/28/26","growth":"Fast","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"9:13 PM","date":"9/27/26","growth":"Fast","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"w ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"3:13 PM","date":"9/27/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":" n","k":"  ","l":"  ","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"9:13 AM","date":"9/27/26","growth":"Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":" n","l":"  ","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 PM","date":"9/26/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":" n","m":"  ","n":"  ","o":"w ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 AM","date":"9/26/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":"  ","o":" n","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 AM","date":"9/26/26","growth":"Below Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"wn","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 PM","date":"9/25/26","growth":"Wilting","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"wn","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 AM","date":"9/25/26","growth":"Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"wn","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 AM","date":"9/25/26","growth":"Normal","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 PM","date":"9/24/26","growth":"Slow","health":"Perfect Condition","plant":"Plant16","size":"Medium"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 PM","date":"9/22/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:48 AM","date":"9/22/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:48 AM","date":"9/22/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"11:35 AM","date":"9/21/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"5:35 AM","date":"9/21/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"8:05 PM","date":"9/20/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"2:05 PM","date":"9/20/26","growth":"Above Normal","health":"Perfect Condition","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:46 AM","date":"9/20/26","growth":"Above Normal","health":"Full of Life","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"w ","l":"  ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:46 PM","date":"9/19/26","growth":"Normal","health":"Full of Life","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"1:46 PM","date":"9/19/26","growth":"Above Normal","health":"Vibrant and Colorful","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:46 AM","date":"9/19/26","growth":"Above Normal","health":"Excellent","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"w ","m":"  ","n":" n","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"1:30 AM","date":"9/19/26","growth":"Above Normal","health":"Excellent","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"  ","n":"  ","o":"wn","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 PM","date":"9/18/26","growth":"Slow","health":"Very Good","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"  ","l":"  ","m":"wn","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"1:30 PM","date":"9/18/26","growth":"Normal","health":"Very Good","plant":"Plant16","size":"Small"},
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 AM","date":"9/18/26","growth":"Slow","health":"Good","plant":"Plant16","size":"Small"}
+ 
+    ];
+
+ /*  |                |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+     |  Desert-like   |       Arid      |    Very Dry     |       Dry       |   Below Normal  |     Normal      |      Moist      |       Wet       |     Very Wet    |    Drenched     |    Waterlogged  |
+     |    Barren      |      Fallow     |    Miniscule    |     Very Low    |       Low       |     Normal      |   Above Normal  |       High      |     Very High   |      Rich       |      Fertile    |*/
+    const jsonDataPlant3=[
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 AM","date":"9/18/26","growth":"Slow","health":"Good","plant":"Plant17","size":"Small"}
+ 
+    ];
+
+ /*  |                |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+     |  Desert-like   |       Arid      |    Very Dry     |       Dry       |   Below Normal  |     Normal      |      Moist      |       Wet       |     Very Wet    |    Drenched     |    Waterlogged  |
+     |    Barren      |      Fallow     |    Miniscule    |     Very Low    |       Low       |     Normal      |   Above Normal  |       High      |     Very High   |      Rich       |      Fertile    |*/
+    const jsonDataPlant4=[
+    {"a":"  ","b":"  ","c":"  ","d":"  ","e":"  ","f":"  ","g":"  ","h":"  ","i":"  ","j":"  ","k":"wn","l":"  ","m":"  ","n":"  ","o":"  ","p":"  ","q":"  ","r":"  ","s":"  ","t":"  ","u":"  ","v":"  ","time":"7:30 AM","date":"9/18/26","growth":"Slow","health":"Good","plant":"Plant18","size":"Small"}
+ 
+    ];
+
+  const tableBodyPHH=document.querySelector("#plantHeaderHealth tbody");
+  plantHeaderH.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.colSpan = 2;
+    aCell.className = 'spn01';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.colSpan = 2;
+    bCell.className = 'spn01';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.colSpan = 2;
+    cCell.className = 'spn01';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.colSpan = 2;
+    dCell.className = 'spn01';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.colSpan = 2;
+    eCell.className = 'spn01';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.colSpan = 2;
+    fCell.className = 'spn01';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.colSpan = 2;
+    gCell.className = 'spn01';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.colSpan = 2;
+    hCell.className = 'spn01';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.colSpan = 2;
+    iCell.className = 'spn01';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.colSpan = 2;
+    jCell.className = 'spn01';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.colSpan = 2;
+    kCell.className = 'spn01';
+    row.appendChild(kCell);
+
+    tableBodyPHH.append(row);
+    
+  });
+
+  const tableBodyPHA1=document.querySelector("#plantHeaderA1 tbody");
+  plantHeaderA.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.colSpan = 2;
+    aCell.className = 'spn01';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.colSpan = 2;
+    bCell.className = 'spn01';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.colSpan = 2;
+    cCell.className = 'spn01';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.colSpan = 2;
+    dCell.className = 'spn01';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.colSpan = 2;
+    eCell.className = 'spn01';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.colSpan = 2;
+    fCell.className = 'spn01';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.colSpan = 2;
+    gCell.className = 'spn01';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.colSpan = 2;
+    hCell.className = 'spn01';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.colSpan = 2;
+    iCell.className = 'spn01';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.colSpan = 2;
+    jCell.className = 'spn01';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.colSpan = 2;
+    kCell.className = 'spn01';
+    row.appendChild(kCell);
+
+    tableBodyPHA1.append(row);
+    
+  });
+
+  const tableBodyPHA2=document.querySelector("#plantHeaderA2 tbody");
+  plantHeaderA.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.colSpan = 2;
+    aCell.className = 'spn01';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.colSpan = 2;
+    bCell.className = 'spn01';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.colSpan = 2;
+    cCell.className = 'spn01';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.colSpan = 2;
+    dCell.className = 'spn01';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.colSpan = 2;
+    eCell.className = 'spn01';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.colSpan = 2;
+    fCell.className = 'spn01';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.colSpan = 2;
+    gCell.className = 'spn01';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.colSpan = 2;
+    hCell.className = 'spn01';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.colSpan = 2;
+    iCell.className = 'spn01';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.colSpan = 2;
+    jCell.className = 'spn01';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.colSpan = 2;
+    kCell.className = 'spn01';
+    row.appendChild(kCell);
+
+    tableBodyPHA2.append(row);
+    
+  });
+
+  const tableBodyPHA3=document.querySelector("#plantHeaderA3 tbody");
+  plantHeaderA.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.colSpan = 2;
+    aCell.className = 'spn01';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.colSpan = 2;
+    bCell.className = 'spn01';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.colSpan = 2;
+    cCell.className = 'spn01';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.colSpan = 2;
+    dCell.className = 'spn01';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.colSpan = 2;
+    eCell.className = 'spn01';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.colSpan = 2;
+    fCell.className = 'spn01';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.colSpan = 2;
+    gCell.className = 'spn01';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.colSpan = 2;
+    hCell.className = 'spn01';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.colSpan = 2;
+    iCell.className = 'spn01';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.colSpan = 2;
+    jCell.className = 'spn01';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.colSpan = 2;
+    kCell.className = 'spn01';
+    row.appendChild(kCell);
+
+    tableBodyPHA3.append(row);
+    
+  });
+
+  const tableBodyPHA4=document.querySelector("#plantHeaderA4 tbody");
+  plantHeaderA.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.colSpan = 2;
+    aCell.className = 'spn01';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.colSpan = 2;
+    bCell.className = 'spn01';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.colSpan = 2;
+    cCell.className = 'spn01';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.colSpan = 2;
+    dCell.className = 'spn01';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.colSpan = 2;
+    eCell.className = 'spn01';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.colSpan = 2;
+    fCell.className = 'spn01';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.colSpan = 2;
+    gCell.className = 'spn01';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.colSpan = 2;
+    hCell.className = 'spn01';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.colSpan = 2;
+    iCell.className = 'spn01';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.colSpan = 2;
+    jCell.className = 'spn01';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.colSpan = 2;
+    kCell.className = 'spn01';
+    row.appendChild(kCell);
+
+    tableBodyPHA4.append(row);
+    
+  });
+
+  const tableBodyPHB1=document.querySelector("#plantHeaderB1 tbody");
+  plantHeaderB.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01b';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02b';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03b';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04b';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05b';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06b';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'gridb';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'gridb';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'gridb';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'gridb';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'gridb';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'gridb';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'gridb';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'gridb';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'gridb';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'gridb';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'gridb';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'gridb';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'gridb';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'gridb';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'gridb';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'gridb';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'gridb';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'gridb';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'gridb';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'gridb';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'gridb';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'gridb';
+    row.appendChild(vCell);
+
+    tableBodyPHB1.append(row);
+    
+  });
+
+  const tableBodyPHB2=document.querySelector("#plantHeaderB2 tbody");
+  plantHeaderB.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01b';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02b';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03b';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04b';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05b';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06b';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'gridb';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'gridb';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'gridb';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'gridb';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'gridb';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'gridb';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'gridb';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'gridb';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'gridb';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'gridb';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'gridb';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'gridb';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'gridb';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'gridb';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'gridb';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'gridb';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'gridb';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'gridb';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'gridb';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'gridb';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'gridb';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'gridb';
+    row.appendChild(vCell);
+
+    tableBodyPHB2.append(row);
+    
+  });
+
+  const tableBodyPHB3=document.querySelector("#plantHeaderB3 tbody");
+  plantHeaderB.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01b';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02b';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03b';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04b';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05b';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06b';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'gridb';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'gridb';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'gridb';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'gridb';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'gridb';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'gridb';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'gridb';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'gridb';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'gridb';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'gridb';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'gridb';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'gridb';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'gridb';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'gridb';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'gridb';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'gridb';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'gridb';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'gridb';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'gridb';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'gridb';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'gridb';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'gridb';
+    row.appendChild(vCell);
+
+    tableBodyPHB3.append(row);
+    
+  });
+
+  const tableBodyPHB4=document.querySelector("#plantHeaderB4 tbody");
+  plantHeaderB.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01b';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02b';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03b';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04b';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05b';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06b';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'gridb';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'gridb';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'gridb';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'gridb';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'gridb';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'gridb';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'gridb';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'gridb';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'gridb';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'gridb';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'gridb';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'gridb';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'gridb';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'gridb';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'gridb';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'gridb';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'gridb';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'gridb';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'gridb';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'gridb';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'gridb';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'gridb';
+    row.appendChild(vCell);
+
+    tableBodyPHB4.append(row);
+    
+  });
+
+  const tableBody1=document.querySelector("#plantDetails1 tbody");
+  jsonDataPlant1.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'grid';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'grid';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'grid';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'grid';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'grid';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'grid';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'grid';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'grid';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'grid';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'grid';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'grid';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'grid';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'grid';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'grid';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'grid';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'grid';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'grid';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'grid';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'grid';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'grid';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'grid';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'grid';
+    row.appendChild(vCell);
+
+    tableBody1.append(row);
+    
+  });
+
+  const tableBody2=document.querySelector("#plantDetails2 tbody");
+  jsonDataPlant2.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'grid';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'grid';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'grid';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'grid';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'grid';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'grid';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'grid';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'grid';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'grid';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'grid';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'grid';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'grid';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'grid';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'grid';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'grid';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'grid';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'grid';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'grid';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'grid';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'grid';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'grid';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'grid';
+    row.appendChild(vCell);
+
+    tableBody2.append(row);
+    
+  });
+
+  const tableBody3=document.querySelector("#plantDetails3 tbody");
+  jsonDataPlant3.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'grid';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'grid';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'grid';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'grid';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'grid';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'grid';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'grid';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'grid';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'grid';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'grid';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'grid';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'grid';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'grid';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'grid';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'grid';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'grid';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'grid';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'grid';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'grid';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'grid';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'grid';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'grid';
+    row.appendChild(vCell);
+
+    tableBody3.append(row);
+    
+  });
+
+  const tableBody4=document.querySelector("#plantDetails4 tbody");
+  jsonDataPlant4.forEach(plant =>{
+    const row=document.createElement('tr');
+    
+    const plantCell=document.createElement('td');
+    plantCell.textContent=plant.plant;
+    plantCell.className = 'col01';
+    row.appendChild(plantCell);
+    
+    const sizeCell=document.createElement('td');
+    sizeCell.textContent=plant.size;
+    sizeCell.className = 'col02';
+    row.appendChild(sizeCell);
+    
+    const dateCell=document.createElement('td');
+    dateCell.textContent=plant.date;
+    dateCell.className = 'col03';
+    row.appendChild(dateCell);
+    
+    const timeCell=document.createElement('td');
+    timeCell.textContent=plant.time;
+    timeCell.className = 'col04';
+    row.appendChild(timeCell);
+    
+    const growthCell=document.createElement('td');
+    growthCell.textContent=plant.growth;
+    growthCell.className = 'col05';
+    row.appendChild(growthCell);
+    
+    const healthCell=document.createElement('td');
+    healthCell.textContent=plant.health;
+    healthCell.className = 'col06';
+    row.appendChild(healthCell);
+    
+    const aCell=document.createElement('td');
+    aCell.textContent=plant.a;
+    aCell.className = 'grid';
+    row.appendChild(aCell);
+    
+    const bCell=document.createElement('td');
+    bCell.textContent=plant.b;
+    bCell.className = 'grid';
+    row.appendChild(bCell);
+    
+    const cCell=document.createElement('td');
+    cCell.textContent=plant.c;
+    cCell.className = 'grid';
+    row.appendChild(cCell);
+    
+    const dCell=document.createElement('td');
+    dCell.textContent=plant.d;
+    dCell.className = 'grid';
+    row.appendChild(dCell);
+    
+    const eCell=document.createElement('td');
+    eCell.textContent=plant.e;
+    eCell.className = 'grid';
+    row.appendChild(eCell);
+    
+    const fCell=document.createElement('td');
+    fCell.textContent=plant.f;
+    fCell.className = 'grid';
+    row.appendChild(fCell);
+    
+    const gCell=document.createElement('td');
+    gCell.textContent=plant.g;
+    gCell.className = 'grid';
+    row.appendChild(gCell);
+    
+    const hCell=document.createElement('td');
+    hCell.textContent=plant.h;
+    hCell.className = 'grid';
+    row.appendChild(hCell);
+    
+    const iCell=document.createElement('td');
+    iCell.textContent=plant.i;
+    iCell.className = 'grid';
+    row.appendChild(iCell);
+    
+    const jCell=document.createElement('td');
+    jCell.textContent=plant.j;
+    jCell.className = 'grid';
+    row.appendChild(jCell);
+    
+    const kCell=document.createElement('td');
+    kCell.textContent=plant.k;
+    kCell.className = 'grid';
+    row.appendChild(kCell);
+    
+    const lCell=document.createElement('td');
+    lCell.textContent=plant.l;
+    lCell.className = 'grid';
+    row.appendChild(lCell);
+    
+    const mCell=document.createElement('td');
+    mCell.textContent=plant.m;
+    mCell.className = 'grid';
+    row.appendChild(mCell);
+    
+    const nCell=document.createElement('td');
+    nCell.textContent=plant.n;
+    nCell.className = 'grid';
+    row.appendChild(nCell);
+    
+    const oCell=document.createElement('td');
+    oCell.textContent=plant.o;
+    oCell.className = 'grid';
+    row.appendChild(oCell);
+    
+    const pCell=document.createElement('td');
+    pCell.textContent=plant.p;
+    pCell.className = 'grid';
+    row.appendChild(pCell);
+    
+    const qCell=document.createElement('td');
+    qCell.textContent=plant.q;
+    qCell.className = 'grid';
+    row.appendChild(qCell);
+    
+    const rCell=document.createElement('td');
+    rCell.textContent=plant.r;
+    rCell.className = 'grid';
+    row.appendChild(rCell);
+    
+    const sCell=document.createElement('td');
+    sCell.textContent=plant.s;
+    sCell.className = 'grid';
+    row.appendChild(sCell);
+    
+    const tCell=document.createElement('td');
+    tCell.textContent=plant.t;
+    tCell.className = 'grid';
+    row.appendChild(tCell);
+    
+    const uCell=document.createElement('td');
+    uCell.textContent=plant.u;
+    uCell.className = 'grid';
+    row.appendChild(uCell);
+    
+    const vCell=document.createElement('td');
+    vCell.textContent=plant.v;
+    vCell.className = 'grid';
+    row.appendChild(vCell);
+
+    tableBody4.append(row);
+    
+  });
+
+</script>
+</html>
