@@ -55,26 +55,32 @@
 
 	<body>
     <main class="content">
-		<center><img src="assemblyConfigurationPNG.png" width="90%"></center><br>
+		<center>
+			Phase I: Crafting Mastery - Assembly<br>
+			<img src="assemblyConfigurationPNG.png" width="90%">
+		</center><br>
 		<div class="container">
 			<div>
 				<div class="form-row algin-items-center">
 					<div class="col-md-1">
-						<label for="colorLabels" class="col-form-label">Colors:</label>
+						<label for="colorLabels" class="col-form-label"></label>
 					</div>
 					<div class="col-md-4">
-						<input type="text" class="form-control" id="colorLabels" value="Red, Blue, Yellow">
+						<input type="hidden" class="form-control" id="colorLabels" value="Red, Blue, Yellow">
+						Phase IV: Crafting Mastery - Repair
 					</div>
 					<div class="col-md-2">
-						<label for="numPegs" class="col-form-label">Number of Pegs:</label>
+						<label for="numPegs" class="col-form-label"></label>
 					</div>
 					<div class="col-md-1">
-						<input type="number" class="form-control" id="numPegs" min="1" step="1" value="4">
+						<!--<input type="number" class="form-control" id="numPegs" min="1" step="1" value="4">-->
+						<input type="hidden" class="form-control" id="numPegs" min="1" step="1" value="4">
 					</div>
 					<div class="col-md-2">
 						<div class="form-check">
-							<input type="checkbox" class="form-check-input" id="allowDups" checked="checked">
-							<label for="allowDups" class="form-check-label">Allow duplicate colors</label>
+							<input type="checkbox" class="form-check-input" id="allowDups" checked="checked" style="opacity:0; position:absolute; left:9999px;">
+							
+							<label for="allowDups" class="form-check-label"></label>
 						</div>
 					</div>
 					<div class="col-md-2">
