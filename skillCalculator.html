@@ -22,31 +22,30 @@
   <style>
 
     body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .content {
-    padding-top: 10px; 
-    /*max-width: 800px;*/
-    margin: 0 110px;
+      padding-top: 10px;
+      margin: 0 110px;
     }
 
     .floating-navbar {
-    position: fixed;
-    top: 10px;
-    left: 5px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px;
-    box-sizing: border-box;
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
     }
 
     .nav-links iframe {
-        width: 100px;
-        height: 200px;
-        border: none;
+      width: 100px;
+      height: 200px;
+      border: none;
     }
 
     table {
@@ -262,10 +261,17 @@
       overflow-y: auto;
     }
 
-    .detTitle {
+    .detHeader {
       background-color: rgb(41, 82, 82);
       color: rgb(255, 255, 0);
       font-size: 17px;
+      text-align: center;
+    }
+
+    .detTitle {
+      background-color: rgb(41, 82, 82);
+      color: rgb(0, 255, 0);
+      font-size: 13px;
       text-align: center;
     }
 
@@ -599,7 +605,6 @@ const ptCap = 250;
   pts = ptCap - pts;
 
 function setBarPercentage(percentage) {
-  // Constrain percentage between 0 and 100
   const validPercent = Math.min(Math.max(percentage, 0), 100);
   document.getElementById('bar-fill').style.width = validPercent + '%';
 }
@@ -918,70 +923,73 @@ table.addEventListener('click', function(event) {
         const detailTableBody=document.querySelector("#skillDetails tbody");
         const detRow=document.createElement('tr');
         const detailTable=document.createElement('td');
-          detailTable.className="outer-shell";
+        detailTable.className="outer-shell";
 
-            let dHeaderHTML = '<table border="0" width="480px">';
-              dHeaderHTML = dHeaderHTML + '<tr><td colspan= "2" class="detTitle">'+ allProfessions[pProfId].skills[box.skillId].row1 + ' ' + allProfessions[pProfId].skills[box.skillId].row2 + ' ' + allProfessions[pProfId].skills[box.skillId].row3 + '</td></tr>';
+        let aPskillsMap = allProfessions[pProfId].skills[box.skillId];
 
-            let dModsHTML = '';
-            if(allProfessions[pProfId].skills[box.skillId].SkillMods !== null){
-              dModsHTML = dModsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">SkillMods<br><br></td></tr>'
-              const ModsObject = Object.entries(allProfessions[pProfId].skills[box.skillId].SkillMods[0])
-              ModsObject.forEach(mod => {
-                dModsHTML = dModsHTML + '<tr><td colspan="2"class="detCell">' + mod[0] + ' +' + mod[1] + '</td>'
-              })
-            };
+        let dHeaderHTML = '<table border="0" width="480px">';
+          dHeaderHTML = dHeaderHTML + '<tr><td colspan= "2" class="detHeader">'+ aPskillsMap.row1 + ' ' + aPskillsMap.row2 + ' ' + aPskillsMap.row3 + '</td></tr>';
+          if(aPskillsMap.Title !== undefined && aPskillsMap.Title !== null){dHeaderHTML = dHeaderHTML + '<tr><td colspan= "3" class="detTitle">Title: '+ aPskillsMap.Title + '</td></tr>'}
 
-            let dAbilitiesHTML = '';
-            if(allProfessions[pProfId].skills[box.skillId].Abilities !== null){
-              dAbilitiesHTML = dAbilitiesHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Abilities<br><br></td></tr>'
-              const AbilitiesObject = Object.entries(allProfessions[pProfId].skills[box.skillId].Abilities[0])
-              AbilitiesObject.forEach(ability => {
-                dAbilitiesHTML = dAbilitiesHTML + '<tr><td colspan="2"class="detCell">' + ability[0] + ': ' + ability[1] + '</td>'
-              })
-            };
+        let dModsHTML = '';
+        if(aPskillsMap.SkillMods !== null){
+          dModsHTML = dModsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">SkillMods<br><br></td></tr>'
+          const ModsObject = Object.entries(aPskillsMap.SkillMods[0])
+          ModsObject.forEach(mod => {
+            dModsHTML = dModsHTML + '<tr><td colspan="2"class="detCell">' + mod[0] + ' +' + mod[1] + '</td>'
+          })
+        };
 
-            let dCertificationsHTML = '';
-            if(allProfessions[pProfId].skills[box.skillId].Certifications !== null){
-              dCertificationsHTML = dCertificationsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Certifications<br><br></td></tr>'
-              const certifications = allProfessions[pProfId].skills[box.skillId].Certifications
-                for (let i = 0; i < certifications.length;) {
-                  if(certifications[i]){dCertificationsHTML = dCertificationsHTML + '<tr><td class="detCell">' + certifications[i] + ' Certification</td>'};
-                  i++
-                  if(certifications[i]){dCertificationsHTML = dCertificationsHTML + '<td class="detCell">' + certifications[i] + ' Certification</td></tr>'};
-                  i++
-                };
-            };
+        let dAbilitiesHTML = '';
+        if(aPskillsMap.Abilities !== null){
+          dAbilitiesHTML = dAbilitiesHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Abilities<br><br></td></tr>'
+          const AbilitiesObject = Object.entries(aPskillsMap.Abilities[0])
+          AbilitiesObject.forEach(ability => {
+            dAbilitiesHTML = dAbilitiesHTML + '<tr><td colspan="2"class="detCell">' + ability[0] + ': ' + ability[1] + '</td>'
+          })
+        };
 
-            let dSchematicsHTML = '';
-            if(allProfessions[pProfId].skills[box.skillId].Schematics !== null){
-              dSchematicsHTML = dSchematicsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Schematics<br><br></td></tr>'
-              const schematics = allProfessions[pProfId].skills[box.skillId].Schematics
-                for (let i = 0; i < schematics.length;) {
-                  if(schematics[i]){dSchematicsHTML = dSchematicsHTML + '<tr><td class="detCell">' + schematics[i] + '</td>'};
-                  i++
-                  if(schematics[i]){dSchematicsHTML = dSchematicsHTML + '<td class="detCell">' + schematics[i] + '</td></tr>'};
-                  i++
-                };
-            };
+        let dCertificationsHTML = '';
+        if(aPskillsMap.Certifications !== null){
+          dCertificationsHTML = dCertificationsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Certifications<br><br></td></tr>'
+          const certifications = aPskillsMap.Certifications
+          for (let i = 0; i < certifications.length;) {
+            if(certifications[i]){dCertificationsHTML = dCertificationsHTML + '<tr><td class="detCell">' + certifications[i] + ' Certification</td>'};
+            i++
+            if(certifications[i]){dCertificationsHTML = dCertificationsHTML + '<td class="detCell">' + certifications[i] + ' Certification</td></tr>'};
+            i++
+          };
+        };
 
-            let dDeedsHTML = '';
-            if(allProfessions[pProfId].skills[box.skillId].Deeds !== null){
-              dDeedsHTML = dDeedsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Deeds<br><br></td></tr>'
-              const deeds = allProfessions[pProfId].skills[box.skillId].Deeds
-                for (let i = 0; i < deeds.length;) {
-                  if(deeds[i]){dDeedsHTML = dDeedsHTML + '<tr><td class="detCell">' + deeds[i] + '</td>'};
-                  i++
-                  if(deeds[i]){dDeedsHTML = dDeedsHTML + '<td class="detCell">' + deeds[i] + '</td></tr>'};
-                  i++
-                };
-            };
-                          
-            dFooterHTML = '</table>';
+        let dSchematicsHTML = '';
+        if(aPskillsMap.Schematics !== null){
+          dSchematicsHTML = dSchematicsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Schematics<br><br></td></tr>'
+          const schematics = aPskillsMap.Schematics
+          for (let i = 0; i < schematics.length;) {
+            if(schematics[i]){dSchematicsHTML = dSchematicsHTML + '<tr><td class="detCell">' + schematics[i] + '</td>'};
+            i++
+            if(schematics[i]){dSchematicsHTML = dSchematicsHTML + '<td class="detCell">' + schematics[i] + '</td></tr>'};
+            i++
+          };
+        };
 
-          detailTable.innerHTML = dHeaderHTML + dModsHTML + dAbilitiesHTML + dCertificationsHTML + dSchematicsHTML + dDeedsHTML  + dFooterHTML
-          detRow.appendChild(detailTable);
-          detailTableBody.append(detRow);
+        let dDeedsHTML = '';
+        if(aPskillsMap.Deeds !== null){
+          dDeedsHTML = dDeedsHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Deeds<br><br></td></tr>'
+          const deeds = aPskillsMap.Deeds
+          for (let i = 0; i < deeds.length;) {
+            if(deeds[i]){dDeedsHTML = dDeedsHTML + '<tr><td class="detCell">' + deeds[i] + '</td>'};
+            i++
+            if(deeds[i]){dDeedsHTML = dDeedsHTML + '<td class="detCell">' + deeds[i] + '</td></tr>'};
+            i++
+          };
+        };
+                      
+        dFooterHTML = '</table>';
+
+        detailTable.innerHTML = dHeaderHTML + dModsHTML + dAbilitiesHTML + dCertificationsHTML + dSchematicsHTML + dDeedsHTML  + dFooterHTML
+        detRow.appendChild(detailTable);
+        detailTableBody.append(detRow);
 
       });
       skill_id.addEventListener('mouseleave', () => {
@@ -1052,7 +1060,7 @@ table.addEventListener('click', function(event) {
     const modsL = mods.slice(0,modsMid);
     const modsR = mods.slice(modsMid);
 
-    let tblS = '<table border="0" width="480px"><tr><td colspan= "2" class="detTitle">Accumulated Skill Data</td></tr>';
+    let tblS = '<table border="0" width="480px"><tr><td colspan= "2" class="detHeader">Accumulated Skill Data</td></tr>';
     
     let modsHTML = '';
     if(modsL[0]){
@@ -1062,7 +1070,7 @@ table.addEventListener('click', function(event) {
         //i++
         if(modsR[i]){modsHTML = modsHTML + '<td class="detCell">' + modsR[i].id + ' +' + modsR[i].value + '</td></tr>'};
         i++
-        };
+      };
     };
 
     let abilitiesHTML = '';
@@ -1073,7 +1081,7 @@ table.addEventListener('click', function(event) {
         i++
         if(abilities[i]){abilitiesHTML = abilitiesHTML + '<td class="detCell">' + abilities[i] + '</td></tr>'};
         i++
-        };
+      };
     };
 
     let titlesHTML = '';
@@ -1084,7 +1092,7 @@ table.addEventListener('click', function(event) {
         i++
         if(titles[i]){titlesHTML = titlesHTML + '<td class="detCell">' + titles[i] + '</td></tr>'};
         i++
-        };
+      };
     };
 
     let certificationsHTML = '';
@@ -1095,7 +1103,7 @@ table.addEventListener('click', function(event) {
         i++
         if(certifications[i]){certificationsHTML = certificationsHTML + '<td class="detCell">' + certifications[i] + '</td></tr>'};
         i++
-        };
+      };
     };
 
     let schematicsHTML = '';
@@ -1106,7 +1114,7 @@ table.addEventListener('click', function(event) {
         i++
         if(schematics[i]){schematicsHTML = schematicsHTML + '<td class="detCell">' + schematics[i] + '</td></tr>'};
         i++
-        };
+      };
     };
 
     let deedsHTML = '';
@@ -1117,7 +1125,7 @@ table.addEventListener('click', function(event) {
         i++
         if(deeds[i]){deedsHTML = deedsHTML + '<td class="detCell">' + deeds[i] + '</td></tr>'};
         i++
-        };
+      };
     };
     
     let tblE = '</table>';
