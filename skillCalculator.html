@@ -295,6 +295,11 @@
       width: 243px
     }
 
+    .xpCell {
+      font-size: 11px;
+      padding: 1px 8px;
+    }
+
     .dscCell {
       font-size: 11px;
       color: rgb(0, 255, 255);
@@ -1113,6 +1118,7 @@ table.addEventListener('click', function(event) {
     abilities.sort((a, b) => a.localeCompare(b));
     titles.sort((a, b) => a.localeCompare(b));
     deeds.sort((a, b) => a.localeCompare(b));
+    experiences.sort((a, b) => a.id.localeCompare(b.id));
     experiences.sort((a, b) => b.value - a.value);
 
     let tblS = '<table border="0" width="480px"><tr><td colspan= "2" class="detHeader">Accumulated Skill Data</td></tr>';
@@ -1122,10 +1128,12 @@ table.addEventListener('click', function(event) {
     let xpHTML = '';
     if(xps[0]){
       xpHTML = xpHTML + '<tr><td colspan= "2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Experience Required<br><br></td></tr>';
+      xpHTML = xpHTML + '<tr><td colspan= "2"><table>';
       for (let i = 0; i < xps.length;) {
-        xpHTML = xpHTML + '<tr><td class="detCell">' + xps[i].value.toLocaleString('en-US') + ' ' + xps[i].id + '</td></tr>';
+        xpHTML = xpHTML + '<tr><td class="xpCell" style="text-align: right;">' + xps[i].value.toLocaleString('en-US') + '</td><td class="xpCell">' + xps[i].id + '</td></tr>';
         i++
       };
+      xpHTML = xpHTML + '</table></td></tr>';
     };
 
     const mods = sklMods.filter(mod => mod.value !== 0);
