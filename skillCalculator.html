@@ -965,7 +965,7 @@ table.addEventListener('click', function(event) {
           const ModsObject = Object.entries(aPskillsMap.SkillMods[0])
           ModsObject.forEach(mod => {
             const mDesc = skillModDesc.find(desc => desc.id === mod[0]);
-            dModsHTML = dModsHTML + '<tr><td colspan="2"class="detCell">' + mod[0] + ' +' + mod[1] + '</td></tr>'
+            dModsHTML = dModsHTML + '<tr><td colspan="2"class="detCell">' + mod[0] + ' +' + mod[1].toLocaleString('en-US') + '</td></tr>'
             dModsHTML = dModsHTML + '<tr><td colspan="2"> <table><tr><td class="dscCell">' + mDesc.description + '</td></tr></table> </td></tr>'
           })
         };
@@ -1021,7 +1021,7 @@ table.addEventListener('click', function(event) {
           dXpHTML = dXpHTML + '<tr><td colspan="2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Experience<br><br></td></tr>'
           const XpObject = Object.entries(aPskillsMap.Requires[0])
           XpObject.forEach(xp => {
-            dXpHTML = dXpHTML + '<tr><td colspan="2"class="detCell">Requires: ' + xp[1] + ' ' + xp[0] + '</td>'
+            dXpHTML = dXpHTML + '<tr><td colspan="2"class="detCell">Requires: ' + xp[1].toLocaleString('en-US') + ' ' + xp[0] + '</td>'
           })
         };
                       
@@ -1123,7 +1123,7 @@ table.addEventListener('click', function(event) {
     if(xps[0]){
       xpHTML = xpHTML + '<tr><td colspan= "2" class="detGroup"><hr style="border: 0; border-bottom: 2px solid #00ffff;">Experience Required<br><br></td></tr>';
       for (let i = 0; i < xps.length;) {
-        xpHTML = xpHTML + '<tr><td class="detCell">' + xps[i].value + ' ' + xps[i].id + '</td></tr>';
+        xpHTML = xpHTML + '<tr><td class="detCell">' + xps[i].value.toLocaleString('en-US') + ' ' + xps[i].id + '</td></tr>';
         i++
       };
     };
@@ -1140,7 +1140,7 @@ table.addEventListener('click', function(event) {
       for (let i = 0; i < modsL.length;) {
         modsHTML = modsHTML + '<tr><td class="detCell">' + modsL[i].id + ' +' + modsL[i].value + '</td>';
         
-        if(modsR[i]){modsHTML = modsHTML + '<td class="detCell">' + modsR[i].id + ' +' + modsR[i].value + '</td></tr>'};
+        if(modsR[i]){modsHTML = modsHTML + '<td class="detCell">' + modsR[i].id + ' +' + modsR[i].value.toLocaleString('en-US') + '</td></tr>'};
         i++
       };
     };
