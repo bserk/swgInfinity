@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gavin's Workout Countdown</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        padding-top: 50px;
+    }
+    #display {
+        font-size: 300px;
+        margin-bottom: 20px;
+    }
+    #display2 {
+        font-size: 150px;
+        margin-bottom: 20px;
+    }
+    #display3 {
+        font-size: 150px;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    input {
+        padding: 5px;
+        font-size: 16px;
+        width: 60px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<h1><a id="restart" href="gavinsCountdown.html">Restart</a></h1>
+<button id="startBtn">Start</button>
+<div><label> Minutes: <input type="number" id="minutes" min="0" value="0"></label><label> Seconds: <input type="number" id="seconds" min="0" max="59" value="0"></label></div><div id="display">00:00</div>
+<span id="display2">All done!!</span><br>
+<span id="display3"></span>
+
+<script>
+/* ************************************************************************************** */
+/* ************************************************************************************** */
+
+
+
+/*You can set your volume and mode here and also write in the correct names for the workout step*/
+
+let setVolume = 0.01; /* quiet = 0.01; */
+
+let setMode = 'practice'; /* 'test' = 10 seconds, 'practice' = variable, 'actual' = 5/30 minutes */
+
+let practiceSeconds = 18;
+
+const stepJson=[
+    {"Name":"Walking (Light Aerobic)"}
+    ,{"Name":"Step 2"}
+    ,{"Name":"Step 3"}
+    ,{"Name":"Step 4"}
+    ,{"Name":"Step 5"}
+    ,{"Name":"Step 6"}
+    ,{"Name":"Step 7"}
+];
+
+
+
+/* ************************************************************************************** */
+/* ************************************************************************************** */
+
+let test = stepJson;
+    test = test.map(Name => ({
+        Name,
+        Minutes: 0,
+        Seconds: 10
+    }));
+
+let practice = stepJson;
+    practice = practice.map(Name => ({
+        Name,
+        Minutes: 0,
+        Seconds: practiceSeconds
+    }));
+
+let actual = stepJson;
+    actual = actual.map(Name => ({
+        Name,
+        Minutes: 5,
+        Seconds: 0
+    }));
+    for (let i = 0; i < actual.length;) {
+        if (i == 0){actual[i].Seconds = 10}
+        if (i + 1 == actual.length){actual[i].Minutes = 30}
+        i++
+    };
+
+    let minSec = [];
+if ( setMode == 'test' ){minSec = test}
+else if ( setMode == 'practice' ){minSec = practice}
+else if ( setMode == 'actual' ){minSec = actual};
+
+let currentUrl = window.location.href;
+
+if(currentUrl.indexOf('step=') === -1){
+  currentUrl = currentUrl+'?step=1'
+  window.history.replaceState(null, '', currentUrl);
+  window.location.href = currentUrl;
+};
+
+let pUrl = currentUrl.substring(currentUrl.indexOf('step=')+5);
+let pSet = pUrl.slice(0,1);
+let pSetId = Number(pUrl.slice(0,1)) - 1;
+
+// Create a single reusable AudioContext
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function playBeep(frequency = 440, duration = 200, volume = 0.5, type = 'sine') {
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+
+  oscillator.type = type; // 'sine', 'square', 'sawtooth', or 'triangle'
+  oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+
+  // Set volume and fade out smoothly to avoid an abrupt click
+  gainNode.gain.setValueAtTime(volume, audioCtx.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration / 1000);
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscillator.start();
+  oscillator.stop(audioCtx.currentTime + duration / 1000);
+}
+
+let restartText = setMode + ' mode';
+
+if(pSetId > 0){restartText = 'Stop and Restart'};
+
+const restartElement = document.getElementById("restart");
+restartElement.textContent = restartText;
+
+const spanElement = document.getElementById("display2");
+spanElement.textContent = minSec[pSetId].Name.Name;
+
+let spanElement3 = document.getElementById("display3");
+spanElement3.textContent = '';
+
+const inputMinutes = document.getElementById("minutes");
+inputMinutes.value = minSec[pSetId].Minutes;
+
+const inputSeconds = document.getElementById("seconds");
+inputSeconds.value = minSec[pSetId].Seconds;
+
+const pTotalSeconds = (minSec[pSetId].Minutes * 60) + minSec[pSetId].Seconds;
+
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return String(mins).padStart(2, '0') + ":" + String(secs).padStart(2, '0');
+}
+
+function startAccurateCountdown(durationSeconds, onTick, onComplete) {
+  const endTime = performance.now() + durationSeconds * 1000;
+
+  function tick() {
+    const remainingMs = endTime - performance.now();
+
+    if (remainingMs <= 0) {
+      onTick(0);
+      if (onComplete) onComplete();
+      return;
+    }
+
+    // Round up so "10" displays for the full first second, down to "1"
+    const secondsLeft = Math.ceil(remainingMs / 1000);
+    onTick(secondsLeft);
+    
+    // Schedule the next check right when the current second expires
+    const nextTickDelay = remainingMs % 1000 || 1000;
+    setTimeout(tick, nextTickDelay);
+  }
+
+  tick();
+};
+
+document.getElementById('startBtn').addEventListener('click', () => {
+
+    startAccurateCountdown(
+        pTotalSeconds,
+        (seconds) => {
+            document.getElementById('display').textContent = formatTime(seconds);
+
+            if (seconds == 15) {
+                    playBeep(520, 300, setVolume, 'sine');
+                    try{
+                        spanElement3.textContent = 'Next up: ' + minSec[(pSetId+1)].Name.Name;
+                    } catch {
+                        spanElement3.textContent = 'Next up: All done!!';
+                    }
+                    
+                };
+
+            if (seconds == 6) {playBeep(520, 300, 0.0, 'sine')};
+            if (seconds == 5) {playBeep(520, 300, setVolume, 'sine')};
+            if (seconds == 4) {playBeep(520, 300, setVolume, 'sine')};
+            if (seconds == 3) {playBeep(520, 300, setVolume, 'sine')};
+            if (seconds == 2) {playBeep(520, 300, setVolume, 'sine')};
+            if (seconds == 1) {playBeep(520, 300, setVolume, 'sine')};
+        },
+        () => {
+            let nextUrl = 'gavinsCountdown.html?step=' + (pSetId + 2);
+            window.location.href = nextUrl;
+            console.log(nextUrl);
+        }
+    );
+
+});
+
+if(pSetId > 0){
+    window.onload = function() {
+        
+        const clckName = "startBtn";
+        const textElement = document.getElementById(clckName);
+        
+        if (textElement) {
+            textElement.click();
+        }
+    };
+};
+
+</script>
+
+</body>
+</html>
